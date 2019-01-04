@@ -1,0 +1,142 @@
+* {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+*::-moz-selection {
+  background-color: transparent;
+}
+
+*::selection {
+  background-color: transparent;
+}
+
+body, html {
+  background-color: #3a3a3a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: Verdana, sans-serif;
+}
+
+.wrapper {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+#setting {
+  position: absolute;
+  top: -70px;
+  left: 10%;
+}
+
+#setting p {
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 40px;
+  color: #d3d3d3;
+}
+
+#setting input {
+  outline: 0;
+}
+
+#box {
+  line-height: 60px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #a0a0a0), color-stop(30%, #ffffff), to(#ffffff));
+  background: linear-gradient(to right, #a0a0a0 30%, #ffffff 30%, #ffffff);
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  height: 60px;
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+
+#box__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 30%;
+  font-size: 40px;
+}
+
+#box__new {
+  width: 70%;
+  position: relative;
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+.description {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: calc(50% + 60px);
+  left: calc(50% - 180px);
+}
+
+.description p {
+  font-size: 16px;
+  display: inline-block;
+  color: #646464;
+  padding: 20px;
+}
+
+span {
+  display: inline-block;
+  font-size: 40px;
+}
+
+#result {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #5a5a51;
+  border-radius: 10px;
+  left: calc(50% - 150px);
+  top: calc(50% - 150px);
+}
+
+#result .close {
+  font-size: 14px;
+  padding: 7px;
+  color: #222222;
+}
+
+#result .result {
+  font-size: 18px;
+  color: #d3d3d3;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#result .left, #result .right {
+  display: inline-block;
+  width: 150px;
+}
+
+#result .left p, #result .right p {
+  font-size: 16px;
+  color: #d3d3d3;
+  padding: 5px;
+}
+
+#result .left p {
+  text-align: right;
+}

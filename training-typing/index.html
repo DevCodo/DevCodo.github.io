@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>typingTutor</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <div class="description">
+            <p>Enter - начать</p>
+            <p>Esc - завершить</p>
+        </div> 
+    <div class="wrapper">
+
+        <div id="setting">
+            <p>Русский <input name="option" type="radio" value="phrasesRu" ></p>
+            <p>English <input name="option" type="radio" value="phrasesEn" checked></p>
+            <p>learn English words <input name="option" type="radio" value="words850"></p>
+        </div>   
+        
+        <div id="box">
+            <div id="box__check"></div>
+            <div id="box__new"></div>
+        </div>
+
+    </div> 
+    
+    <div id="result">
+        <p class="close">Esc</p>
+        <p class="result">Результат</p>
+        <div class="left">
+            <p>Время:</p>
+            <p>Натыкано:</p>
+            <p>Скорость:</p>
+            <p>Ошибок:</p>
+        </div>
+        <div class="right">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+        </div>
+    </div>
+
+    <script src="phrases.js"></script>   
+    <script src="common.js"></script>   
+</body>
+</html>
