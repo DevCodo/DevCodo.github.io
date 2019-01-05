@@ -69,7 +69,7 @@ document.body.addEventListener("keydown", function(info) {
             result2.innerHTML = ""; 
             result3.innerHTML = ""; 
             result4.innerHTML = ""; 
-            boxNew.innerHTML = ""; 
+            boxNew.innerHTML = "";
             boxCheck.innerHTML = "";
             boxNew.style.textIndent = "0px";
             newStr = document.createTextNode(strNew);
