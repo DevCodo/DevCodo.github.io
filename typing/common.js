@@ -28,7 +28,7 @@ let result1 = document.getElementById("result1");
 let result2 = document.getElementById("result2");
 let result3 = document.getElementById("result3");
 let result4 = document.getElementById("result4");
-boxNew.innerHTML = "Рекорд: " + record + " зн/мин";
+boxNew.innerHTML = "Рекорд: " + record + " зн/мин (от 1 мин)";
 timeShow.innerHTML = timeStr;
 
 document.body.addEventListener("keydown", function(info) {
