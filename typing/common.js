@@ -90,10 +90,8 @@ document.body.addEventListener("keydown", function(info) {
                 boxNew.innerHTML = "Рекорд: " + record + " зн/мин";
             }
              
-            // boxNew.style.backgroundColor = "white";
             boxCheck.innerHTML = ""; 
             timeStart = 0;
-    
 
             result1.appendChild(document.createTextNode(timeStr));
             result2.appendChild(document.createTextNode(click));
@@ -124,7 +122,6 @@ document.body.addEventListener("keydown", function(info) {
         if (result.style.display != "block" && timeStart != 0) {
             click++;
             boxNew.appendChild(newStr);
-            // boxNew.style.backgroundColor = "white";
             boxNew.innerHTML = "";
             newStr = document.createTextNode(strNew.substring(1))
             boxNew.appendChild(newStr);
