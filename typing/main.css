@@ -82,6 +82,10 @@ body, html {
   font-size: 40px;
 }
 
+#box__check span {
+  color: #383838;
+}
+
 #box__new {
   width: 70%;
   position: relative;

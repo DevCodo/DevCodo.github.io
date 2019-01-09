@@ -66,6 +66,10 @@ body, html {
         justify-content: flex-end;
         width: 30%;
         font-size: 40px;
+
+        span {
+            color: #383838;
+        }
     }
 
     &__new {
