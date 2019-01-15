@@ -9,7 +9,7 @@ function getStrRandom(str) {
 
 let str; 
 let strNewAll;
-let i = 0;
+let i = 1;
 let strNew;
 let err = 0;
 let click = 0;
@@ -141,7 +141,7 @@ document.body.addEventListener("keydown", function(info) {
     
             strNew = strNew.substring(1);
             if(strNew.length == 0) {
-                i = i + 1;                
+                i++;                
                 strNew = strNewAll[i];
                 boxNew.innerHTML = "";
                 newStr = document.createTextNode(strNew)
