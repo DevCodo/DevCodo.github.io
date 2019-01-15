@@ -9,7 +9,7 @@ function getStrRandom(str) {
 
 let str; 
 let strNewAll;
-let i = 1;
+let i = 0;
 let strNew;
 let err = 0;
 let click = 0;
@@ -34,14 +34,15 @@ timeShow.innerHTML = timeStr;
 document.body.addEventListener("keydown", function(info) {
     if(info.key == "Enter") {
         if (timeStart == 0 && result.style.display != "block") {
-            for (let i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
+            i = 0;
+            for (let k = 0; k < radios.length; k++) {
+                if (radios[k].checked) {
                     
-                    if (radios[i].value == "phrasesRu") {
+                    if (radios[k].value == "phrasesRu") {
                         str = phrasesRu;
-                    }else if(radios[i].value == "phrasesEn") {
+                    }else if(radios[k].value == "phrasesEn") {
                         str = phrasesEn;
-                    }else if(radios[i].value == "words850") {
+                    }else if(radios[k].value == "words850") {
                         str = words850;
                     }
                     
