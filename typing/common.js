@@ -141,7 +141,7 @@ document.body.addEventListener("keydown", function(info) {
     
             strNew = strNew.substring(1);
             if(strNew.length == 0) {
-                i++;
+                ++i;
                 strNew = strNewAll[i];
                 boxNew.innerHTML = "";
                 newStr = document.createTextNode(strNew)
