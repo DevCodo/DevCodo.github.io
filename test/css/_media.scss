@@ -1,0 +1,139 @@
+
+@media only screen and (max-width : 1732px) {
+    .description {
+        width: $mainSize;
+        &-section {
+            width: $mainSize - 366px;
+        }
+        &__info-wrapper {
+            width: 75%;
+        }
+    }    
+}
+
+@media only screen and (max-width : 1350px) {
+    .header-wrapper,
+    .description,
+    .feedback,
+    .footer__info {
+        width: 100%;
+    }
+
+    .header__logo {
+        padding-left: 50px;
+    }
+
+    .nav__menu {
+        padding-left: 0;
+        &-wrapper {
+            padding-right: 50px;
+        }
+    }
+
+    .description {
+        &-section {
+            width: calc(100% - 366px);
+            flex-direction: column;
+        }
+        &__info-wrapper {
+            width: 75%;
+        }
+        &__main  {
+            width: 100%;
+            &__header {
+                text-align: center;
+            }
+            &__content {
+                text-align: justify;
+            }
+        }
+        &__info {
+            margin-top: 40px;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .feedback__box {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 100%;
+        padding: 20px 0;
+
+        &__item {
+            margin: 0;
+            padding: 0;
+            margin: 20px;
+            max-width: 100%;
+            &-description {
+                padding-top: 30px;
+            }
+        }
+        &__form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 20px 0;
+
+        }
+    }
+    
+    .footer__info {
+        &__telefon {
+            padding-right: 20px;
+        }
+        &__adress {
+            padding-right: 20px;
+        }
+    }
+
+}
+
+@media only screen and (max-width : 992px) {
+    .nav__menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 100px 0;
+        background: #F7F7F7;
+        &-toggle {
+            display: block;
+            margin-right: 30px;
+        }
+        &-wrapper {
+            position: fixed;
+            z-index: 999;
+            width: 400px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.822);
+            padding-right: 0px;
+            display: none;
+        }
+        &__item {
+            margin: 20px 0;
+
+
+    
+        }
+        &-close {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}
+    
+
+
+@media only screen and (max-width : 768px) {
+
+}
+@media only screen and (max-width : 576px) {
+
+}
+
+
