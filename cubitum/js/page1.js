@@ -83,7 +83,7 @@ if (window.DeviceOrientationEvent) {
     });
 }
 
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
+var handleOrientationEvent = function(x, y, z) {
 
     if (x >  90) { x =  90};
     if (x < -90) { x = -90};
