@@ -78,7 +78,7 @@ if (window.DeviceOrientationEvent) {
         // beta: front back motion (от -180 до 180)
         var x = event.beta;
 
-        handleOrientationEvent(x, y, z);
+        // handleOrientationEvent(x, y, z);
     });
 }
 
@@ -106,61 +106,6 @@ var handleOrientationEvent = function(x, y, z) {
 
 
 
-/* 
-if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis (от 0 до 360)
-        var rotateDegrees = event.alpha;
-        // gamma: left to right (от -90 до 90)
-        var leftToRight = event.gamma;
-        // beta: front back motion (от -180 до 180)
-        var frontToBack = event.beta;
-
-        if (frontToBack >  90) { frontToBack =  90};
-        if (frontToBack < -90) { frontToBack = -90};
-
-        // handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
-}
-
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    
-    var maxX = 50;
-    var maxY = 50;
-
-    // смещаем диапазон от 0 до 180
-
-    frontToBack += 90;
-    leftToRight += 90;
-
-    if (mousStartX && mousStartY) {
-
-        differenceX += mousStartX - frontToBack;
-        differenceY += mousStartY - leftToRight;
-
-        // element1.style.left = coordElement1.left - coordBox.left + differenceX / 30 + "px";
-        // element1.style.top = coordElement1.top - coordBox.top + differenceY / 40 + "px";
-        element1.style.left = (maxX*frontToBack/180 - 10) + "px";
-        element1.style.top = (maxY*leftToRight/180 - 10) + "px";
-
-        element2.style.left = coordElement2.left - coordBox.left + differenceX  / 20 + "px";
-        element2.style.top = coordElement2.top - coordBox.top + differenceY  / 30 + "px";
-
-        element3.style.left = coordElement3.left - coordBox.left + differenceX  / 50 + "px";
-        element3.style.top = coordElement3.top - coordBox.top + differenceY  / 20 + "px";
-
-        element4.style.left = coordElement4.left - coordBox.left + differenceX  / 40 + "px";
-        element4.style.top = coordElement4.top - coordBox.top + differenceY  / 30 + "px";
-
-        element5.style.left = coordElement5.left - coordBox.left + differenceX  / 30 + "px";
-        element5.style.top = coordElement5.top - coordBox.top + differenceY  / 50 + "px";
-
-    }
-
-    mousStartX = frontToBack;
-    mousStartY = leftToRight;
-
-}; */
 
 
 
