@@ -84,7 +84,7 @@ if (window.DeviceOrientationEvent) {
 }
 
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-
+    document.body.style.backgroundColor = "black";
     if (x >  90) { x =  90};
     if (x < -90) { x = -90};
 
