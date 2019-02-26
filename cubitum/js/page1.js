@@ -82,12 +82,12 @@ if (window.DeviceOrientationEvent) {
         if (frontToBack >  90) { frontToBack =  90};
         if (frontToBack < -90) { frontToBack = -90};
 
-        // handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
     }, true);
 }
 
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    
+    document.body.innerHTML = frontToBack;
     var maxX = 50;
     var maxY = 50;
 
