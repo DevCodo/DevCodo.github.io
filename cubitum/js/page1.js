@@ -101,8 +101,10 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
         differenceX += mousStartX - frontToBack;
         differenceY += mousStartY - leftToRight;
 
-        element1.style.left = coordElement1.left - coordBox.left + differenceX / 30 + "px";
-        element1.style.top = coordElement1.top - coordBox.top + differenceY / 40 + "px";
+        // element1.style.left = coordElement1.left - coordBox.left + differenceX / 30 + "px";
+        // element1.style.top = coordElement1.top - coordBox.top + differenceY / 40 + "px";
+        element1.style.left = (maxX*frontToBack/180 - 10) + "px";
+        element1.style.top = (maxY*leftToRight/180 - 10) + "px";
 
         element2.style.left = coordElement2.left - coordBox.left + differenceX  / 20 + "px";
         element2.style.top = coordElement2.top - coordBox.top + differenceY  / 30 + "px";

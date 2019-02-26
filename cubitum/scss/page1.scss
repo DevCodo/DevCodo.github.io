@@ -330,10 +330,13 @@ main {
 }
 
 @media only screen and (max-width : $breakpoints-md) {
+	.main_wrapper {
+		margin-top: -60px;
+	}
 	.description__element{
 		transform: scale(0.8);
 	}
-	.description__element {
+	/* .description__element {
 		&__element1 {
 			position: absolute;
 			top: 5%;
@@ -359,7 +362,7 @@ main {
 			top: 40%;
 			left: 25%;
 		}
-	}
+	} */
 }
 
 @media only screen and (max-width : $breakpoints-sm) {
@@ -375,27 +378,27 @@ main {
 		&__element1 {
 			position: absolute;
 			top: 5%;
-			left: 10%;
+			left: 0%;
 		}
 		&__element2 {
 			position: absolute;
 			top: 0;
-			left: 45%;
+			left: 50%;
 		}
 		&__element3 {
 			position: absolute;
-			top: 65%;
-			left: 0%;
+			top: 35%;
+			left: -20%;
 		}
 		&__element4 {
 			position: absolute;
-			top: 45%;
-			left: 50%;
+			top: 25%;
+			left: 60%;
 		}
 		&__element5 {
 			position: absolute;
-			top: 40%;
-			left: 25%;
+			top: 20%;
+			left: 20%;
 		}
 	}	
 }
