@@ -67,7 +67,6 @@ box.addEventListener("mouseover", function(event) {
     
 });
 
-
 /* анимирование объектов на телефоне *//////////////////////////////////////////////////////////////////////////////
 
 if (window.DeviceOrientationEvent) {
