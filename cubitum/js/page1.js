@@ -87,7 +87,7 @@ if (window.DeviceOrientationEvent) {
 }
 
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    document.body.innerHTML = frontToBack;
+    document.getElementsByClassName("description").innerText = frontToBack;
     var maxX = 50;
     var maxY = 50;
 
