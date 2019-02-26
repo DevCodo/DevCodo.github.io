@@ -82,7 +82,7 @@ if (window.DeviceOrientationEvent) {
         if (frontToBack >  90) { frontToBack =  90};
         if (frontToBack < -90) { frontToBack = -90};
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+        // handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
     }, true);
 }
 
