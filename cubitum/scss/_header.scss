@@ -38,7 +38,7 @@ body {
 * {
     padding: 0;
     margin: 0;
-    // font-size: 0;
+    font-size: 0;
 }
 
 .container {
@@ -184,6 +184,25 @@ header {
 	text-align: center;
 }
 
+.nav-menu__head_mobile {
+	display: none;
+}
+
+.nav-menu__batton-close {
+	width: 24px;
+	height: 24px;
+	&_1 {
+		width: 3px;
+	}
+	&_2{
+		width: 3px;
+
+	}
+}
+
+
+
+
 .nav-menu__item {
 	font-family: PT Sans;
 	font-weight: bold;
@@ -289,4 +308,14 @@ header {
 
 @media only screen and (max-width : $breakpoints-sm) {
 
+}
+
+@media only screen and (max-height : 900px) {
+	.nav-menu__head {
+		display: none;
+	}
+	.nav-menu__head_mobile {
+		display: flex;
+
+	}
 }
