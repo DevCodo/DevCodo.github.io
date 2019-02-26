@@ -1,0 +1,28 @@
+@import "vars";
+
+
+
+@media only screen and (max-width : $breakpoints-xl) {
+
+}
+
+@media only screen and (max-width : $breakpoints-lg) {
+
+}
+
+@media only screen and (max-width : $breakpoints-md) {
+
+}
+
+@media only screen and (max-width : $breakpoints-sm) {
+
+}
+
+@media only screen and (max-width : $width-xl + $padding) {
+    .works__box {
+		justify-content: center;
+	}
+	.works__item {
+		margin: 9px;
+	}
+}

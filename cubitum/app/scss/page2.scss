@@ -1,0 +1,245 @@
+@import "header";
+
+// MAIN  //////////////////////////////////////////////////////////////////////////////////////////////
+main {
+    flex: 1;
+}
+
+.main_wrapper {
+	display: flex;
+	flex-direction: column;
+    padding-top: 96px;
+}
+
+// CASE //////////////////////////////////////////////////////////////////////////////////////////////
+
+.case {
+    padding: 100px 0 0px;
+}
+
+.case__box {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.case__info {
+    max-width: 720px;
+}
+
+.case__header {
+    font-size: 47px;
+    color: $blue;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.case__info__text {
+    font-family: PT Sans;
+    line-height: 42px;
+    font-size: 26px;
+    color: $text;
+    margin-bottom: 40px;
+}
+
+.case__description {
+    margin-top: 75px;
+    max-width: 500px;
+    border-radius: 20px;
+    position: relative;
+    background: $backgroundHead;
+}
+
+.case__description__content {
+    padding: 30px 50px;
+}
+
+.case__description__header {
+    line-height: 35px;
+    font-size: 31px;
+    color: $pink;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.case__item {
+
+}
+
+.case__item__parametr {
+    font-family: PT Sans;
+    line-height: 34px;
+    font-size: 21px;
+    color: $text;
+    display: inline-block;
+    width: 110px;
+}
+
+.case__item__description {
+    font-family: PT Sans;
+    line-height: 34px;
+    font-size: 21px;
+    color: $text;
+    display: inline-block;
+}
+
+.case__item__separator {
+    background: #CBCBCB;
+    height: 1px;
+    margin: 30px 0 45px;
+}
+
+.case__description__element1 {
+    position: absolute;
+    top: 0;
+    right: -80px;
+}
+
+.case__description__element2{
+    position: absolute;
+    bottom: -80px;
+    left: -10px;
+}
+
+.case__nav {
+    width: 113px;
+    position: absolute;
+    text-align: center;
+    top: calc(50% - 85px);
+    cursor: pointer;
+    user-select: none;
+    &:hover #nav-element1{
+        fill : #3995ff;
+    }
+    &:hover #nav-element2{
+        fill : #3995ff;
+    }
+    &:hover .case__nav__text{
+        color : rgb(153, 153, 153);
+    }
+}
+
+.case__nav1 {
+    left: -183px;
+}
+
+.case__nav2 {
+    right: -183px;
+}
+
+.case__nav__element {
+    
+}
+
+.case__nav__text {
+    line-height: 26px;
+    font-size: 18px;
+    text-align: center;
+    color: #CCCCCC;
+    margin-top: 32px;
+}
+
+
+.case__info__content, .case__description__content {
+    animation: visibly 1.5s;
+}
+
+@keyframes visibly {
+	1% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// CASE //////////////////////////////////////////////////////////////////////////////////////////////
+
+.case-show {
+    position: relative;
+    margin: auto;
+    max-width: 1681px;
+}
+
+.case-show__macbook {
+    position: relative;
+    img {
+        width: 100%;
+    }
+}
+
+.case-show__mackbook__iframe_wrappper {
+    position: absolute;
+    left: 12.7%;
+    top: 11.7%;
+    width: 74.68%;
+    height: 63.15%;
+    overflow: hidden;
+}
+
+.case-show__mackbook__iframe {
+    width: 1440px;
+    height: 900px;
+    transform-origin: 0% 0%;
+}
+
+
+.case-show__iphone {
+    position: absolute;
+    bottom: -3.5%;
+    right: 7.3%;
+    z-index: 2;
+    width: 25.3%;
+    img {
+        width: 100%;
+    }
+   
+}
+
+.case-show__iphone__iframe_wrappper {
+    position: absolute;
+    left: 22.55%;
+    top: 16.59%;
+    width: 58.65%;
+    height: 55.56%;
+    overflow: hidden;
+}
+
+.case-show__iphone__iframe {
+    width: 375px;
+    height: 667px;
+    // transform: scale(0.72);
+    transform-origin: 0% 0%;
+}
+
+// MEDIA //////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@media only screen and (max-width : $breakpoints-xl) {
+
+}
+
+@media only screen and (max-width : $breakpoints-lg) {
+
+}
+
+@media only screen and (max-width : $breakpoints-md) {
+
+}
+
+@media only screen and (max-width : $breakpoints-sm) {
+
+}
+
+@media only screen and (max-width : $width-xl + $padding) {
+    .works__box {
+		justify-content: center;
+	}
+	.works__item {
+		margin: 9px;
+	}
+}
+
+@import "footer";

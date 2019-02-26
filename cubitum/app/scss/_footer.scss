@@ -1,0 +1,180 @@
+
+// FEEDBACK  //////////////////////////////////////////////////////////////////////////////////////////////
+
+.feedback {
+	padding: 210px $padding 112px;
+}
+
+.feedback__header {
+	line-height: normal;
+	font-size: 47px;
+	text-align: center;
+	color: $text;
+}
+
+.feedback__description {
+	font-family: PT Sans;
+	line-height: 45px;
+	font-size: 28px;
+	text-align: center;
+	color: $text;
+	margin: 30px 0 45px;
+}
+
+.feedback__box {
+	display: flex;
+	background: $blue;
+	min-height: 136px;
+	border-radius: 15px;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: space-between;
+	padding: 0 50px;
+}
+
+.feedback__box__item {
+	display: inline-flex;
+	align-items: center;
+}
+
+.feedback__box__item-logo {
+	
+}
+
+.feedback__box__item-text {
+	margin-left: 12px;
+	font-family: PT Sans;
+	line-height: 18px;
+	font-size: 18px;
+	color: $white;
+	&1 {
+		width: 155px;
+	}
+	&2 {
+		width: 190px;
+	}
+	&3 {
+		width: 153px;
+	}
+}
+
+.feedback__form {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.feedback__form__telefon {
+	width: 246px;
+	height: 42px;
+	border-radius: 25%;
+	background: $white;
+	box-shadow: 0px 0px 20px rgba(0, 178, 255, 0.64);
+	border-radius: 25px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.feedback__form__telefon_round {
+	display: inline-flex;
+	width: 28px;
+	height: 28px;
+	background: $blue;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	margin: 0 12px 0 9px;
+}
+
+.feedback__form__telefon_text {
+	border: none;
+	outline: none;
+	line-height: 19px;
+	font-size: 14px;
+}
+
+.feedback__form__submit {
+	background: $pink;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 25px;
+	border: none;
+	width: 189px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: $white;
+	cursor: pointer;
+	outline: none;
+	margin-left: 36px;
+	&:hover {
+		background: #636363;
+	}
+}
+
+.feedback__box__privacy-policy {
+	position: absolute;
+	bottom: 12px;
+	right: 52px;
+	a {
+		line-height: 22px;
+		font-size: 12px;
+		text-decoration-line: underline;
+		color: $lightgray;
+	}
+}
+
+// footer //////////////////////////////////////////////////////////////////////////////////////////////
+
+.footer_wrapper {
+	background: $backgroundFooter;
+}
+
+.footer__info {
+	height: 140px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer__info__telefon {
+	line-height: 40px;
+	font-size: 28px;
+	color: $text;
+	text-align: right;
+}
+
+.footer__info__adress {
+	line-height: 25px;
+	font-size: 18px;
+	color: $text;
+	text-align: right;
+}
+
+.footer__copy {
+	height: 54px;
+	background: $backgroundCopy;
+	line-height: 54px;
+	text-align: center;
+	font-size: 16px;
+	color: $white;
+}
+
+// MEDIA //////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (max-width : $breakpoints-xl) {
+
+}
+
+@media only screen and (max-width : $breakpoints-lg) {
+
+}
+
+@media only screen and (max-width : $breakpoints-md) {
+
+}
+
+@media only screen and (max-width : $breakpoints-sm) {
+
+}
