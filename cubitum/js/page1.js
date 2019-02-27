@@ -122,20 +122,20 @@ var handleOrientationEvent = function(x, y, z) {
     if (x >  90) { x =  90};
     if (x < -90) { x = -90};
 
-    element1.style.left = coordElement1.left - coordBox.left + y * 0.7 + "px";
-    element1.style.top = coordElement1.top - coordBox.top + x * 0.7 + "px";
+    element1.style.left = coordElement1.left - coordBox.left + y * 0.6 + "px";
+    element1.style.top = coordElement1.top - coordBox.top + x * 0.6 + "px";
 
-    element2.style.left = coordElement2.left - coordBox.left + y * 0.5 + "px";
-    element2.style.top = coordElement2.top - coordBox.top + x * 0.5 + "px";
+    element2.style.left = coordElement2.left - coordBox.left + y * 0.3 + "px";
+    element2.style.top = coordElement2.top - coordBox.top + x * 0.3 + "px";
 
-    element3.style.left = coordElement3.left - coordBox.left + y * 0.6 + "px";
-    element3.style.top = coordElement3.top - coordBox.top + x * 0.6 + "px";
+    element3.style.left = coordElement3.left - coordBox.left + y * 0.5 + "px";
+    element3.style.top = coordElement3.top - coordBox.top + x * 0.5 + "px";
 
-    element4.style.left = coordElement4.left - coordBox.left + y * 0.5 + "px";
-    element4.style.top = coordElement4.top - coordBox.top + x * 0.5 + "px";
+    element4.style.left = coordElement4.left - coordBox.left + y * 0.3 + "px";
+    element4.style.top = coordElement4.top - coordBox.top + x * 0.3 + "px";
 
-    element5.style.left = coordElement5.left - coordBox.left + y * 0.6 + "px";
-    element5.style.top = coordElement5.top - coordBox.top + x * 0.6 + "px";
+    element5.style.left = coordElement5.left - coordBox.left + y * 0.2 + "px";
+    element5.style.top = coordElement5.top - coordBox.top + x * 0.2 + "px";
 }    
 
 
