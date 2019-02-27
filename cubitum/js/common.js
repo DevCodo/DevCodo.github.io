@@ -6,7 +6,7 @@ window.addEventListener("scroll", function(event) {
     if (window.pageYOffset > 0) {
         $("header").css("backgroundColor", "#F1F1F1")
     } else if (window.pageYOffset == 0) {
-        $("header").css("backgroundColor", "#F7F7F7")
+        $("header").css("backgroundColor", "#fff")
     }
 })
 
