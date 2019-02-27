@@ -165,7 +165,7 @@ if (window.DeviceOrientationEvent) {
         // beta: front back motion (от -180 до 180)
         var x = event.beta;
 
-        handleOrientationEvent(x, y, z);
+        handleOrientationEvent(x, y, z, true);
     });
 }
 
