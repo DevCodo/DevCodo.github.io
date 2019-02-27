@@ -13,13 +13,13 @@ $('.works__element').click(function() {
 /* анимирование объектов *//////////////////////////////////////////////////////////////////////////////
 
 
-var box = document.getElementsByTagName("main")[0];
-var boxElements = document.getElementsByClassName("description__element")[0];
-var element1 = document.getElementsByClassName("description__element__element1")[0];
-var element2 = document.getElementsByClassName("description__element__element2")[0];
-var element3 = document.getElementsByClassName("description__element__element3")[0];
-var element4 = document.getElementsByClassName("description__element__element4")[0];
-var element5 = document.getElementsByClassName("description__element__element5")[0];
+var box = document.querySelector("main");
+var boxElements = document.querySelector(".description__element");
+var element1 = document.querySelector(".description__element__element1");
+var element2 = document.querySelector(".description__element__element2");
+var element3 = document.querySelector(".description__element__element3");
+var element4 = document.querySelector(".description__element__element4");
+var element5 = document.querySelector(".description__element__element5");
 var coordBox = boxElements.getBoundingClientRect()
 var coordElement1 = element1.getBoundingClientRect()
 var coordElement2 = element2.getBoundingClientRect()
@@ -30,7 +30,6 @@ var mousStartX;
 var mousStartY;
 var differenceX = 0;
 var differenceY = 0;
-
 box.addEventListener("mousemove", function(event) {
 
     if (mousStartX && mousStartY) {
@@ -59,13 +58,38 @@ box.addEventListener("mousemove", function(event) {
 
 });
 
-box.addEventListener("mouseout", function(event) {
+/* box.addEventListener("mouseout", function(event) {
 
 });
 
 box.addEventListener("mouseover", function(event) {
     
-});
+}); */
+
+/* изменение ширины SVG елементов *//////////////////////////////////////////////////////////////////////////////
+
+var element1СoefWidth = 84 / 576;
+var element2СoefWidth = 299 / 576;
+var element3СoefWidth = 213 / 576;
+var element4СoefWidth = 286 / 576;
+var element5СoefWidth = 261 / 576;
+var element1СoefHeight = 84 / 576;
+var element2СoefHeight = 231 / 576;
+var element3СoefHeight = 150 / 576;
+var element4СoefHeight = 319 / 576;
+var element5СoefHeight = 253/ 576;
+
+resizeWidthelement();
+
+window.addEventListener("resize", resizeWidthelement);
+
+function resizeWidthelement() {
+    element1.style.cssText = `width: ${boxElements.clientWidth * element1СoefWidth}px; height: ${boxElements.clientWidth * element1СoefHeight}px; `;
+    element2.style.cssText = `width: ${boxElements.clientWidth * element2СoefWidth}px; height: ${boxElements.clientWidth * element2СoefHeight}px; `;
+    element3.style.cssText = `width: ${boxElements.clientWidth * element3СoefWidth}px; height: ${boxElements.clientWidth * element3СoefHeight}px; `;
+    element4.style.cssText = `width: ${boxElements.clientWidth * element4СoefWidth}px; height: ${boxElements.clientWidth * element4СoefHeight}px; `;
+    element5.style.cssText = `width: ${boxElements.clientWidth * element5СoefWidth}px; height: ${boxElements.clientWidth * element5СoefHeight}px; `;
+};
 
 /* анимирование объектов на телефоне *//////////////////////////////////////////////////////////////////////////////
 

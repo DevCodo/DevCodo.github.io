@@ -119,8 +119,11 @@ main {
 	top: calc(50% - 250px);
 	z-index: -1;
 	width: 576px;
-	img {
-		width: 100%;;
+	&_wrapper {
+		position: relative;
+		img {
+			width: 100%;;
+		}
 	}
 	&__element1 {
 		position: absolute;
@@ -130,21 +133,21 @@ main {
 	&__element2 {
 		position: absolute;
 		top: 0%;
-		right: 0%;
+		left: 60%;
 	}
 	&__element3 {
 		position: absolute;
-		bottom: 10%;
+		top: 65%;
 		left: -5%;
 	}
 	&__element4 {
 		position: absolute;
-		bottom: 5%;
-		right: -30%;
+		top: 40%;
+		left: 75%;
 	}
 	&__element5 {
 		position: absolute;
-		bottom: 10%;
+		top: 40%;
 		left: 35%;
 	}
 }
@@ -321,6 +324,7 @@ main {
 	}
 	
 	.description__element {
+		width: 50%;
 		position: relative;
 		order: -1;
 		margin: auto;
@@ -338,9 +342,9 @@ main {
 		// width: 50%;
 		// transform: scale(0.5);
 	}
-	.description__element  div{
+	.description__element {
 		// transform: scale(0.5);
-		&__element1 {
+	/* 	&__element1 {
 			position: absolute;
 			top: 5%;
 			left: 10%;
@@ -364,20 +368,20 @@ main {
 			position: absolute;
 			top: 40%;
 			left: 25%;
-		}
+		} */
 	}
 }
 
 //480px
 @media only screen and (max-width : $breakpoints-sm) {
 	.main_wrapper {
-		margin-top: -160px;
+		// margin-top: -160px;
 	}
-	.description__element div{
+	.description__element{
 		// transform: scale(0.7)
 	}
 	.description__element {
-		margin-bottom: -190px;
+		// margin-bottom: -190px;
 		// transform: scale(0.5);
 		/* &__element1 {
 			position: absolute;
