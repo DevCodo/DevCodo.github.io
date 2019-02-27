@@ -172,8 +172,8 @@ if (window.DeviceOrientationEvent) {
 var handleOrientationEvent = function(x, y, z, orientation) {
 
     if (!orientation) {
-        let x = y;
-        let y = x;
+        var x = y;
+        var y = x;
     };
 
     if (x >  90) { x =  90};
