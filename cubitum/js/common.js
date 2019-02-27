@@ -12,7 +12,7 @@ window.addEventListener("scroll", function(event) {
 
 /* открытие, закрытие меню *//////////////////////////////////////////////////////////////////////////////
 
-$("main, .nav-menu__call, header, footer").click(function(event) {
+$("main, .nav-menu__call, .nav-menu__batton-close, header, footer").click(function(event) {
 
     if (event.target.classList.contains("header__button-menu__item") || event.target.classList.contains("header__button-menu")) {
 

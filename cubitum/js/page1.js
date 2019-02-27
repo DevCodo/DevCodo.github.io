@@ -12,7 +12,6 @@ $('.works__element').click(function() {
 
 /* анимирование объектов *//////////////////////////////////////////////////////////////////////////////
 
-
 var box = document.querySelector("main");
 var boxElements = document.querySelector(".description__element");
 var element1 = document.querySelector(".description__element__element1");
@@ -63,14 +62,6 @@ box.addEventListener("mousemove", function(event) {
     mousStartY = event.clientY;
 
 });
-
-/* box.addEventListener("mouseout", function(event) {
-
-});
-
-box.addEventListener("mouseover", function(event) {
-    
-}); */
 
 /* изменение ширины SVG елементов *//////////////////////////////////////////////////////////////////////////////
 var element1СoefWidth = 84 / 576;
@@ -192,9 +183,11 @@ var handleOrientationEvent = function(x, y, z, orientation) {
 
     element5.style.left = coordElement5.left - coordBox.left + y * 0.1 + "px";
     element5.style.top = coordElement5.top - coordBox.top + x * 0.1 + "px";
-}    
+} 
 
+/* Видимость кейсов *//////////////////////////////////////////////////////////////////////////////
 
+var $case = $(".works__item")
 
 
 
