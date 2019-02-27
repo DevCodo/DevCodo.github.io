@@ -63,6 +63,7 @@ header {
 	align-items: center;
 	height: 100%;
 	justify-content: space-between;
+	user-select: none;
 }
 
 .header__button-menu_wrapper {
@@ -77,7 +78,6 @@ header {
 	cursor: pointer;
 	flex-direction: column;
 	justify-content: space-between;
-	user-select: none;
 }
 
 .header__button-menu__item {
