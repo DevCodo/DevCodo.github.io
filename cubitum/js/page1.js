@@ -134,8 +134,8 @@ var handleOrientationEvent = function(x, y, z) {
     element4.style.left = coordElement4.left - coordBox.left + y * 0.3 + "px";
     element4.style.top = coordElement4.top - coordBox.top + x * 0.3 + "px";
 
-    element5.style.left = coordElement5.left - coordBox.left + y * 0.2 + "px";
-    element5.style.top = coordElement5.top - coordBox.top + x * 0.2 + "px";
+    element5.style.left = coordElement5.left - coordBox.left + y * 0.1 + "px";
+    element5.style.top = coordElement5.top - coordBox.top + x * 0.1 + "px";
 }    
 
 
