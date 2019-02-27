@@ -55,8 +55,8 @@ box.addEventListener("mousemove", function(event) {
             element4.style.left = coordElement4.left - coordBox.left + differenceX  / 50 + "px";
             element4.style.top = coordElement4.top - coordBox.top + differenceY  / 30 + "px";
 
-            element5.style.left = coordElement5.left - coordBox.left + differenceX  / 60 + "px";
-            element5.style.top = coordElement5.top - coordBox.top + differenceY  / 50 + "px";
+            element5.style.left = coordElement5.left - coordBox.left + differenceX  / 100 + "px";
+            element5.style.top = coordElement5.top - coordBox.top + differenceY  / 100 + "px";
 
     }
     mousStartX = event.clientX;
