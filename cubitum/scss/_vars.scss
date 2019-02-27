@@ -44,5 +44,37 @@ P {
 font-size: 26px;    
 }
 
+@media only screen and (max-width : $breakpoints-xl) {
 
+}
+
+@media only screen and (max-width : $breakpoints-lg) {
+
+}
+
+@media only screen and (max-width : $breakpoints-md) {
+
+}
+
+@media only screen and (max-width : $breakpoints-sm) {
+    h1 {
+        font-size: 23px;    
+        }
+        
+        h2 {
+        font-size: 23px;
+        }
+        
+        h3 {
+        font-size: 31px;    
+        }
+        
+        h4 {
+        font-size: 16px;
+        }
+        
+        P {
+        font-size: 26px;    
+        }
+}
 
