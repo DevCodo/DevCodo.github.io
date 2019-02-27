@@ -330,6 +330,28 @@ main {
 		margin: auto;
 		top: 0;
 		right: 0;
+		&__element1 {
+			top: 5%;
+			left: 10%;
+		}
+		&__element2 {
+			top: 0;
+			left: 65%;
+		}
+		&__element3 {
+			top: 65%;
+			left: 80%;
+			transform: rotate(175deg);
+		}
+		&__element4 {
+			transform: rotate(245deg);
+			top: 35%;
+			left: -30%;
+		}
+		&__element5 {
+			top: 45%;
+			left: 35%;
+		}
 	}
 }
 
@@ -338,37 +360,12 @@ main {
 	.main_wrapper {
 		// margin-top: -60px;
 	}
-	.description__element{
-		// width: 50%;
-		// transform: scale(0.5);
+
+	.description__request-element {
+		display: none;
 	}
+
 	.description__element {
-		// transform: scale(0.5);
-	/* 	&__element1 {
-			position: absolute;
-			top: 5%;
-			left: 10%;
-		}
-		&__element2 {
-			position: absolute;
-			top: 0;
-			left: 45%;
-		}
-		&__element3 {
-			position: absolute;
-			top: 65%;
-			left: 0%;
-		}
-		&__element4 {
-			position: absolute;
-			top: 45%;
-			left: 50%;
-		}
-		&__element5 {
-			position: absolute;
-			top: 40%;
-			left: 25%;
-		} */
 	}
 }
 
