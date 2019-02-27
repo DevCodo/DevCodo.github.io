@@ -116,11 +116,8 @@ mql.addListener(function(m) {
         // Изменено на горизонтальный режим
         getCoordinateElements()
         window.addEventListener("deviceorientation", function(event) {
-            // alpha: rotation around z-axis (от 0 до 360)
             var z = event.alpha;
-            // gamma: left to right (от -90 до 90)
             var y = event.gamma;
-            // beta: front back motion (от -180 до 180)
             var x = event.beta;
     
             handleOrientationEvent(x, y, z, false);

@@ -26,14 +26,12 @@ main {
 
 .description__header {
 	line-height: 72px;
-	font-size: 54px;
 	color: $blue;
 }
 
 .description__text {
 	font-family: PT Sans;
 	line-height: 43px;
-	font-size: 28px;
 	color: $text;
 	margin-top: 19px;
 }
@@ -91,10 +89,22 @@ main {
 	outline: none;
 	margin-left: 12px;
 	&:hover {
-		background: #636363;
+		background: linear-gradient(180deg, $blue , $pink);
 	}
 }
-
+.description__order-button {
+	font-family: PT Sans;
+	font-weight: bold;
+	line-height: 53px;
+	text-align: center;
+	font-size: 18px;
+	background: linear-gradient(105.53deg, #2FB4FF 30.59%, #0075FF 71.45%);
+	border-radius: 5px;
+	color: $white;
+	height: 53px;
+	width: 327px;
+	display: none;
+}
 .description__request {
 	position: relative;
 	width: 315px;
@@ -224,7 +234,6 @@ main {
 
 .works__header {
 	line-height: 42px;
-	font-size: 28px;
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: $text;
@@ -245,7 +254,7 @@ main {
 
 .works__item {
 	width: 324px;
-	height: 324px;
+	height: 188px;
 	box-shadow: 0px 0px 10px rgba(7, 23, 61, 0.44);
 	position: relative;
 	background: $gray;
@@ -316,11 +325,21 @@ main {
 
 //1024px;
 @media only screen and (max-width : $breakpoints-lg) {
+	.main_wrapper {
+		margin-top: -60px;
+	}
 	.description {
 		flex-direction: column;
 	}
 	.description__info {
+		margin-top: 30px;
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.description__header {
+		text-align: center;
 	}
 	
 	.description__element {
@@ -360,9 +379,20 @@ main {
 	.main_wrapper {
 		// margin-top: -60px;
 	}
-
-	.description__request-element {
+	.description__form {
 		display: none;
+	}
+	.description__order-button {
+		display: block;
+		margin-top: 30px;
+		margin-bottom: 15px;
+	}
+	.description__request {
+		width: 202px;
+		p {
+			line-height: 16px;
+			font-size: 10px;
+		}
 	}
 
 	.description__element {
@@ -371,9 +401,24 @@ main {
 
 //480px
 @media only screen and (max-width : $breakpoints-sm) {
+
 	.main_wrapper {
 		// margin-top: -160px;
 	}
+	.description__header {
+		line-height: 31px;
+		font-size: 23px;
+	}
+	.description__text {
+		line-height: 25px;
+		font-size: 16px;
+	}
+	/* .description__request {
+		p {
+			line-height: 16px;
+			font-size: 10px;
+		}
+	} */
 	.description__element{
 		// transform: scale(0.7)
 	}

@@ -11,7 +11,6 @@ $gray: #777777;
 $lightgray: #ECECEC;
 
 $padding: 12px;
-$abra: 1000px;
 
 $breakpoints-sm: 480px;
 $breakpoints-md: 768px;
@@ -22,5 +21,28 @@ $width-sm: 576px;
 $width-md: 768px;
 $width-lg: 992px;
 $width-xl: 1350px;
+
+
+h1 {
+font-size: 54px;    
+}
+
+h2 {
+font-size: 47px;
+}
+
+h3 {
+font-size: 31px;    
+}
+
+h4 {
+font-size: 28px;
+font-weight: normal;   
+}
+
+P {
+font-size: 26px;    
+}
+
 
 
