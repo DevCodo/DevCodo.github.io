@@ -32,12 +32,12 @@ var differenceX = 0;
 var differenceY = 0;
 box.addEventListener("mousemove", function(event) {
     resizeWidthelement();
-    coordBox = boxElements.getBoundingClientRect()
-    coordElement1 = element1.getBoundingClientRect()
-    coordElement2 = element2.getBoundingClientRect()
-    coordElement3 = element3.getBoundingClientRect()
-    coordElement4 = element4.getBoundingClientRect()
-    coordElement5 = element5.getBoundingClientRect()
+    coordBox = boxElements.getBoundingClientRect();
+    coordElement1 = element1.getBoundingClientRect();
+    coordElement2 = element2.getBoundingClientRect();
+    coordElement3 = element3.getBoundingClientRect();
+    coordElement4 = element4.getBoundingClientRect();
+    coordElement5 = element5.getBoundingClientRect();
     if (mousStartX && mousStartY) {
 
             differenceX += mousStartX- event.clientX;
@@ -72,8 +72,54 @@ box.addEventListener("mouseover", function(event) {
     
 }); */
 
-/* изменение ширины SVG елементов *//////////////////////////////////////////////////////////////////////////////
+/* изменение ориентации телефона *//////////////////////////////////////////////////////////////////////////////
 
+var mql = window.matchMedia("(orientation: portrait)");
+
+if(mql.matches) {  
+    // Портретная ориентация
+} else {  
+    // Горизонтальная ориентация
+}
+
+// Прослушка события изменения ориентации
+mql.addListener(function(m) {
+    if(m.matches) {
+        // Изменено на портретный режим
+        getCoordinateElements()
+    }
+    else {
+        // Изменено на горизонтальный режим
+        getCoordinateElements()
+    }
+});
+
+function getCoordinateElements() {
+    resizeWidthelement();
+    coordBox = boxElements.getBoundingClientRect();
+    coordElement1 = element1.getBoundingClientRect();
+    coordElement2 = element2.getBoundingClientRect();
+    coordElement3 = element3.getBoundingClientRect();
+    coordElement4 = element4.getBoundingClientRect();
+    coordElement5 = element5.getBoundingClientRect();
+    
+    element1.style.left = coordElement1.left - coordBox.left + "px";
+    element1.style.top = coordElement1.top - coordBox.top + "px";
+
+    element2.style.left = coordElement2.left - coordBox.left + "px";
+    element2.style.top = coordElement2.top - coordBox.top + "px";
+
+    element3.style.left = coordElement3.left - coordBox.left + "px";
+    element3.style.top = coordElement3.top - coordBox.top + "px";
+
+    element4.style.left = coordElement4.left - coordBox.left + "px";
+    element4.style.top = coordElement4.top - coordBox.top + "px";
+
+    element5.style.left = coordElement5.left - coordBox.left + "px";
+    element5.style.top = coordElement5.top - coordBox.top + "px";
+}
+
+/* изменение ширины SVG елементов *//////////////////////////////////////////////////////////////////////////////
 var element1СoefWidth = 84 / 576;
 var element2СoefWidth = 299 / 576;
 var element3СoefWidth = 213 / 576;
@@ -90,16 +136,16 @@ resizeWidthelement();
 window.addEventListener("resize", resizeWidthelement);
 
 function resizeWidthelement() {
-    // element1.style.cssText = `width: ${boxElements.clientWidth * element1СoefWidth}px; height: ${boxElements.clientWidth * element1СoefHeight}px;`;
-    // element2.style.cssText = `width: ${boxElements.clientWidth * element2СoefWidth}px; height: ${boxElements.clientWidth * element2СoefHeight}px;`;
-    // element3.style.cssText = `width: ${boxElements.clientWidth * element3СoefWidth}px; height: ${boxElements.clientWidth * element3СoefHeight}px;`;
-    // element4.style.cssText = `width: ${boxElements.clientWidth * element4СoefWidth}px; height: ${boxElements.clientWidth * element4СoefHeight}px;`;
-    // element5.style.cssText = `width: ${boxElements.clientWidth * element5СoefWidth}px; height: ${boxElements.clientWidth * element5СoefHeight}px;`;
-    element1.style.cssText = `width: ${boxElements.clientWidth * element1СoefWidth}px; height: ${boxElements.clientWidth * element1СoefHeight}px; top: 5%; left: 10%;`;
-    element2.style.cssText = `width: ${boxElements.clientWidth * element2СoefWidth}px; height: ${boxElements.clientWidth * element2СoefHeight}px; top: 0%; left: 60%;`;
-    element3.style.cssText = `width: ${boxElements.clientWidth * element3СoefWidth}px; height: ${boxElements.clientWidth * element3СoefHeight}px; top: 65%; left: -5%;`;
-    element4.style.cssText = `width: ${boxElements.clientWidth * element4СoefWidth}px; height: ${boxElements.clientWidth * element4СoefHeight}px; top: 40%; left: 75%;`;
-    element5.style.cssText = `width: ${boxElements.clientWidth * element5СoefWidth}px; height: ${boxElements.clientWidth * element5СoefHeight}px; top: 40%; left: 35%;`;
+    element1.style.cssText = `width: ${boxElements.clientWidth * element1СoefWidth}px; height: ${boxElements.clientWidth * element1СoefHeight}px;`;
+    element2.style.cssText = `width: ${boxElements.clientWidth * element2СoefWidth}px; height: ${boxElements.clientWidth * element2СoefHeight}px;`;
+    element3.style.cssText = `width: ${boxElements.clientWidth * element3СoefWidth}px; height: ${boxElements.clientWidth * element3СoefHeight}px;`;
+    element4.style.cssText = `width: ${boxElements.clientWidth * element4СoefWidth}px; height: ${boxElements.clientWidth * element4СoefHeight}px;`;
+    element5.style.cssText = `width: ${boxElements.clientWidth * element5СoefWidth}px; height: ${boxElements.clientWidth * element5СoefHeight}px;`;
+    // element1.style.cssText = `width: ${boxElements.clientWidth * element1СoefWidth}px; height: ${boxElements.clientWidth * element1СoefHeight}px; top: 5%; left: 10%;`;
+    // element2.style.cssText = `width: ${boxElements.clientWidth * element2СoefWidth}px; height: ${boxElements.clientWidth * element2СoefHeight}px; top: 0%; left: 60%;`;
+    // element3.style.cssText = `width: ${boxElements.clientWidth * element3СoefWidth}px; height: ${boxElements.clientWidth * element3СoefHeight}px; top: 65%; left: -5%;`;
+    // element4.style.cssText = `width: ${boxElements.clientWidth * element4СoefWidth}px; height: ${boxElements.clientWidth * element4СoefHeight}px; top: 40%; left: 75%;`;
+    // element5.style.cssText = `width: ${boxElements.clientWidth * element5СoefWidth}px; height: ${boxElements.clientWidth * element5СoefHeight}px; top: 40%; left: 35%;`;
 };
 
 /* анимирование объектов на телефоне *//////////////////////////////////////////////////////////////////////////////
