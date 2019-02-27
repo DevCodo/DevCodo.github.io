@@ -111,17 +111,6 @@ mql.addListener(function(m) {
     if(m.matches) {
         // Изменено на портретный режим
         getCoordinateElements()
-        window.addEventListener("deviceorientation", function(event) {
-            // alpha: rotation around z-axis (от 0 до 360)
-            var z = event.alpha;
-            // gamma: left to right (от -90 до 90)
-            var y = event.gamma;
-            // beta: front back motion (от -180 до 180)
-            var x = event.beta;
-    
-            handleOrientationEvent(x, y, z, true);
-        });
-    
     }
     else {
         // Изменено на горизонтальный режим
@@ -167,7 +156,7 @@ function getCoordinateElements() {
 
 /* анимирование объектов на телефоне *//////////////////////////////////////////////////////////////////////////////
 
-/* if (window.DeviceOrientationEvent) {
+if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
         // alpha: rotation around z-axis (от 0 до 360)
         var z = event.alpha;
@@ -178,7 +167,7 @@ function getCoordinateElements() {
 
         handleOrientationEvent(x, y, z);
     });
-} */
+}
 
 var handleOrientationEvent = function(x, y, z, orientation) {
 
