@@ -93,22 +93,8 @@ var mql = window.matchMedia("(orientation: portrait)");
 
 if(mql.matches) {  
     // Портретная ориентация
-    window.addEventListener("deviceorientation", function(event) {
-        var z = event.alpha;
-        var y = event.gamma;
-        var x = event.beta;
-
-        handleOrientationEvent(x, y, z);
-    });
 } else {  
     // Горизонтальная ориентация
-    window.addEventListener("deviceorientation", function(event) {
-        var z = event.alpha;
-        var x = event.gamma;
-        var y = event.beta;
-
-        handleOrientationEvent(x, y, z);
-    });
 }
 
 // Прослушка события изменения ориентации
@@ -116,10 +102,25 @@ mql.addListener(function(m) {
     if(m.matches) {
         // Изменено на портретный режим
         getCoordinateElements()
+        window.addEventListener("deviceorientation", function(event) {
+            var z = event.alpha;
+            var y = event.gamma;
+            var x = event.beta;
+    
+            handleOrientationEvent(x, y, z);
+        });
     }
     else {
         // Изменено на горизонтальный режим
         getCoordinateElements()
+        window.addEventListener("deviceorientation", function(event) {
+            var z = event.alpha;
+            var x = event.gamma;
+            var y = event.beta;
+    
+            handleOrientationEvent(x, y, z);
+        });
+        
     }
 });
 
@@ -150,7 +151,7 @@ function getCoordinateElements() {
 
 /* анимирование объектов на телефоне *//////////////////////////////////////////////////////////////////////////////
 
-/* if (window.DeviceOrientationEvent) {
+if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
         // alpha: rotation around z-axis (от 0 до 360)
         var z = event.alpha;
@@ -161,7 +162,7 @@ function getCoordinateElements() {
 
         handleOrientationEvent(x, y, z);
     });
-} */
+}
 
 var handleOrientationEvent = function(x, y, z) {
 
@@ -186,7 +187,7 @@ var handleOrientationEvent = function(x, y, z) {
 
 /* Видимость кейсов *//////////////////////////////////////////////////////////////////////////////
 
-var $case = $(".works__item");
+var $case = $(".works__item")
 
 
 
