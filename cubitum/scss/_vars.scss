@@ -11,6 +11,7 @@ $gray: #777777;
 $lightgray: #ECECEC;
 
 $padding: 12px;
+$padding-mobile: 25px;
 
 $breakpoints-sm: 480px;
 $breakpoints-md: 768px;
@@ -49,7 +50,7 @@ font-size: 26px;
 }
 
 @media only screen and (max-width : $breakpoints-lg) {
-    $padding: 25px;
+    
 }
 
 @media only screen and (max-width : $breakpoints-md) {

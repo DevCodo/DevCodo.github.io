@@ -119,35 +119,80 @@
 }
 
 .feedback__box-mobile {
-	display: flex;
+	display: none;
 	flex-direction: column;
-	background: $blue;
-	border-radius: 15px;
+	background: $white;
 	flex-wrap: wrap;
 	position: relative;
-	justify-content: space-between;
-	padding: 47px 50px;
+	justify-content: center;
+	padding: 36px;
+	box-shadow: 0px 0px 15px rgba(11, 132, 255, 0.25);
+	border-radius: 5px;
+	margin-top: 30px;
 }
 
 .feedback__box-mobile__item {
 	display: inline-flex;
 	align-items: center;
+	&:nth-child(2) {
+		margin-left: -8px;
+	}
+	
+}
+
+.case__item__separator {
+    background: #CBCBCB;
+    height: 1px;
+    margin: 25px 0 25px;
 }
 
 .feedback__box-mobile__item-text {
-	margin-left: 12px;
+	margin-left: 33px;
 	font-family: PT Sans;
 	line-height: 18px;
 	font-size: 18px;
 	color: $text;
-	&1 {
-		width: 155px;
-	}
-	&2 {
-		width: 190px;
-	}
-	&3 {
-		width: 153px;
+}
+
+.feedback__form-mobile {
+	display: none;
+	margin-top: 52px;
+}
+
+.feedback__form-mobile__telefon {
+	background: linear-gradient(105.62deg, #F8FDFF 30.59%, #E8F2FF 71.45%);
+	box-shadow: inset 0px 0px 8px #0075FF;
+	border-radius: 5px;
+	height: 53px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.feedback__form-mobile__telefon_text {
+	font-family: PT Sans;
+	font-size: 14px;
+	color: $text;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+.feedback__form-mobile__submit {
+	@extend %button_mobile;
+	display: block;
+	width: 100%;
+	margin: 11px 0 5px;
+}
+
+.feedback__box-mobile__privacy-policy {
+	text-align: center;
+	a {
+		font-family: PT Sans;
+		line-height: 22px;
+		font-size: 12px;
+		text-decoration-line: underline;
+		color: $text;
 	}
 }
 
@@ -195,17 +240,45 @@
 }
 
 @media only screen and (max-width : $breakpoints-lg) {
-
+	.container {
+		padding: 0 $padding-mobile;
+	}
+	.feedback {
+		margin: 60px 0 112px;
+	}
 }
 
 @media only screen and (max-width : $breakpoints-md) {
-	.feedback__box {
+	.feedback__box,
+	.feedback__description {
 		display: none;
+	}
+	.feedback__box-mobile {
+		display: flex;
+	}
+	.feedback__form-mobile {
+		display: block;
 	}
 }
 
 @media only screen and (max-width : $breakpoints-sm) {
-
+	.feedback__form-mobile__telefon {
+		justify-content: start;
+		&_text {
+			padding: 0 34px;
+		}
+	}
+	.feedback__box-mobile__item-text {
+		&1 {
+			width: 155px;
+		}
+		&2 {
+			width: 190px;
+		}
+		&3 {
+			width: 153px;
+		}
+	}
 }
 
 

@@ -564,7 +564,7 @@ header {
   }
 }
 
-.description__order-button, .works__button-show-case {
+.description__order-button, .works__button-show-case, .feedback__form-mobile__submit {
   font-family: PT Sans;
   font-weight: bold;
   line-height: 53px;
@@ -586,7 +586,7 @@ header {
           user-select: none;
 }
 
-.description__order-button:hover, .works__button-show-case:hover {
+.description__order-button:hover, .works__button-show-case:hover, .feedback__form-mobile__submit:hover {
   background: -webkit-linear-gradient(346.86deg, #10a2f7 30.59%, #004ca3 71.45%);
   background: -o-linear-gradient(346.86deg, #10a2f7 30.59%, #004ca3 71.45%);
   background: linear-gradient(103.14deg, #10a2f7 30.59%, #004ca3 71.45%);
@@ -1326,27 +1326,27 @@ main {
 }
 
 .feedback__box-mobile {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #0075FF;
-  -webkit-border-radius: 15px;
-          border-radius: 15px;
+  background: #FFFFFF;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   position: relative;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 47px 50px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 36px;
+  -webkit-box-shadow: 0px 0px 15px rgba(11, 132, 255, 0.25);
+          box-shadow: 0px 0px 15px rgba(11, 132, 255, 0.25);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-top: 30px;
 }
 
 .feedback__box-mobile__item {
@@ -1360,24 +1360,74 @@ main {
           align-items: center;
 }
 
+.feedback__box-mobile__item:nth-child(2) {
+  margin-left: -8px;
+}
+
+.case__item__separator {
+  background: #CBCBCB;
+  height: 1px;
+  margin: 25px 0 25px;
+}
+
 .feedback__box-mobile__item-text {
-  margin-left: 12px;
+  margin-left: 33px;
   font-family: PT Sans;
   line-height: 18px;
   font-size: 18px;
   color: #2F3349;
 }
 
-.feedback__box-mobile__item-text1 {
-  width: 155px;
+.feedback__form-mobile {
+  display: none;
+  margin-top: 52px;
 }
 
-.feedback__box-mobile__item-text2 {
-  width: 190px;
+.feedback__form-mobile__telefon {
+  background: -webkit-linear-gradient(344.38deg, #F8FDFF 30.59%, #E8F2FF 71.45%);
+  background: -o-linear-gradient(344.38deg, #F8FDFF 30.59%, #E8F2FF 71.45%);
+  background: linear-gradient(105.62deg, #F8FDFF 30.59%, #E8F2FF 71.45%);
+  -webkit-box-shadow: inset 0px 0px 8px #0075FF;
+          box-shadow: inset 0px 0px 8px #0075FF;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  height: 53px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.feedback__box-mobile__item-text3 {
-  width: 153px;
+.feedback__form-mobile__telefon_text {
+  font-family: PT Sans;
+  font-size: 14px;
+  color: #2F3349;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.feedback__form-mobile__submit {
+  display: block;
+  width: 100%;
+  margin: 11px 0 5px;
+}
+
+.feedback__box-mobile__privacy-policy {
+  text-align: center;
+}
+
+.feedback__box-mobile__privacy-policy a {
+  font-family: PT Sans;
+  line-height: 22px;
+  font-size: 12px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #2F3349;
 }
 
 .footer_wrapper {
@@ -1424,9 +1474,49 @@ main {
   color: #FFFFFF;
 }
 
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0 25px;
+  }
+  .feedback {
+    margin: 60px 0 112px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
-  .feedback__box {
+  .feedback__box,
+  .feedback__description {
     display: none;
+  }
+  .feedback__box-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .feedback__form-mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .feedback__form-mobile__telefon {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .feedback__form-mobile__telefon_text {
+    padding: 0 34px;
+  }
+  .feedback__box-mobile__item-text1 {
+    width: 155px;
+  }
+  .feedback__box-mobile__item-text2 {
+    width: 190px;
+  }
+  .feedback__box-mobile__item-text3 {
+    width: 153px;
   }
 }
 
