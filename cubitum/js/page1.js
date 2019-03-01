@@ -193,6 +193,12 @@ window.addEventListener("resize", hiddenItems);
 
 var condition = true;
 
+window.addEventListener("load", function() {
+    condition = true;
+    hiddenItems();
+});
+
+
 $(".works__button-show-case").click(function() {
 
     if ($(".works__item[hidden]").length < 5) {
