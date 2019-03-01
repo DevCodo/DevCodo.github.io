@@ -191,6 +191,8 @@ hiddenItems();
 
 window.addEventListener("resize", hiddenItems);
 
+var condition = true;
+
 $(".works__button-show-case").click(function() {
 
     if ($(".works__item[hidden]").length < 5) {
@@ -208,16 +210,20 @@ function hiddenItems() {
     if (window.innerWidth > 1024) {
         $(".works__item").prop("hidden", false);
         $(".works__button-show-case").css("display", "none");
+        condition = true;
     } else if (window.innerWidth <= 1024){
 
-        if($(".works__item").length > 4) {
+        if (condition) {
+            condition = false;
+            if($(".works__item").length > 4) {
 
-            $(".works__item:gt(3)").prop("hidden", true);
-            $(".works__button-show-case").css("display", "block");
+                $(".works__item:gt(3)").prop("hidden", true);
+                $(".works__button-show-case").css("display", "block");
 
-        } else {
+            } else {
 
-            $(".works__button-show-case").css("display", "none");
+                $(".works__button-show-case").css("display", "none");
+            }
         }
     }
 };
