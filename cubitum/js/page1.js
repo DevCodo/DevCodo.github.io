@@ -191,31 +191,34 @@ hiddenItems();
 
 window.addEventListener("resize", hiddenItems);
 
+$(".works__button-show-case").click(function() {
+
+    if ($(".works__item[hidden]").length < 5) {
+
+        $(".works__item[hidden]:lt(4)").prop("hidden", false);
+        $(".works__button-show-case").css("display", "none");
+
+    } else {
+        
+        $(".works__item[hidden]:lt(4)").prop("hidden", false);
+    }
+});
+
 function hiddenItems() {
     if (window.innerWidth > 1024) {
         $(".works__item").prop("hidden", false);
         $(".works__button-show-case").css("display", "none");
     } else if (window.innerWidth <= 1024){
+
         if($(".works__item").length > 4) {
 
             $(".works__item:gt(3)").prop("hidden", true);
             $(".works__button-show-case").css("display", "block");
 
-            $(".works__button-show-case").click(function() {
-                if ($(".works__item[hidden]").length < 5) {
-                    $(".works__item[hidden]:lt(4)").prop("hidden", false);
-                    $(".works__button-show-case").css("display", "none");
-                } else {
-                    $(".works__item[hidden]:lt(4)").prop("hidden", false);
-                }
-               
-            });
         } else {
+
             $(".works__button-show-case").css("display", "none");
         }
-        
-
-
     }
 };
 

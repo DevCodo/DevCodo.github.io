@@ -22,21 +22,16 @@
 .feedback__box {
 	display: flex;
 	background: $blue;
-	min-height: 136px;
 	border-radius: 15px;
 	flex-wrap: wrap;
 	position: relative;
 	justify-content: space-between;
-	padding: 0 50px;
+	padding: 47px 50px;
 }
 
 .feedback__box__item {
 	display: inline-flex;
 	align-items: center;
-}
-
-.feedback__box__item-logo {
-	
 }
 
 .feedback__box__item-text {
@@ -57,7 +52,7 @@
 }
 
 .feedback__form {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 }
@@ -123,6 +118,40 @@
 	}
 }
 
+.feedback__box-mobile {
+	display: flex;
+	flex-direction: column;
+	background: $blue;
+	border-radius: 15px;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: space-between;
+	padding: 47px 50px;
+}
+
+.feedback__box-mobile__item {
+	display: inline-flex;
+	align-items: center;
+}
+
+.feedback__box-mobile__item-text {
+	margin-left: 12px;
+	font-family: PT Sans;
+	line-height: 18px;
+	font-size: 18px;
+	color: $text;
+	&1 {
+		width: 155px;
+	}
+	&2 {
+		width: 190px;
+	}
+	&3 {
+		width: 153px;
+	}
+}
+
+
 // footer //////////////////////////////////////////////////////////////////////////////////////////////
 
 .footer_wrapper {
@@ -170,9 +199,25 @@
 }
 
 @media only screen and (max-width : $breakpoints-md) {
-
+	.feedback__box {
+		display: none;
+	}
 }
 
 @media only screen and (max-width : $breakpoints-sm) {
 
+}
+
+
+@media only screen and (max-width : 1300px) {
+	.feedback__box {
+		justify-content: space-around;
+		padding-top: 0;
+	}
+	.feedback__box__item {
+		margin-top: 47px;
+	}
+	.feedback__form {
+		margin-top: 47px;
+	}
 }
