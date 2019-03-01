@@ -22,7 +22,7 @@
 }
 
 main {
-    flex: 1;
+    flex-grow: 1;
 }
 
 .main_wrapper {
@@ -270,6 +270,7 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	max-width: 100%;
 }
 
 .works__item {

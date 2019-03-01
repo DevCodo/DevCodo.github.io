@@ -3,7 +3,7 @@ $(function() {
 
 /* управление кнопкой кейсов *//////////////////////////////////////////////////////////////////////////////
 
-var works = document.getElementsByClassName("works__box")[0];
+var works = document.querySelector(".works__box");
 
 $('.works__element').click(function() {
     $('html, body').animate({scrollTop: works.getBoundingClientRect().top + window.pageYOffset - 100},500);
