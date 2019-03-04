@@ -9,12 +9,15 @@ main {
 	display: flex;
 	flex-direction: column;
     padding-top: 96px;
+    max-width: 1716px;
 }
 
 // CASE //////////////////////////////////////////////////////////////////////////////////////////////
 
 .case {
     padding: 100px 0 0px;
+    position: relative;
+    display: flex;
 }
 
 .case__box {
@@ -22,11 +25,12 @@ main {
     justify-content: space-between;
     position: relative;
     align-items: flex-start;
-    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .case__info {
-    max-width: 720px;
+    // max-width: 720px;
+    padding-right: 30px;
 }
 
 .case__header {
@@ -48,6 +52,7 @@ main {
     border-radius: 20px;
     position: relative;
     background: $backgroundHead;
+    flex-shrink: 0;
 }
 
 .case__description__content {
@@ -102,9 +107,9 @@ main {
 
 .case__nav {
     width: 113px;
-    position: absolute;
+    position: relative;
     text-align: center;
-    top: calc(50% - 85px);
+    top: 150px;
     cursor: pointer;
     user-select: none;
     &:hover #nav-element1{
@@ -119,11 +124,13 @@ main {
 }
 
 .case__nav1 {
-    left: -183px;
+    margin-right: 70px;
+    // left: -183px;
 }
 
 .case__nav2 {
-    right: -183px;
+    margin-left: 70px;
+    // right: -183px;
 }
 
 .case__nav__element {
@@ -215,15 +222,27 @@ main {
 
 
 @media only screen and (max-width : $breakpoints-xl) {
-
+    .case__box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .case__info {
+        width: 100%;
+        padding-right: 0;
+    }
+    .case__description {
+        margin: 50px 0;
+    }
 }
 
 @media only screen and (max-width : $breakpoints-lg) {
-
+    .case__nav {
+        display: none;
+    }
 }
 
 @media only screen and (max-width : $breakpoints-md) {
-
+    
 }
 
 @media only screen and (max-width : $breakpoints-sm) {

@@ -187,6 +187,7 @@
 
 .feedback__box-mobile__privacy-policy {
 	text-align: center;
+	display: none;
 	a {
 		font-family: PT Sans;
 		line-height: 22px;
@@ -257,6 +258,9 @@
 		display: flex;
 	}
 	.feedback__form-mobile {
+		display: block;
+	}
+	.feedback__box-mobile__privacy-policy {
 		display: block;
 	}
 }

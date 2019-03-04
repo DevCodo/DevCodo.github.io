@@ -2,24 +2,7 @@
 
 // MAIN  //////////////////////////////////////////////////////////////////////////////////////////////
 
-%button_mobile {
-	font-family: PT Sans;
-	font-weight: bold;
-	line-height: 53px;
-	text-align: center;
-	font-size: 18px;
-	background: linear-gradient(105.53deg, #2FB4FF 30.59%, #0075FF 71.45%);
-	border-radius: 5px;
-	color: $white;
-	height: 53px;
-	width: 327px;
-	display: none;
-	cursor: pointer;
-	user-select: none;
-	&:hover {
-		background: linear-gradient(103.14deg, rgb(16, 162, 247) 30.59%, rgb(0, 76, 163) 71.45%);
-	}
-}
+
 
 main {
     flex-grow: 1;

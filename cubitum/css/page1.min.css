@@ -508,6 +508,34 @@ header {
   color: #FFFFFF;
 }
 
+.description__order-button, .works__button-show-case, .feedback__form-mobile__submit {
+  font-family: PT Sans;
+  font-weight: bold;
+  line-height: 53px;
+  text-align: center;
+  font-size: 18px;
+  background: -webkit-linear-gradient(344.47deg, #2FB4FF 30.59%, #0075FF 71.45%);
+  background: -o-linear-gradient(344.47deg, #2FB4FF 30.59%, #0075FF 71.45%);
+  background: linear-gradient(105.53deg, #2FB4FF 30.59%, #0075FF 71.45%);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  color: #FFFFFF;
+  height: 53px;
+  width: 327px;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.description__order-button:hover, .works__button-show-case:hover, .feedback__form-mobile__submit:hover {
+  background: -webkit-linear-gradient(346.86deg, #10a2f7 30.59%, #004ca3 71.45%);
+  background: -o-linear-gradient(346.86deg, #10a2f7 30.59%, #004ca3 71.45%);
+  background: linear-gradient(103.14deg, #10a2f7 30.59%, #004ca3 71.45%);
+}
+
 @media only screen and (max-width: 1024px) {
   header {
     height: 60px;
@@ -562,34 +590,6 @@ header {
     -webkit-border-radius: 0;
             border-radius: 0;
   }
-}
-
-.description__order-button, .works__button-show-case, .feedback__form-mobile__submit {
-  font-family: PT Sans;
-  font-weight: bold;
-  line-height: 53px;
-  text-align: center;
-  font-size: 18px;
-  background: -webkit-linear-gradient(344.47deg, #2FB4FF 30.59%, #0075FF 71.45%);
-  background: -o-linear-gradient(344.47deg, #2FB4FF 30.59%, #0075FF 71.45%);
-  background: linear-gradient(105.53deg, #2FB4FF 30.59%, #0075FF 71.45%);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  color: #FFFFFF;
-  height: 53px;
-  width: 327px;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.description__order-button:hover, .works__button-show-case:hover, .feedback__form-mobile__submit:hover {
-  background: -webkit-linear-gradient(346.86deg, #10a2f7 30.59%, #004ca3 71.45%);
-  background: -o-linear-gradient(346.86deg, #10a2f7 30.59%, #004ca3 71.45%);
-  background: linear-gradient(103.14deg, #10a2f7 30.59%, #004ca3 71.45%);
 }
 
 main {
@@ -1420,6 +1420,7 @@ main {
 
 .feedback__box-mobile__privacy-policy {
   text-align: center;
+  display: none;
 }
 
 .feedback__box-mobile__privacy-policy a {
@@ -1496,6 +1497,9 @@ main {
     display: flex;
   }
   .feedback__form-mobile {
+    display: block;
+  }
+  .feedback__box-mobile__privacy-policy {
     display: block;
   }
 }
