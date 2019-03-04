@@ -2084,6 +2084,8 @@ textarea:focus {
 	-webkit-box-align: end;
 	-ms-flex-align: end;
 	align-items: flex-end;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
 }
 
 .roto_image img {
@@ -2231,6 +2233,8 @@ textarea:focus {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
 }
 
 /*------------------AIK--------------------*/
@@ -3131,13 +3135,15 @@ textarea:focus {
 	-o-border-radius: 50%;
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
+/* 	display: flex;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
-	align-items: center;
+	align-items: center; */
+	display: inline-block;
+	padding-left: 14px;
 	cursor: pointer;
 }
 
@@ -4118,6 +4124,7 @@ textarea:focus {
 	position: absolute;
 	top: -73px;
 	z-index: 100;
+	left: 0;
 }
 
 .tab_board {
@@ -7736,7 +7743,7 @@ iframe {
 	}
 
 	.door_slider_wrapper {
-		width: 100%;
+		/* width: 100%; */
 	}
 
 	.uteplenie_balkona {
@@ -8200,6 +8207,10 @@ iframe {
 }
 
 @media screen and (max-width: 960px) {
+	.vhodnye_slider_wrapper .simple_circle {
+		left: calc(0% + 16px);
+	}
+
 	.gorshok2 {
 		display: none;
 	}
@@ -8617,6 +8628,9 @@ iframe {
 }
 
 @media screen and (max-width: 767px) {
+	.door_slider {
+		margin-left: 25px;
+	}
 	.steklo_vhodnye .big_desc {
 		top: 40px;
 		left: -15px;
@@ -11143,6 +11157,7 @@ img.lg-image {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
+
 
 	.osob_slider_helper.plus.pl {
 		margin-bottom: 25px;
