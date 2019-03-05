@@ -159,7 +159,7 @@ main {
 	}
 }
 
-// CASE //////////////////////////////////////////////////////////////////////////////////////////////
+// CASE-SHOW //////////////////////////////////////////////////////////////////////////////////////////////
 
 .case-show {
     position: relative;
@@ -242,7 +242,12 @@ main {
 }
 
 @media only screen and (max-width : $breakpoints-md) {
-    
+    main {
+        overflow: hidden;
+    }
+    .case__description {
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width : $breakpoints-sm) {

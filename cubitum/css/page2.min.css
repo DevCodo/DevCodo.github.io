@@ -863,6 +863,15 @@ main {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  main {
+    overflow: hidden;
+  }
+  .case__description {
+    max-width: 100%;
+  }
+}
+
 @media only screen and (max-width: 1362px) {
   .works__box {
     -webkit-box-pack: center;
