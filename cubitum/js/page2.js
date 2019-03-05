@@ -58,10 +58,10 @@ $(function () {
     var xUp = evt.touches[0].clientX;
     var xDiff = xDown - xUp;
 
-    if (xDiff > 0) {
+    if (xDiff > 20) {
       /* left swipe */
       nextCase();
-    } else if (xDiff) {
+    } else if (xDiff < -20) {
       /* right swipe */
       prevCase();
     }
