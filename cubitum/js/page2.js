@@ -69,7 +69,6 @@ $(function () {
 
 
     xDown = null;
-    yDown = null;
   }
 
   ;
