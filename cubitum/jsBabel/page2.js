@@ -36,8 +36,8 @@ $(function () {
   }
 
   ;
-  /* переключение кейсов свайпом*/
-  ////////////////////////////////////////////////////////////////////////
+  /* переключение кейсов свайпом*/////////////////////////////////////////////////////////////////////////
+  
   // Вешаем на прикосновение функцию handleTouchStart
 
   $(".case").on('touchstart', handleTouchStart); // А на движение пальцем по экрану - handleTouchMove      
@@ -56,10 +56,10 @@ $(function () {
     var xUp = evt.touches[0].clientX;
     var xDiff = xDown - xUp;
 
-    if (xDiff > 30) {
+    if (xDiff > 0) {
       /* left swipe */
       nextCase();
-    } else if (xDiff < -30) {
+    } else if (xDiff ) {
       /* right swipe */
       prevCase();
     }
