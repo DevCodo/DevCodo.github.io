@@ -150,6 +150,7 @@ body input:required:valid, body textarea:required:valid {
   padding: 0;
   margin: 0;
   font-size: 0;
+  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .container {
@@ -210,10 +211,6 @@ header {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .header__button-menu__item {
@@ -250,12 +247,6 @@ header {
 
 .header__button__call img {
   margin: auto;
-}
-
-.header__button-menu,
-.header__logo,
-.header__button__call {
-  outline: none;
 }
 
 .header__nav-menu {
