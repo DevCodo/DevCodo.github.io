@@ -248,6 +248,12 @@ header {
   margin: auto;
 }
 
+.header__button-menu__item,
+.header__logo,
+.header__button__call {
+  outline: none;
+}
+
 .header__nav-menu {
   display: -webkit-box;
   display: -webkit-flex;

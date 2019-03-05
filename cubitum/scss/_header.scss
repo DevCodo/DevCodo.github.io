@@ -108,6 +108,12 @@ header {
 	}
 }
 
+.header__button-menu__item,
+.header__logo,
+.header__button__call {
+	outline: none;
+}
+
 .header__nav-menu {
 	display: flex;
 	user-select: none;
