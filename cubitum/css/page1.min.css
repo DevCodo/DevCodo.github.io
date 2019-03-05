@@ -211,6 +211,8 @@ header {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #e7e6cd;
+  tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .header__button-menu__item {

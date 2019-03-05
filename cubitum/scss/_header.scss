@@ -79,6 +79,8 @@ header {
 	cursor: pointer;
 	flex-direction: column;
 	justify-content: space-between;
+	background: rgb(231, 230, 205);
+	tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .header__button-menu__item {
