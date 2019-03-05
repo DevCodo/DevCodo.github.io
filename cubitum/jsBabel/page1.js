@@ -1,5 +1,3 @@
-"use strict";
-
 $(function () {
   /* управление кнопкой кейсов */
   /////////////////////////////////////////////////////////////////////////////
@@ -9,6 +7,7 @@ $(function () {
       scrollTop: works.getBoundingClientRect().top + window.pageYOffset - 100
     }, 500);
   });
+  
   /* анимирование объектов */
   /////////////////////////////////////////////////////////////////////////////
 
@@ -73,11 +72,11 @@ $(function () {
   window.addEventListener("resize", resizeWidthelement);
 
   function resizeWidthelement() {
-    element1.style.cssText = "width: ".concat(boxElements.clientWidth * element1СoefWidth, "px; height: ").concat(boxElements.clientWidth * element1СoefHeight, "px;");
-    element2.style.cssText = "width: ".concat(boxElements.clientWidth * element2СoefWidth, "px; height: ").concat(boxElements.clientWidth * element2СoefHeight, "px;");
-    element3.style.cssText = "width: ".concat(boxElements.clientWidth * element3СoefWidth, "px; height: ").concat(boxElements.clientWidth * element3СoefHeight, "px;");
-    element4.style.cssText = "width: ".concat(boxElements.clientWidth * element4СoefWidth, "px; height: ").concat(boxElements.clientWidth * element4СoefHeight, "px;");
-    element5.style.cssText = "width: ".concat(boxElements.clientWidth * element5СoefWidth, "px; height: ").concat(boxElements.clientWidth * element5СoefHeight, "px;");
+    element1.style.cssText = `width: ${boxElements.clientWidth * element1СoefWidth}px; height: ${boxElements.clientWidth * element1СoefHeight}px;`;
+    element2.style.cssText = `width: ${boxElements.clientWidth * element2СoefWidth}px; height: ${boxElements.clientWidth * element2СoefHeight}px;`;
+    element3.style.cssText = `width: ${boxElements.clientWidth * element3СoefWidth}px; height: ${boxElements.clientWidth * element3СoefHeight}px;`;
+    element4.style.cssText = `width: ${boxElements.clientWidth * element4СoefWidth}px; height: ${boxElements.clientWidth * element4СoefHeight}px;`;
+    element5.style.cssText = `width: ${boxElements.clientWidth * element5СoefWidth}px; height: ${boxElements.clientWidth * element5СoefHeight}px;`;
   }
 
   ;
@@ -89,7 +88,6 @@ $(function () {
   if (mql.matches) {// Портретная ориентация
   } else {} // Горизонтальная ориентация
   // Прослушка события изменения ориентации
-
 
   mql.addListener(function (m) {
     if (m.matches) {
@@ -148,7 +146,7 @@ $(function () {
     });
   }
 
-  var handleOrientationEvent = function handleOrientationEvent(x, y, z) {
+  var handleOrientationEvent = function (x, y, z) {
     if (x > 90) {
       x = 90;
     }

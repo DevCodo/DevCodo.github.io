@@ -1,6 +1,5 @@
-"use strict";
-
 $(function () {
+
   /* управление шапкой */
   /////////////////////////////////////////////////////////////////////////////
   window.addEventListener("scroll", function (event) {

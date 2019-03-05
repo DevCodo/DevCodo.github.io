@@ -1,0 +1,80 @@
+$default-font: "Gilroy", sans-serif;
+$accent: orange;
+$text: #2F3349;
+$backgroundHead: #F7F7F7;
+$backgroundFooter: #F1F1F1;
+$backgroundCopy: #52566D;
+$blue: #0075FF;
+$pink: #FF5A96;
+$white: #FFFFFF;
+$gray: #777777;
+$lightgray: #ECECEC;
+
+$padding: 12px;
+$padding-mobile: 25px;
+
+$breakpoints-sm: 480px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 1024px;
+$breakpoints-xl: 1400px;
+
+$width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
+$width-xl: 1350px;
+
+h1 {
+font-size: 54px;    
+}
+
+h2 {
+font-size: 47px;
+}
+
+h3 {
+font-size: 31px;    
+}
+
+h4 {
+font-size: 28px;
+font-weight: normal;   
+}
+
+P {
+font-size: 26px;    
+}
+
+@media only screen and (max-width : $breakpoints-xl) {
+
+}
+
+@media only screen and (max-width : $breakpoints-lg) {
+    
+}
+
+@media only screen and (max-width : $breakpoints-md) {
+
+}
+
+@media only screen and (max-width : $breakpoints-sm) {
+    h1 {
+        font-size: 23px;    
+        }
+        
+        h2 {
+        font-size: 23px;
+        }
+        
+        h3 {
+        font-size: 31px;    
+        }
+        
+        h4 {
+        font-size: 16px;
+        }
+        
+        P {
+        font-size: 26px;    
+        }
+}
+
