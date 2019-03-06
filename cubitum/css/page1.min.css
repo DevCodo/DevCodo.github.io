@@ -537,6 +537,12 @@ header {
   background: linear-gradient(103.14deg, #10a2f7 30.59%, #004ca3 71.45%);
 }
 
+@media only screen and (max-width: 1400px) {
+  .container {
+    max-width: 1008px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   header {
     height: 60px;
@@ -629,6 +635,7 @@ main {
 .description__header {
   line-height: 72px;
   color: #0075FF;
+  margin: 0;
 }
 
 .description__text {
@@ -1526,7 +1533,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1400px) {
   .feedback__box {
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;

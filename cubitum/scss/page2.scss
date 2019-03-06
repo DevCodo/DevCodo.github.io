@@ -222,7 +222,7 @@ main {
 
 
 @media only screen and (max-width : $breakpoints-xl) {
-    .case__box {
+  /*   .case__box {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -232,7 +232,7 @@ main {
     }
     .case__description {
         margin: 50px 0;
-    }
+    } */
 }
 
 @media only screen and (max-width : $breakpoints-lg) {
