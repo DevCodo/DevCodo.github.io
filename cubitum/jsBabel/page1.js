@@ -1,5 +1,16 @@
 $(function () {
 
+var cauntNum = 0
+  $(".feedback__form__telefon_text").on("keyup", function(e) {
+    if(cauntNum === 0) {
+      cauntNum++;
+      if ( e.key == "8" ) {
+          this.value = "";
+      }
+    }
+      
+  }) 
+
   /* управление кнопкой кейсов */
   /////////////////////////////////////////////////////////////////////////////
   var works = document.querySelector(".works__box");

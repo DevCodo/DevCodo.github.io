@@ -49,6 +49,8 @@ $(function () {
     xDown = evt.touches[0].clientX;
   }
 
+  ;
+
   function handleTouchMove(evt) {
     if (!xDown) return;
     var xUp = evt.touches[0].clientX;
@@ -65,6 +67,7 @@ $(function () {
 
 
     xDown = null;
+    yDown = null;
   }
 
   ;
