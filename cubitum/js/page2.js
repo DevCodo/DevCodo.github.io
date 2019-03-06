@@ -21,8 +21,6 @@ $(function () {
     }
   }
 
-  ;
-
   function prevCase() {
     var $sectionNow = $(".case__info__content:not([hidden])");
     var indexNow = $(".case__info__content").index($sectionNow);
@@ -36,11 +34,9 @@ $(function () {
       $(".case-show__mackbook__iframe, .case-show__iphone__iframe").attr("src", $sections.eq($sections.length - 1).attr("src"));
     }
   }
-
-  ;
   /* переключение кейсов свайпом*/
   ////////////////////////////////////////////////////////////////////////
-  // Вешаем на прикосновение функцию handleTouchStart
+
 
   $(".case").on('touchstart', handleTouchStart); // А на движение пальцем по экрану - handleTouchMove      
 
@@ -51,30 +47,22 @@ $(function () {
     xDown = evt.touches[0].clientX;
   }
 
-  ;
-
   function handleTouchMove(evt) {
     if (!xDown) return;
     var xUp = evt.touches[0].clientX;
     var xDiff = xDown - xUp;
 
     if (xDiff > 20) {
-      /* left swipe */
       nextCase();
     } else if (xDiff < -20) {
-      /* right swipe */
       prevCase();
     }
-    /* reset values */
-
 
     xDown = null;
-    yDown = null;
   }
-
-  ;
   /* управление шириной iframe */
   ////////////////////////////////////////////////////////////////////////
+
 
   var $iframeMac = $(".case-show__mackbook__iframe");
   var $iframeIphone = $(".case-show__iphone__iframe");
