@@ -27,14 +27,12 @@ main {
 }
 
 .description__header {
-	line-height: 72px;
 	color: $blue;
 	margin: 0;
 }
 
 .description__text {
 	font-family: PT Sans;
-	line-height: 43px;
 	color: $text;
 	margin-top: 19px;
 }
@@ -228,15 +226,12 @@ main {
 }
 
 .works__header {
-	line-height: 42px;
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: $text;
 }
 
 .works__header_mobile {
-	line-height: 31px;
-	font-size: 23px;
 	color: #0075FF;
 	font-weight: bold;
 	display: none;
@@ -449,12 +444,6 @@ main {
 	.main_wrapper {
 		// margin-top: -160px;
 	}
-	.description__header {
-		line-height: 31px;
-	}
-	.description__text {
-		line-height: 25px;
-	}
 	.description__form__wrapper {
 		width: 100%;
 	}
@@ -491,7 +480,7 @@ main {
 	}
 }
 
-@media only screen and (max-width : 1040px) {
+@media only screen and (max-width : 1050px) {
     .works__box {
 		width: 669px;
 	}

@@ -202,11 +202,11 @@ var cauntNum = 0
   });
 
   function hiddenItems() {
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1050) {
       $(".works__item").prop("hidden", false);
       $(".works__button-show-case").css("display", "none");
       condition = true;
-    } else if (window.innerWidth <= 1024) {
+    } else if (window.innerWidth <= 1050) {
       if (condition) {
         condition = false;
 

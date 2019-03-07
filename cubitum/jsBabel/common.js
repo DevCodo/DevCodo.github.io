@@ -20,4 +20,6 @@ $(function () {
       $(".header__button-menu__item").removeClass("header__button-menu__item_active");
     }
   });
+
+
 });

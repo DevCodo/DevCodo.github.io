@@ -128,7 +128,8 @@
 	padding: 36px;
 	box-shadow: 0px 0px 15px rgba(11, 132, 255, 0.25);
 	border-radius: 5px;
-	margin-top: 30px;
+	margin: 30px auto 0;
+	width: 54%;
 }
 
 .feedback__box-mobile__item {
@@ -156,7 +157,9 @@
 
 .feedback__form-mobile {
 	display: none;
-	margin-top: 52px;
+	margin: 52px auto 0;
+	width: 62%;
+
 }
 
 .feedback__form-mobile__telefon {
@@ -247,9 +250,6 @@
 	.feedback {
 		margin: 60px 0 112px;
 	}
-}
-
-@media only screen and (max-width : $breakpoints-md) {
 	.feedback__box,
 	.feedback__description {
 		display: none;
@@ -262,6 +262,16 @@
 	}
 	.feedback__box-mobile__privacy-policy {
 		display: block;
+	}
+
+}
+
+@media only screen and (max-width : $breakpoints-md) {
+	.feedback__form-mobile {
+		width: 100%;
+	}
+	.feedback__box-mobile {
+		width: auto;
 	}
 }
 

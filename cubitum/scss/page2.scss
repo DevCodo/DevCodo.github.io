@@ -1,163 +1,7 @@
 @import "header";
-
-// MAIN  //////////////////////////////////////////////////////////////////////////////////////////////
-main {
-    flex-grow: 1;
-}
-
-.main_wrapper {
-	display: flex;
-	flex-direction: column;
-    padding-top: 96px;
-    max-width: 1716px;
-}
-
-// CASE //////////////////////////////////////////////////////////////////////////////////////////////
-
-.case {
-    padding: 100px 0 0px;
-    position: relative;
-    display: flex;
-}
-
-.case__box {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: flex-start;
-    margin-bottom: 50px;
-}
-
-.case__info {
-    // max-width: 720px;
-    padding-right: 30px;
-}
-
-.case__header {
-    color: $blue;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.case__info__text {
-    font-family: PT Sans;
-    line-height: 42px;
-    color: $text;
-    margin-bottom: 40px;
-}
-
-.case__description {
-    margin-top: 75px;
-    max-width: 500px;
-    border-radius: 20px;
-    position: relative;
-    background: $backgroundHead;
-    flex-shrink: 0;
-}
-
-.case__description__content {
-    padding: 30px 50px;
-}
-
-.case__description__header {
-    line-height: 35px;
-    color: $pink;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.case__item {
-
-}
-
-.case__item__parametr {
-    font-family: PT Sans;
-    line-height: 34px;
-    font-size: 21px;
-    color: $text;
-    display: inline-block;
-    width: 110px;
-}
-
-.case__item__description {
-    font-family: PT Sans;
-    line-height: 34px;
-    font-size: 21px;
-    color: $text;
-    display: inline-block;
-}
-
-.case__item__separator {
-    background: #CBCBCB;
-    height: 1px;
-    margin: 30px 0 45px;
-}
-
-.case__description__element1 {
-    position: absolute;
-    top: 0;
-    right: -80px;
-}
-
-.case__description__element2{
-    position: absolute;
-    bottom: -80px;
-    left: -10px;
-}
-
-.case__nav {
-    width: 113px;
-    position: relative;
-    text-align: center;
-    top: 150px;
-    cursor: pointer;
-    user-select: none;
-    &:hover #nav-element1{
-        fill : #3995ff;
-    }
-    &:hover #nav-element2{
-        fill : #3995ff;
-    }
-    &:hover .case__nav__text{
-        color : rgb(153, 153, 153);
-    }
-}
-
-.case__nav1 {
-    margin-right: 70px;
-    // left: -183px;
-}
-
-.case__nav2 {
-    margin-left: 70px;
-    // right: -183px;
-}
-
-.case__nav__element {
-    
-}
-
-.case__nav__text {
-    line-height: 26px;
-    font-size: 18px;
-    text-align: center;
-    color: #CCCCCC;
-    margin-top: 32px;
-}
+@import "main";
 
 
-.case__info__content, .case__description__content {
-    animation: visibly 1.5s;
-}
-
-@keyframes visibly {
-	1% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
 
 // CASE-SHOW //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -222,45 +66,19 @@ main {
 
 
 @media only screen and (max-width : $breakpoints-xl) {
-  /*   .case__box {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .case__info {
-        width: 100%;
-        padding-right: 0;
-    }
-    .case__description {
-        margin: 50px 0;
-    } */
+
 }
 
 @media only screen and (max-width : $breakpoints-lg) {
-    .case__nav {
-        display: none;
-    }
+
 }
 
 @media only screen and (max-width : $breakpoints-md) {
-    main {
-        overflow: hidden;
-    }
-    .case__description {
-        max-width: 100%;
-    }
+
 }
 
 @media only screen and (max-width : $breakpoints-sm) {
 
-}
-
-@media only screen and (max-width : $width-xl + $padding) {
-    .works__box {
-		justify-content: center;
-	}
-	.works__item {
-		margin: 9px;
-	}
 }
 
 @import "footer";
