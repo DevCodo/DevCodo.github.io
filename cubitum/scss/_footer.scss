@@ -179,6 +179,7 @@
 	border: none;
 	outline: none;
 	background: transparent;
+	text-align: center;
 }
 
 .feedback__form-mobile__submit {
@@ -277,7 +278,7 @@
 
 @media only screen and (max-width : $breakpoints-sm) {
 	.feedback__form-mobile__telefon {
-		justify-content: start;
+		// justify-content: start;
 		&_text {
 			padding: 0 34px;
 		}

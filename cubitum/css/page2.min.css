@@ -1201,6 +1201,7 @@ main {
   border: none;
   outline: none;
   background: transparent;
+  text-align: center;
 }
 
 .feedback__form-mobile__submit {
@@ -1302,12 +1303,6 @@ main {
 }
 
 @media only screen and (max-width: 480px) {
-  .feedback__form-mobile__telefon {
-    -webkit-box-pack: start;
-    -webkit-justify-content: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
   .feedback__form-mobile__telefon_text {
     padding: 0 34px;
   }

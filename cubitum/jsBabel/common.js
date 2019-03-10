@@ -8,8 +8,7 @@ $(function () {
       $("header").css("backgroundColor", "#fff");
     }
   });
-  /* открытие, закрытие меню */
-  /////////////////////////////////////////////////////////////////////////////
+  /* открытие, закрытие меню *//////////////////////////////////////////////////////////////////////////////
 
   $("main, .nav-menu__call, .nav-menu__batton-close, header, footer").click(function (event) {
     if (event.target.classList.contains("header__button-menu__item") || event.target.classList.contains("header__button-menu")) {
@@ -21,5 +20,55 @@ $(function () {
     }
   });
 
+/* обработка воода телефона в форму *//////////////////////////////////////////////////////////////////////////////
 
-});
+  function setSelectionRange(input, selectionStart, selectionEnd) {
+    if (input.setSelectionRange) {
+      input.focus();
+      input.setSelectionRange(selectionStart, selectionEnd);
+    }
+    else if (input.createTextRange) {
+      var range = input.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', selectionEnd);
+      range.moveStart('character', selectionStart);
+      range.select();
+    }
+  }
+
+  $(".tel").each(function() {
+    $(this).mask("+7(999) 999-9999");
+
+    $(this).on("click", function() {
+      setSelectionRange(this, 3, 3)
+    }) 
+    $(this).on("keyup", function() {
+      if ( $(this).val() == "+7(8__) ___-____" ) {
+        var e = $.Event("keydown", { keyCode: 8}); 
+        $(this).trigger(e);
+      }
+    })
+  })
+
+ /* передача телефона из формы *////////////////////////////////////////////////////////////////////////////// 
+
+  $(".form_callback").submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "../script/callBack.php",
+      data: $(this).serialize(),
+      // contentType: false,
+      // cache: false,
+      // processData: false,
+      success: function(result) {
+        $(".tel").val("");
+			  alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+      },
+      error: function() { // Данные не отправлены
+        alert("Данные не отправлены");;
+      }
+    })
+  })
+
+}); 

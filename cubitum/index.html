@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-
-	<title>cubitum</title>
-	<meta name="description" content="">
-
+  <head>
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+    
+    <title>cubitum</title>
+    <meta name="description" content="">
+    
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
@@ -19,9 +18,9 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
-
+  
 	<link rel="stylesheet" href="css/page1.min.css">
-
+  
 	<script src="js/scripts.min.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/page1.js"></script>
@@ -29,20 +28,20 @@
 </head>
 
 <body>
-
-<!-- HEADER ----------------------------------------------------------->
-
-<header>
-	<div class="header_wrapper container">
-		<div class="header__button-menu_wrapper">
-			<div class="header__button-menu">
-			<div class="header__button-menu__item header__button-menu__item1"></div>
-			<div class="header__button-menu__item header__button-menu__item2"></div>
-			<div class="header__button-menu__item header__button-menu__item3"></div>
-			</div>
-
-			<div class="header__logo">
-				<a href="/">
+  
+  <!-- HEADER ----------------------------------------------------------->
+  
+  <header>
+    <div class="header_wrapper container">
+      <div class="header__button-menu_wrapper">
+        <div class="header__button-menu">
+          <div class="header__button-menu__item header__button-menu__item1"></div>
+          <div class="header__button-menu__item header__button-menu__item2"></div>
+          <div class="header__button-menu__item header__button-menu__item3"></div>
+        </div>
+        
+        <div class="header__logo">
+          <a href="/">
 					<img src="img/logo.svg" alt="logo">
 				</a>
 			</div>
@@ -111,21 +110,17 @@
 				<h1 class="description__header">Создаем сайты, порталы интернет - магазины</h1>
 				<h4 class="description__text">Закажите сайт всего от 25.000 руб</h4>
 				<div class="description__form__wrapper">
-					<div class="description__form">
-						
-						<div class="description__form__telefon">
 
+					<form class="description__form form_callback">
+						<label for="description__form__telefon_text" class="description__form__telefon">
 							<div class="description__form__telefon_round">
 								<img src="img/telephone.svg" alt="">
 							</div>
-
-							<input class="description__form__telefon_text" type="text" size="22" placeholder="Введите номер телефона">
-
-						</div>
-						
+							<input class="description__form__telefon_text tel" name="phone" id="description__form__telefon_text" type="text" size="22" placeholder="Введите номер телефона">
+						</label>
 						<input class="description__form__submit" type="submit" value="Заказать сайт">
-						
-					</div>
+					</form>
+					
 					<div class="description__order-button">Заказать сайт</div>
 					<div class="description__request">
 						<p>Оставьте заявку и дождитесь звонка специалиста, это не займет много времени</p>
@@ -330,13 +325,13 @@
 				<div class="feedback__box__item-text feedback__box__item-text3">Делаем в срок, регулярные отчеты</div>
 			</div>
 			
-			<form action="" method="post" class="feedback__form">
-				<div class="feedback__form__telefon">
+			<form class="feedback__form form_callback">
+				<label for="feedback__form__telefon_text" class="feedback__form__telefon">
 					<div class="feedback__form__telefon_round">
 						<img src="img/telephone.svg" alt="">
 					</div>
-					<input class="feedback__form__telefon_text" type="text" size="22" placeholder="Введите номер телефона">
-				</div>
+					<input class="feedback__form__telefon_text tel" name="phone" id="feedback__form__telefon_text" type="text" size="22" placeholder="Введите номер телефона">
+				</label>
 				<input class="feedback__form__submit" type="submit" value="Заказать сайт">
 			</form>
 
@@ -372,10 +367,10 @@
 				<div class="feedback__box-mobile__item-text feedback__box-mobile__item-text3">Делаем в срок, регулярные отчеты</div>
 			</div>
 		</div>
-		<form action="" method="post" class="feedback__form-mobile">
-			<div class="feedback__form-mobile__telefon">
-				<input class="feedback__form-mobile__telefon_text" type="text" size="20" placeholder="Введите номер телефона">
-			</div>
+		<form class="feedback__form-mobile form_callback">
+			<label for="feedback__form-mobile__telefon_text" class="feedback__form-mobile__telefon">
+				<input class="feedback__form-mobile__telefon_text tel" name="phone" id="feedback__form-mobile__telefon_text" type="text" size="20" placeholder="Введите номер телефона">
+			</label>
 			<input class="feedback__form-mobile__submit" type="submit" value="Заказать сайт">
 		</form>
 		<div class="feedback__box-mobile__privacy-policy">
