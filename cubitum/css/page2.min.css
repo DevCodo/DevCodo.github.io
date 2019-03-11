@@ -805,8 +805,8 @@ main {
 }
 
 .case__info__content, .case__description__content {
-  -webkit-animation: visibly 1.5s;
-          animation: visibly 1.5s;
+  -webkit-animation: visibly 2.5s;
+          animation: visibly 2.5s;
 }
 
 @-webkit-keyframes visibly {

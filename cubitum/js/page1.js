@@ -1,16 +1,6 @@
+"use strict";
+
 $(function () {
-
-var cauntNum = 0
-  $(".feedback__form__telefon_text").on("keyup", function(e) {
-    if(cauntNum === 0) {
-      cauntNum++;
-      if ( e.key == "8" ) {
-          this.value = "";
-      }
-    }
-      
-  }) 
-
   /* управление кнопкой кейсов */
   /////////////////////////////////////////////////////////////////////////////
   var works = document.querySelector(".works__box");
@@ -19,7 +9,6 @@ var cauntNum = 0
       scrollTop: works.getBoundingClientRect().top + window.pageYOffset - 100
     }, 500);
   });
-  
   /* анимирование объектов */
   /////////////////////////////////////////////////////////////////////////////
 
@@ -84,11 +73,11 @@ var cauntNum = 0
   window.addEventListener("resize", resizeWidthelement);
 
   function resizeWidthelement() {
-    element1.style.cssText = `width: ${boxElements.clientWidth * element1СoefWidth}px; height: ${boxElements.clientWidth * element1СoefHeight}px;`;
-    element2.style.cssText = `width: ${boxElements.clientWidth * element2СoefWidth}px; height: ${boxElements.clientWidth * element2СoefHeight}px;`;
-    element3.style.cssText = `width: ${boxElements.clientWidth * element3СoefWidth}px; height: ${boxElements.clientWidth * element3СoefHeight}px;`;
-    element4.style.cssText = `width: ${boxElements.clientWidth * element4СoefWidth}px; height: ${boxElements.clientWidth * element4СoefHeight}px;`;
-    element5.style.cssText = `width: ${boxElements.clientWidth * element5СoefWidth}px; height: ${boxElements.clientWidth * element5СoefHeight}px;`;
+    element1.style.cssText = "width: ".concat(boxElements.clientWidth * element1СoefWidth, "px; height: ").concat(boxElements.clientWidth * element1СoefHeight, "px;");
+    element2.style.cssText = "width: ".concat(boxElements.clientWidth * element2СoefWidth, "px; height: ").concat(boxElements.clientWidth * element2СoefHeight, "px;");
+    element3.style.cssText = "width: ".concat(boxElements.clientWidth * element3СoefWidth, "px; height: ").concat(boxElements.clientWidth * element3СoefHeight, "px;");
+    element4.style.cssText = "width: ".concat(boxElements.clientWidth * element4СoefWidth, "px; height: ").concat(boxElements.clientWidth * element4СoefHeight, "px;");
+    element5.style.cssText = "width: ".concat(boxElements.clientWidth * element5СoefWidth, "px; height: ").concat(boxElements.clientWidth * element5СoefHeight, "px;");
   }
 
   ;
@@ -100,6 +89,7 @@ var cauntNum = 0
   if (mql.matches) {// Портретная ориентация
   } else {} // Горизонтальная ориентация
   // Прослушка события изменения ориентации
+
 
   mql.addListener(function (m) {
     if (m.matches) {
@@ -158,7 +148,7 @@ var cauntNum = 0
     });
   }
 
-  var handleOrientationEvent = function (x, y, z) {
+  var handleOrientationEvent = function handleOrientationEvent(x, y, z) {
     if (x > 90) {
       x = 90;
     }

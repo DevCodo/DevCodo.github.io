@@ -1,8 +1,21 @@
 $(function () {
+  
   /* переключение кейсов */////////////////////////////////////////////////////////////////////////
   var $sections = $(".case__info__content");
   $(".case__nav2").on("click", nextCase);
   $(".case__nav1").on("click", prevCase);
+
+  showCase()
+
+  function showCase() {
+    $('html, body').animate({scrollTop: 0});
+    let url = location.href
+    let caseId = url.slice(url.lastIndexOf("#"));
+    let indexNow = $(".case__info__content").index($(caseId));
+    $(`.case__info__content:eq(${indexNow}), .case__description__content:eq(${indexNow})`).prop("hidden", false);
+    $(`.case-show__mackbook__iframe, .case-show__iphone__iframe`).attr("src", $sections.eq(indexNow).attr("src"));
+  }
+
 
   function nextCase() {
     let $sectionNow = $(".case__info__content:not([hidden])");
