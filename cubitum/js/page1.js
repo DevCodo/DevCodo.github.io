@@ -181,6 +181,7 @@ $(function () {
   window.addEventListener("load", function () {
     condition = true;
     hiddenItems();
+    getCoordinateElements();
   });
   $(".works__button-show-case").click(function () {
     if ($(".works__item[hidden]").length < 5) {
