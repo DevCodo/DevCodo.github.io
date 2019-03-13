@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+.container {
+    width: 300px;
+    overflow: hidden;
+    background: #000;
+    /* height: 200px; */
+    position: relative;
+}
+.slider {
+    position: relative;
+    width: 900px;
+    left: 0;
+}
