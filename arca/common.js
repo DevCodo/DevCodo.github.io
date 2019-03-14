@@ -60,6 +60,78 @@ $container.on("mousemove", function(e) {
     
 })
 
+var xDown;
+$container.on('touchstart', touchStart);
+function touchStart(e) {
+    xDown = e.originalEvent.changedTouches[0].clientX;
+    $container.on('touchmove', touchMove);
+}
+
+function touchMove(e) {
+    e.preventDefault();
+    var $thisSlider = $(this).find(".slider");
+    var $ItemsRotater = $(this).find(".rotater").children();
+    var xUp = e.originalEvent.changedTouches[0].clientX;
+    var xDiff = xDown - xUp;
+    var item = 0;
+
+    if (xDiff > 100) {
+        if (parseInt($thisSlider.css("left")) > -$(this).width() * ($ItemsRotater.length -1)) {
+
+            $container.off('touchmove', touchMove);
+            $slider.animate({
+                left: parseInt($thisSlider.css("left")) - 300 + "px"
+            }, 500);
+            setTimeout(changeRotater.bind(this, $thisSlider), 600);
+        }
+    } else if (xDiff < -100) {
+        if (parseInt($thisSlider.css("left")) < 0) {
+
+            $container.off('touchmove', touchMove);
+            $slider.animate({
+                left: parseInt($thisSlider.css("left")) + 300 + "px"
+              }, 500);
+              setTimeout(changeRotater.bind(this, $thisSlider), 600);
+        }
+    }
+}
+
+function changeRotater($thisSlider) {
+    var posLeft = parseInt($thisSlider.css("left"));
+    var $container = $thisSlider .parent();
+    var $ItemsRotater = $container.find(".rotater").children();
+
+    if (posLeft == -$container.width()) {
+        $ItemsRotater.eq(0).removeClass("item_active");
+        $ItemsRotater.eq(1).addClass("item_active");
+        $ItemsRotater.eq(2).removeClass("item_active");
+    }
+    if (posLeft == -$container.width() * 2) {
+        $ItemsRotater.eq(1).removeClass("item_active");
+        $ItemsRotater.eq(2).addClass("item_active");
+        $ItemsRotater.eq(3).removeClass("item_active");
+    }
+    if (posLeft == -$container.width() * 3) {
+        $ItemsRotater.eq(2).removeClass("item_active");
+        $ItemsRotater.eq(3).addClass("item_active");
+        $ItemsRotater.eq(4).removeClass("item_active");
+    }
+    if (posLeft == -$container.width() * 4) {
+        $ItemsRotater.eq(3).removeClass("item_active");
+        $ItemsRotater.eq(4).addClass("item_active");
+        $ItemsRotater.eq(5).addClass("item_active");
+    }
+    if (posLeft == -$container.width() * 5) {
+        $ItemsRotater.eq(4).removeClass("item_active");
+        $ItemsRotater.eq(5).addClass("item_active");
+    }
+    if (posLeft == 0) {
+        $ItemsRotater.eq($ItemsRotater.length).removeClass("item_active");
+        $ItemsRotater.eq(0).addClass("item_active");
+        $ItemsRotater.eq(1).removeClass("item_active");
+    }
+}
+
 // $container.on("touchmove", function(e) {
 //     // e.preventDefault();
 //     console.log(e.touches[0].clientX)
@@ -153,35 +225,8 @@ function mouseUp(e) {
 //         }
 //     })
 // })
-var xDown;
-$container.on('touchstart', touchStart);
-function touchStart(e) {
-    xDown = e.originalEvent.changedTouches[0].clientX;
-    $container.on('touchmove', touchMove);
-}
 
-function touchMove(e) {
-    e.preventDefault();
-    var $thisSlider = $(this).find(".slider");
-    var xUp = e.originalEvent.changedTouches[0].clientX;
-    var xDiff = xDown - xUp;
-    
-    if (xDiff > 100) {
-        $container.off('touchmove', touchMove);
-        $slider.animate({
-            left: parseInt($thisSlider.css("left")) - 300 + "px"
-          }, 500);
-    } else if (xDiff < -100) {
-        $container.off('touchmove', touchMove);
-        $slider.animate({
-            left: parseInt($thisSlider.css("left")) + 300 + "px"
-          }, 500);
-    }
-}
 
-function touchEnd(e) {
-    
-}
 
 /* var xDown;
 $container.on('touchstart', touchStart);
