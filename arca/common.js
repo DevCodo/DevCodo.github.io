@@ -1,5 +1,7 @@
 $(function() {
-var $container = $(".container");
+
+var slider_proizvodstvo = (function(){
+    var $container = $(".container");
 var $slider = $(".slider");
 // var slider = document.querySelector(".slider");
 var $img = $slider.children();
@@ -24,38 +26,33 @@ $container.on("mousemove", function(e) {
 
     if (e.offsetX > $container.width() / $children.length && e.offsetX < $container.width() / $children.length * 2) {
         $thisSlider.css("left", (-1 * $container.width()) + "px");
-        $ItemsRotater.eq(0).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(1).addClass("item_active");
-        $ItemsRotater.eq(2).removeClass("item_active");
     }
     if (e.offsetX > $container.width() / $children.length * 2 && e.offsetX < $container.width() / $children.length * 3) {
         $thisSlider.css("left", (-2 * $container.width()) + "px");
-        $ItemsRotater.eq(1).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(2).addClass("item_active");
-        $ItemsRotater.eq(3).removeClass("item_active");
     }
     if (e.offsetX > $container.width() / $children.length * 3 && e.offsetX < $container.width() / $children.length * 4) {
         $thisSlider.css("left", (-3 * $container.width()) + "px");
-        $ItemsRotater.eq(2).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(3).addClass("item_active");
-        $ItemsRotater.eq(4).removeClass("item_active");
     }
     if (e.offsetX > $container.width() / $children.length * 4 && e.offsetX < $container.width() / $children.length * 5) {
         $thisSlider.css("left", (-4 * $container.width()) + "px");
-        $ItemsRotater.eq(3).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(4).addClass("item_active");
-        $ItemsRotater.eq(5).addClass("item_active");
     }
     if (e.offsetX > $container.width() / $children.length * 5) {
         $thisSlider.css("left", (-5 * $container.width()) + "px");
-        $ItemsRotater.eq(4).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(5).addClass("item_active");
     }
     if (e.offsetX < $container.width() / $children.length) {
         $thisSlider.css("left", "0px");
-        $ItemsRotater.eq($children.length).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(0).addClass("item_active");
-        $ItemsRotater.eq(1).removeClass("item_active");
     }
     
 })
@@ -102,35 +99,32 @@ function changeRotater($thisSlider) {
     var $ItemsRotater = $container.find(".rotater").children();
 
     if (posLeft == -$container.width()) {
-        $ItemsRotater.eq(0).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(1).addClass("item_active");
-        $ItemsRotater.eq(2).removeClass("item_active");
     }
     if (posLeft == -$container.width() * 2) {
-        $ItemsRotater.eq(1).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(2).addClass("item_active");
-        $ItemsRotater.eq(3).removeClass("item_active");
     }
     if (posLeft == -$container.width() * 3) {
-        $ItemsRotater.eq(2).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(3).addClass("item_active");
-        $ItemsRotater.eq(4).removeClass("item_active");
     }
     if (posLeft == -$container.width() * 4) {
-        $ItemsRotater.eq(3).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(4).addClass("item_active");
-        $ItemsRotater.eq(5).addClass("item_active");
     }
     if (posLeft == -$container.width() * 5) {
-        $ItemsRotater.eq(4).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(5).addClass("item_active");
     }
     if (posLeft == 0) {
-        $ItemsRotater.eq($ItemsRotater.length).removeClass("item_active");
+        $ItemsRotater.removeClass("item_active");
         $ItemsRotater.eq(0).addClass("item_active");
-        $ItemsRotater.eq(1).removeClass("item_active");
     }
 }
+
+})();
 
 // $container.on("touchmove", function(e) {
 //     // e.preventDefault();
