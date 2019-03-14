@@ -67,6 +67,7 @@ if (!('ontouchstart' in document.documentElement)) {
         e.preventDefault();
         var $thisSlider = $(this).find(".slider");
         var $ItemsRotater = $(this).find(".rotater").children();
+        var posLeft = parseInt($thisSlider.css("left"));
         var xUp = e.originalEvent.changedTouches[0].clientX;
         var xDiff = xDown - xUp;
 
@@ -76,8 +77,28 @@ if (!('ontouchstart' in document.documentElement)) {
                 $container.off('touchmove', touchMove);
                 $slider.animate({
                     left: parseInt($thisSlider.css("left")) - 300 + "px"
-                }, 300);
-                setTimeout(changeRotater.bind(this, $thisSlider), 310);
+                }, 250);
+                // setTimeout(changeRotater.bind(this, $thisSlider), 310);
+                if (posLeft == 0) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(1).addClass("item_active");
+                }
+                if (posLeft == -$container.width()) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(2).addClass("item_active");
+                }
+                if (posLeft == -$container.width() * 2) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(3).addClass("item_active");
+                }
+                if (posLeft == -$container.width() * 3) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(4).addClass("item_active");
+                }
+                if (posLeft == -$container.width() * 4) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(5).addClass("item_active");
+                }
             }
         } else if (xDiff < -100) {
             if (parseInt($thisSlider.css("left")) < 0) {
@@ -85,13 +106,33 @@ if (!('ontouchstart' in document.documentElement)) {
                 $container.off('touchmove', touchMove);
                 $slider.animate({
                     left: parseInt($thisSlider.css("left")) + 300 + "px"
-                }, 300);
-                setTimeout(changeRotater.bind(this, $thisSlider), 310);
+                }, 250);
+                // setTimeout(changeRotater.bind(this, $thisSlider), 310);
+                if (posLeft == -$container.width()) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(0).addClass("item_active");
+                }
+                if (posLeft == -$container.width() * 2) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(1).addClass("item_active");
+                }
+                if (posLeft == -$container.width() * 3) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(2).addClass("item_active");
+                }
+                if (posLeft == -$container.width() * 4) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(3).addClass("item_active");
+                }
+                if (posLeft == -$container.width() * 5) {
+                    $ItemsRotater.removeClass("item_active");
+                    $ItemsRotater.eq(4).addClass("item_active");
+                }
             }
         }
     }
 
-    function changeRotater($thisSlider) {
+    /* function changeRotater($thisSlider) {
         var posLeft = parseInt($thisSlider.css("left"));
         var $container = $thisSlider .parent();
         var $ItemsRotater = $container.find(".rotater").children();
@@ -120,7 +161,7 @@ if (!('ontouchstart' in document.documentElement)) {
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(0).addClass("item_active");
         }
-    }
+    } */
 
 })();
 
