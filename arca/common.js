@@ -133,26 +133,24 @@ function mouseUp(e) {
 
 
 
-// $container.on('touchstart', function(e) {
-//     var xDown = e.originalEvent.changedTouches[0].clientX;
-//     $container.on('touchmove', function(e) {
-//         var xUp = e.originalEvent.changedTouches[0].clientX;
-//         var xDiff = xDown - xUp;
-//         console.log(works.getBoundingClientRect().left)
+$container.on('touchstart', function(e) {
+    var xDown = e.originalEvent.changedTouches[0].clientX;
+    $container.on('touchmove', function(e) {
+        var $thisSlider = $(this).find(".slider");
+        var xUp = e.originalEvent.changedTouches[0].clientX;
+        var xDiff = xDown - xUp;
 
-//         if (xDiff > 50) {
-//             // $slider.css("left", "0px")
-//             $slider.animate({
-//                 left: works.getBoundingClientRect().left - 300 + "px"
-//               }, 500);
-//         } else if (xDiff < -50) {
-//             // $slider.css("left", "-300px")
-//             $slider.animate({
-//                 left: works.getBoundingClientRect().left + 300 + "px"
-//               }, 500);
-//         }
-//     })
-// })
+        if (xDiff > 100) {
+            $slider.animate({
+                left: parseInt($thisSlider.css("left")) - 300 + "px"
+              }, 500);
+        } else if (xDiff < -100) {
+            $slider.animate({
+                left: parseInt($thisSlider.css("left")) + 300 + "px"
+              }, 500);
+        }
+    })
+})
 
 
 
