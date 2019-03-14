@@ -22,33 +22,34 @@ if (!('ontouchstart' in document.documentElement)) {
         var $thisSlider = $(this).find(".slider");
         var $children = $(this).find("img");
         var $ItemsRotater = $(this).find(".rotater").children();
-
-        if (e.offsetX > $container.width() / $children.length && e.offsetX < $container.width() / $children.length * 2) {
+        var $posContainer = e.clientX - $(".container").offset().left;      /// замена e.offsetX на e.clientX ///!!!!!!!!!!!!!!!!!!!!
+        
+        if ($posContainer > $container.width() / $children.length && $posContainer < $container.width() / $children.length * 2) {
             $thisSlider.css("left", (-1 * $container.width()) + "px");
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(1).addClass("item_active");
         }
-        if (e.offsetX > $container.width() / $children.length * 2 && e.offsetX < $container.width() / $children.length * 3) {
+        if ($posContainer > $container.width() / $children.length * 2 && $posContainer < $container.width() / $children.length * 3) {
             $thisSlider.css("left", (-2 * $container.width()) + "px");
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(2).addClass("item_active");
         }
-        if (e.offsetX > $container.width() / $children.length * 3 && e.offsetX < $container.width() / $children.length * 4) {
+        if ($posContainer > $container.width() / $children.length * 3 && $posContainer < $container.width() / $children.length * 4) {
             $thisSlider.css("left", (-3 * $container.width()) + "px");
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(3).addClass("item_active");
         }
-        if (e.offsetX > $container.width() / $children.length * 4 && e.offsetX < $container.width() / $children.length * 5) {
+        if ($posContainer > $container.width() / $children.length * 4 && $posContainer < $container.width() / $children.length * 5) {
             $thisSlider.css("left", (-4 * $container.width()) + "px");
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(4).addClass("item_active");
         }
-        if (e.offsetX > $container.width() / $children.length * 5) {
+        if ($posContainer > $container.width() / $children.length * 5) {
             $thisSlider.css("left", (-5 * $container.width()) + "px");
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(5).addClass("item_active");
         }
-        if (e.offsetX < $container.width() / $children.length) {
+        if ($posContainer < $container.width() / $children.length) {
             $thisSlider.css("left", "0px");
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(0).addClass("item_active");
@@ -61,6 +62,8 @@ if (!('ontouchstart' in document.documentElement)) {
     function touchStart(e) {
         xDown = e.originalEvent.changedTouches[0].clientX;
         $container.on('touchmove', touchMove);
+        console.log(13)
+        $container.off('touchstart', touchStart);               ///!!!!!!!!!!!!!!!!!!!!
     }
 
     function touchMove(e) {
@@ -70,16 +73,18 @@ if (!('ontouchstart' in document.documentElement)) {
         var posLeft = parseInt($thisSlider.css("left"));
         var xUp = e.originalEvent.changedTouches[0].clientX;
         var xDiff = xDown - xUp;
+        
+      
+
 
         if (xDiff > 100) {
             if (parseInt($thisSlider.css("left")) > -$(this).width() * ($ItemsRotater.length -1)) {
-
                 $container.off('touchmove', touchMove);
                 $slider.animate({
                     left: parseInt($thisSlider.css("left")) - 300 + "px"
-                }, 250);
-                // setTimeout(changeRotater.bind(this, $thisSlider), 310);
-                if (posLeft == 0) {
+                }, 200);
+                setTimeout(changeRotater.bind(this, $thisSlider), 250);
+             /*    if (posLeft == 0) {
                     $ItemsRotater.removeClass("item_active");
                     $ItemsRotater.eq(1).addClass("item_active");
                 }
@@ -98,17 +103,16 @@ if (!('ontouchstart' in document.documentElement)) {
                 if (posLeft == -$container.width() * 4) {
                     $ItemsRotater.removeClass("item_active");
                     $ItemsRotater.eq(5).addClass("item_active");
-                }
+                } */
             }
         } else if (xDiff < -100) {
             if (parseInt($thisSlider.css("left")) < 0) {
-
-                $container.off('touchmove', touchMove);
+                $container.off('touchmove', touchMove); 
                 $slider.animate({
                     left: parseInt($thisSlider.css("left")) + 300 + "px"
-                }, 250);
-                // setTimeout(changeRotater.bind(this, $thisSlider), 310);
-                if (posLeft == -$container.width()) {
+                }, 200);
+                setTimeout(changeRotater.bind(this, $thisSlider), 250);
+            /*     if (posLeft == -$container.width()) {
                     $ItemsRotater.removeClass("item_active");
                     $ItemsRotater.eq(0).addClass("item_active");
                 }
@@ -127,15 +131,16 @@ if (!('ontouchstart' in document.documentElement)) {
                 if (posLeft == -$container.width() * 5) {
                     $ItemsRotater.removeClass("item_active");
                     $ItemsRotater.eq(4).addClass("item_active");
-                }
+                } */
             }
         }
     }
 
-    /* function changeRotater($thisSlider) {
-        var posLeft = parseInt($thisSlider.css("left"));
-        var $container = $thisSlider .parent();
-        var $ItemsRotater = $container.find(".rotater").children();
+    function changeRotater($thisSlider) {
+      var posLeft = parseInt($thisSlider.css("left"));
+      var $container = $thisSlider.parent();
+      var $ItemsRotater = $container.find(".rotater").children();
+      $container.on('touchstart', touchStart);                                 ///!!!!!!!!!!!!!!!!!!!!
 
         if (posLeft == -$container.width()) {
             $ItemsRotater.removeClass("item_active");
@@ -161,7 +166,7 @@ if (!('ontouchstart' in document.documentElement)) {
             $ItemsRotater.removeClass("item_active");
             $ItemsRotater.eq(0).addClass("item_active");
         }
-    } */
+    }
 
 })();
 
