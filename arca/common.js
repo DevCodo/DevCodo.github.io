@@ -3,23 +3,61 @@ var $container = $(".container");
 var $slider = $(".slider");
 // var slider = document.querySelector(".slider");
 var $img = $slider.children();
-var $rotater = $("rotater");
-
-$img.css("width", $container.width());
-$slider.css("width", $container.width() * $img.length)
+$img.css("width", $container.width());                     //задаем ширину картинкам
+$slider.css("width", $container.width() * $img.length)     // задаем ширину слайдеру
+$container.each(function() {                               // cоздаем item в ротатере                
+    var $children = $(this).find("img");
+    var $rotater = $(this).find(".rotater");
+    for(let i = 0; i < $children.length; i++) {
+        $rotater.append('<div class="item"></div>')
+    }
+    var $ItemsRotater = $rotater.children();
+    $ItemsRotater.css("width", $rotater.width() / $children.length - 10 + "px");
+    $ItemsRotater.eq(0).addClass("item_active")
+})
 
 
 $container.on("mousemove", function(e) {
     var $thisSlider = $(this).find(".slider");
-    if (e.offsetX > 100 && e.offsetX < 200) {
-        $thisSlider.css("left", "-300px")
+    var $children = $(this).find("img");
+    var $ItemsRotater = $(this).find(".rotater").children();
+
+    if (e.offsetX > $container.width() / $children.length && e.offsetX < $container.width() / $children.length * 2) {
+        $thisSlider.css("left", (-1 * $container.width()) + "px");
+        $ItemsRotater.eq(0).removeClass("item_active");
+        $ItemsRotater.eq(1).addClass("item_active");
+        $ItemsRotater.eq(2).removeClass("item_active");
     }
-    if (e.offsetX > 200) {
-        $thisSlider.css("left", "-600px")
+    if (e.offsetX > $container.width() / $children.length * 2 && e.offsetX < $container.width() / $children.length * 3) {
+        $thisSlider.css("left", (-2 * $container.width()) + "px");
+        $ItemsRotater.eq(1).removeClass("item_active");
+        $ItemsRotater.eq(2).addClass("item_active");
+        $ItemsRotater.eq(3).removeClass("item_active");
     }
-    if (e.offsetX < 100) {
-        $thisSlider.css("left", "0px")
+    if (e.offsetX > $container.width() / $children.length * 3 && e.offsetX < $container.width() / $children.length * 4) {
+        $thisSlider.css("left", (-3 * $container.width()) + "px");
+        $ItemsRotater.eq(2).removeClass("item_active");
+        $ItemsRotater.eq(3).addClass("item_active");
+        $ItemsRotater.eq(4).removeClass("item_active");
     }
+    if (e.offsetX > $container.width() / $children.length * 4 && e.offsetX < $container.width() / $children.length * 5) {
+        $thisSlider.css("left", (-4 * $container.width()) + "px");
+        $ItemsRotater.eq(3).removeClass("item_active");
+        $ItemsRotater.eq(4).addClass("item_active");
+        $ItemsRotater.eq(5).addClass("item_active");
+    }
+    if (e.offsetX > $container.width() / $children.length * 5) {
+        $thisSlider.css("left", (-5 * $container.width()) + "px");
+        $ItemsRotater.eq(4).removeClass("item_active");
+        $ItemsRotater.eq(5).addClass("item_active");
+    }
+    if (e.offsetX < $container.width() / $children.length) {
+        $thisSlider.css("left", "0px");
+        $ItemsRotater.eq($children.length).removeClass("item_active");
+        $ItemsRotater.eq(0).addClass("item_active");
+        $ItemsRotater.eq(1).removeClass("item_active");
+    }
+    
 })
 
 // $container.on("touchmove", function(e) {
@@ -95,26 +133,26 @@ function mouseUp(e) {
 
 
 
-$container.on('touchstart', function(e) {
-    var xDown = e.originalEvent.changedTouches[0].clientX;
-    $container.on('touchmove', function(e) {
-        var xUp = e.originalEvent.changedTouches[0].clientX;
-        var xDiff = xDown - xUp;
-        console.log(works.getBoundingClientRect().left)
+// $container.on('touchstart', function(e) {
+//     var xDown = e.originalEvent.changedTouches[0].clientX;
+//     $container.on('touchmove', function(e) {
+//         var xUp = e.originalEvent.changedTouches[0].clientX;
+//         var xDiff = xDown - xUp;
+//         console.log(works.getBoundingClientRect().left)
 
-        if (xDiff > 50) {
-            // $slider.css("left", "0px")
-            $slider.animate({
-                left: works.getBoundingClientRect().left - 300 + "px"
-              }, 500);
-        } else if (xDiff < -50) {
-            // $slider.css("left", "-300px")
-            $slider.animate({
-                left: works.getBoundingClientRect().left + 300 + "px"
-              }, 500);
-        }
-    })
-})
+//         if (xDiff > 50) {
+//             // $slider.css("left", "0px")
+//             $slider.animate({
+//                 left: works.getBoundingClientRect().left - 300 + "px"
+//               }, 500);
+//         } else if (xDiff < -50) {
+//             // $slider.css("left", "-300px")
+//             $slider.animate({
+//                 left: works.getBoundingClientRect().left + 300 + "px"
+//               }, 500);
+//         }
+//     })
+// })
 
 
 
