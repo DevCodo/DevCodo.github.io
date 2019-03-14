@@ -7,7 +7,7 @@ body {
     position: relative;
 }
 .container {
-    left: 200px;
+    left: 10px;
     top: 100px;
     width: 300px;
     overflow: hidden;

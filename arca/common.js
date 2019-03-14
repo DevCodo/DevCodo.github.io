@@ -135,8 +135,9 @@ function mouseUp(e) {
 
 $container.on('touchstart', function(e) {
     var xDown = e.originalEvent.changedTouches[0].clientX;
+    var $thisSlider = $(this).find(".slider");
     $container.on('touchmove', function(e) {
-        var $thisSlider = $(this).find(".slider");
+        e.preventDefault();
         var xUp = e.originalEvent.changedTouches[0].clientX;
         var xDiff = xDown - xUp;
 
