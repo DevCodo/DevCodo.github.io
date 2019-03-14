@@ -133,29 +133,88 @@ function mouseUp(e) {
 
 
 
-$container.on('touchstart', function(e) {
-    var xDown = e.originalEvent.changedTouches[0].clientX;
+// $container.on('touchstart', function(e) {
+//     var xDown = e.originalEvent.changedTouches[0].clientX;
+//     var $thisSlider = $(this).find(".slider");
+//     $container.on('touchmove', function(e) {
+//         e.preventDefault();
+//         var xUp = e.originalEvent.changedTouches[0].clientX;
+//         var xDiff = xDown - xUp;
+
+//         if (xDiff > 100) {
+//             console.log(parseInt($thisSlider.css("left")))
+//             $slider.animate({
+//                 left: parseInt($thisSlider.css("left")) - 300 + "px"
+//               }, 500);
+//         } else if (xDiff < -100) {
+//             $slider.animate({
+//                 left: parseInt($thisSlider.css("left")) + 300 + "px"
+//               }, 500);
+//         }
+//     })
+// })
+var xDown;
+$container.on('touchstart', touchStart);
+function touchStart(e) {
+    xDown = e.originalEvent.changedTouches[0].clientX;
+    $container.on('touchmove', touchMove);
+}
+
+function touchMove(e) {
+    e.preventDefault();
     var $thisSlider = $(this).find(".slider");
-    $container.on('touchmove', function(e) {
-        e.preventDefault();
-        var xUp = e.originalEvent.changedTouches[0].clientX;
-        var xDiff = xDown - xUp;
+    var xUp = e.originalEvent.changedTouches[0].clientX;
+    var xDiff = xDown - xUp;
+    
+    if (xDiff > 100) {
+        $container.off('touchmove', touchMove);
+        $slider.animate({
+            left: parseInt($thisSlider.css("left")) - 300 + "px"
+          }, 500);
+    } else if (xDiff < -100) {
+        $container.off('touchmove', touchMove);
+        $slider.animate({
+            left: parseInt($thisSlider.css("left")) + 300 + "px"
+          }, 500);
+    }
+}
 
-        if (xDiff > 100) {
-            $slider.animate({
-                left: parseInt($thisSlider.css("left")) - 300 + "px"
-              }, 500);
-        } else if (xDiff < -100) {
-            $slider.animate({
-                left: parseInt($thisSlider.css("left")) + 300 + "px"
-              }, 500);
-        }
-    })
-})
+function touchEnd(e) {
+    
+}
 
+/* var xDown;
+$container.on('touchstart', touchStart);
+function touchStart(e) {
+    xDown = e.originalEvent.changedTouches[0].clientX;
+    $container.on('touchmove', touchMove);
+}
 
+function touchMove(e) {
+    e.preventDefault();
+    var $thisSlider = $(this).find(".slider");
+    var coordSlider = this.getBoundingClientRect().left;
+    var xUp = e.originalEvent.changedTouches[0].clientX;
+    var xDiff = xDown - xUp;
+    console.log(e.originalEvent.changedTouches[0].clientX,coordSlider,xDown)
+    $slider.css("left", e.originalEvent.changedTouches[0].clientX - xDown)
 
+    if (xDiff > 100) {
+        $container.off('touchmove', touchMove);
+        $slider.animate({
+            left: parseInt($thisSlider.css("left")) - 300 + "px"
+          }, 500);
+    } else if (xDiff < -100) {
+        $container.off('touchmove', touchMove);
+        $slider.animate({
+            left: parseInt($thisSlider.css("left")) + 300 + "px"
+          }, 500);
+    }
+}
 
+function touchEnd(e) {
+    
+} */
 
 
 
