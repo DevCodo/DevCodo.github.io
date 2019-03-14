@@ -3,15 +3,38 @@
     margin: 0;
     font-size: 0;
 }
+body {
+    position: relative;
+}
 .container {
+    left: 200px;
+    top: 100px;
     width: 300px;
     overflow: hidden;
-    background: #000;
-    /* height: 200px; */
     position: relative;
+}
+.container2 {
+    left: 700px;
+    top: 0px;
+ 
 }
 .slider {
     position: relative;
-    width: 900px;
     left: 0;
+}
+.rotater {
+    position: relative;
+    height: 10px;
+    bottom: 20px;
+    margin: 0 10px;
+}
+.item {
+    display: inline-block;
+    background: rgb(163, 195, 199);
+    margin: 0 5px;
+    height: 10px;
+    width: calc(100% / 3 - 10px);
+}
+.item_active {
+    background: rgb(117, 164, 218);
 }
