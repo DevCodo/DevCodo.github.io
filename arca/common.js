@@ -69,7 +69,6 @@ if (!('ontouchstart' in document.documentElement)) {
         var $ItemsRotater = $(this).find(".rotater").children();
         var xUp = e.originalEvent.changedTouches[0].clientX;
         var xDiff = xDown - xUp;
-        var item = 0;
 
         if (xDiff > 100) {
             if (parseInt($thisSlider.css("left")) > -$(this).width() * ($ItemsRotater.length -1)) {
@@ -77,8 +76,8 @@ if (!('ontouchstart' in document.documentElement)) {
                 $container.off('touchmove', touchMove);
                 $slider.animate({
                     left: parseInt($thisSlider.css("left")) - 300 + "px"
-                }, 500);
-                setTimeout(changeRotater.bind(this, $thisSlider), 600);
+                }, 300);
+                setTimeout(changeRotater.bind(this, $thisSlider), 310);
             }
         } else if (xDiff < -100) {
             if (parseInt($thisSlider.css("left")) < 0) {
@@ -86,8 +85,8 @@ if (!('ontouchstart' in document.documentElement)) {
                 $container.off('touchmove', touchMove);
                 $slider.animate({
                     left: parseInt($thisSlider.css("left")) + 300 + "px"
-                }, 500);
-                setTimeout(changeRotater.bind(this, $thisSlider), 600);
+                }, 300);
+                setTimeout(changeRotater.bind(this, $thisSlider), 310);
             }
         }
     }
