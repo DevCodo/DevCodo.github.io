@@ -1,0 +1,178 @@
+body, html, .container {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #cfcfcf;
+}
+
+.container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input {
+	outline: none;
+}
+
+.authorization {
+	background: #999;
+	width: 250px;
+	/*height: 250px;*/
+	border-radius: 20px;
+}
+
+.authorization__form {
+	padding-top: 30px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.authorization__item {
+	margin: 10px;
+	display: inline-block;
+}
+
+.authorization__input {
+	text-align: center;
+	height: 25px;
+	border-radius: 10px;
+}
+
+.authorization__submit {
+	margin: 30px auto;
+	width: 173px;
+	height: 35px;
+	background: linear-gradient(218.21deg, #00c2ff 2.85%, #004aff 91.51%);
+	border-radius: 10px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.error_password {
+	color: red;
+}
+
+
+section {
+
+}
+
+.parametrs {
+
+}
+
+.setting {
+	display: none;
+}
+
+.save_change {
+	color: green;
+	padding: 0;
+}
+
+.error_change {
+	color: red;
+	padding: 0;
+}
+
+h3 {
+	text-align: center;
+}
+
+.section__header {
+	text-align: left;
+	margin: 20px 0 50px;
+	padding-left: 10px;
+	width: 350px;
+}
+
+.section__form {
+	/* padding-top: 30px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center; */
+	
+}
+
+.section__item {
+	margin: 10px;
+	width: 350px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.section__item__text {
+	width: 200px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.section__input {
+	text-align: center;
+	height: 25px;
+	border-radius: 10px;
+}
+
+.section__submit {
+	margin: 100px auto 0;
+	width: 133px;
+	height: 35px;
+	background: linear-gradient(218.21deg, #00c2ff 2.85%, #004aff 91.51%);
+	border-radius: 10px;
+	cursor: pointer;
+	color: #fff;
+}
+
+
+header {
+	background: #333;
+	height: 35px;
+	text-align: right;
+	padding-top: 15px;
+	border-bottom: 2px solid #cfcfcf;
+}
+
+header a {
+	text-decoration: none;
+	color: #fff;
+	margin-right: 35px;
+}
+
+nav {
+	width: 150px;
+	background: #333;
+	height: 100%;
+	position: fixed;
+}
+
+.nav__item {
+	/* height: 50px; */
+	color: #fff;
+	padding: 20px 10px;
+	cursor: pointer;
+}
+
+.nav__item:hover {
+	background: rgb(76, 104, 165);
+}
+
+main {
+	margin: 0px 0 0 200px;
+}
