@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</head>
+<body>
+      
+    <div class="container">
+        <div class="param">
+            <input type="text" name="" id="include" placeholder="пример: абв + - где - + - о">
+            <textarea name="" id="exclude1" cols="30" rows="5" placeholder="введите буквы, которые следует исключить через пробел"></textarea>
+            <textarea name="" id="exclude2" cols="30" rows="5" placeholder="введите сочетания букв, которые следует исключить через пробел"></textarea>
+            <div class="radio">
+                <input type="radio" id="contactChoice1" name="contact" value="ru" checked>
+                <label for="contactChoice1">Ru</label>
+                <input type="radio" id="contactChoice2" name="contact" value="en">
+                <label for="contactChoice2">En</label>
+            </div>
+            <button>Показать результаты</button>
+        </div>
+        <div class="result">
+            
+        </div>
+    </div>
+
+    <script src="common.js"></script>
+</body>
+</html>

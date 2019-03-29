@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('Roboto-Regular.eot');
+    src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Roboto-Regular.woff') format('woff'),
+    url('Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Roboto Regular';
+}
+
+.container {
+    display: flex;
+    padding: 50px 0 0 20px;
+}
+.param {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 200px;
+}
+
+.result div {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+textarea {
+    resize: none;
+    margin: 10px;
+}
+
+input[type="text"] {
+    margin: 10px;
+}
+.radio {
+    margin: 10px;
+}
+input[type="radio"] {
+
+}
+
+button {
+    width: 150px;
+    margin: 30px auto;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 10px;
+    background: rgb(87, 88, 86);
+    color: #fff;
+    outline: none;
+}
