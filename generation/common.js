@@ -60,6 +60,7 @@ button.addEventListener("click", function() {
 
         for (let i = 0; i < 10; ) {
             if (generationWord()) {
+                resultArr = resultArr[0].toUpperCase() + resultArr.slice(1);
                 result.insertAdjacentHTML("beforeend", `<div>${resultArr}</div>`);
                 i++;
             }
