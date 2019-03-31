@@ -48,7 +48,6 @@ showButton.addEventListener("click", function() {
         generationArr();
         writeInResult();
         console.log(clearArr.length)
-        console.log(typeof archive.textContent)
     }
 })
 
