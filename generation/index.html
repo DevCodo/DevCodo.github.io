@@ -7,12 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    
 </head>
 <body>
       
-    <div class="container">
+    <div class="main">
         <div class="param">
-            <input type="text" name="" id="include" placeholder="Пример: абв + - гд - + - е">
+            <input type="text" name="" id="include" placeholder="Пример: абв+*гд*+*е    (+) гласные, (*) согласные">
+            <textarea name="" id="includeNewArr" cols="30" rows="5" placeholder="Буквы, которые нужно использовать в выборке (через пробел)"></textarea>
             <textarea name="" id="exclude1" cols="30" rows="5" placeholder="Буквы, которые следует исключить (через пробел)"></textarea>
             <textarea name="" id="exclude2" cols="30" rows="5" placeholder="Сочетания букв, которые следует исключить (через пробел)"></textarea>
             <div class="radio">
@@ -21,13 +23,25 @@
                 <input type="radio" id="contactChoice2" name="contact" value="en">
                 <label for="contactChoice2">En</label>
             </div>
-            <button>Показать результаты</button>
-        </div>
-        <div class="result">
+            <div class="set_num">
+                <span>Выводить результаты по </span><input type="number" name="" id="setNumber" value="10" max="1000" min="1">
+            </div>
             
+            <div class="buttons">
+                    <button id="show">Показать результаты</button>
+                <button id="clear">Очистить архив</button>
+            </div>
+            <a download="words.txt" id="save" href="#"><button>Скачать архив</button></a>
+        </div>
+        <div class="result_container">
+            <h2>Рузультаты поиска</h2>
+            <div class="result"></div>
+        </div>
+        <div class="archive_container">
+            <h2>Архив рузультатов <span id="sortDown"> &darr; </span> <span id="sortUp"> &uarr; </span></h2>
+            <div class="archive"></div>
         </div>
     </div>
-
     <script src="common.js"></script>
 </body>
 </html>

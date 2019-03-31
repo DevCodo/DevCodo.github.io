@@ -11,23 +11,30 @@ body {
     font-family: 'Roboto Regular';
 }
 
-.container {
+.main {
     display: flex;
-    padding: 50px 0 0 20px;
+    padding: 0 20px;
 }
 .param {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 350px;
 }
-.result {
+h2 {
+    text-align: center;
+}
+.result_container,
+.archive_container {
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin-left: 200px;
+    margin-left: 100px;
 }
-
-.result div {
+.buttons {
+   
+}
+.result div,
+.archive div {
     text-align: center;
     padding: 10px;
     font-size: 20px;
@@ -39,7 +46,8 @@ textarea {
 }
 
 input[type="text"] {
-    margin: 10px;
+    margin: 50px 10px 10px;
+    
 }
 .radio {
     margin: 10px;
@@ -50,7 +58,7 @@ input[type="radio"] {
 
 button {
     width: 150px;
-    margin: 30px auto;
+    margin: 20px 10px;
     cursor: pointer;
     height: 30px;
     border-radius: 10px;
@@ -58,3 +66,17 @@ button {
     color: #fff;
     outline: none;
 }
+
+.archive_container span {
+    cursor: pointer;
+}
+
+.set_num {
+    margin: 10px;
+} 
+
+input[type="number"] {
+    width: 60px;
+    margin-left: 10px;
+    padding-left: 10px;
+} 
