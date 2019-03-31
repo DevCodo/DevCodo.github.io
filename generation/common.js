@@ -7,6 +7,7 @@ let showButton = document.querySelector("#show");
 let clearButton = document.querySelector("#clear");
 let result = document.querySelector(".result");
 let archive = document.querySelector(".archive");
+let showAll = document.querySelector("#showAll");
 let include = document.querySelector("#include");
 let includeNewArr = document.querySelector("#includeNewArr");
 let exclude2 = document.querySelector("#exclude2");
@@ -25,6 +26,18 @@ clearButton.addEventListener("click", function() {
     clearArr = [];
     archive.innerHTML = "";
     result.innerHTML = "";
+})
+
+showAll.addEventListener("click", function() {
+    if (include.value.indexOf("*") != -1 || include.value.indexOf("+") != -1) {
+        arr = include.value.split("");
+        radio[0].checked ? lang = "ru" : lang = "en";
+        result.innerHTML = "";
+        archive.innerHTML = "";
+        generationArr();
+        getAllResult();
+    }
+    
 })
 
 saveButton.addEventListener("click", function() {
@@ -47,7 +60,6 @@ showButton.addEventListener("click", function() {
         if (caunt > 1000) caunt = 1000;
         generationArr();
         writeInResult();
-        console.log(clearArr.length)
     }
 })
 
@@ -69,25 +81,32 @@ sortUp.addEventListener("click", function() {
 
 function getAllResult() {
     let caunt = 0;
-    for (let i = 0, f = 0; i < 100; f++) {
-        if (!generationWord()) {
-            if (f > 1000000) break;
+    for (let i = 0, f = 0; i < 1000; f++) {
+        resultArr = generationWord();
+        if (!resultArr) {
+            if (f > 1000) break;
         }
-        if (generationWord()) {
+        if (resultArr) {
             // resultArr = resultArr[0].toUpperCase() + resultArr.slice(1);
             if(clearArr.indexOf(resultArr) == -1) {
                 clearArr.push(resultArr);
-                result.insertAdjacentHTML("afterBegin", `<div>${resultArr}</div>`);
+                archive.insertAdjacentHTML("afterBegin", `<div>${resultArr}</div>`);
                 i++;
                 caunt++;
             } else {
                 f++;
-                if (f > 1000000) break;
+                if (f > 1000) break;
             }
         }
     }
-    console.log(caunt);
-    if (caunt) setTimeout(getAllResult, 100);
+    if (caunt) {
+        setTimeout(getAllResult, 100);
+    } else {
+        for (let i = 0; i < clearArr.length; i++) {
+            archive.insertAdjacentHTML("afterBegin", `<div>${clearArr[i]}</div>`);
+        }
+        console.log(clearArr.length)
+    }
 }
 
 function writeInResult() {
@@ -96,10 +115,11 @@ function writeInResult() {
     }
 
     for (let i = 0, f = 0; i < caunt; f++) {
-        if (!generationWord()) {
+        resultArr = generationWord();
+        if (!resultArr) {
             if (f > 100000) break;
         }
-        if (generationWord()) {
+        if (resultArr) {
             // resultArr = resultArr[0].toUpperCase() + resultArr.slice(1);
             if(clearArr.indexOf(resultArr) == -1) {
                 clearArr.push(resultArr);
