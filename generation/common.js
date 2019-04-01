@@ -87,9 +87,9 @@ showNextButton.addEventListener("click", function() {
 saveButton.addEventListener("click", function() {
     let base;
     if (clearArr.length) {
-        base = utoa(clearArr.join());
+        base = utoa(clearArr.join("\n"));
     } else if (allArr.length) {
-        base = utoa(allArr.join());
+        base = utoa(allArr.join("\n"));
     }
     function utoa(str) {
         return window.btoa(unescape(encodeURIComponent(str)));
@@ -664,106 +664,3 @@ break1:     for (let a1 = 0; a1 < b1.length; a1++) {
     }}
     
 }   
-
-
-// function getAllResult() {
-//     let caunt = 0;
-//     for (let i = 0, f = 0; i < 1000; f++) {
-//         resultArr = generationWord();
-//         if (!resultArr) {
-//             if (f > 1000) break;
-//         }
-//         if (resultArr) {
-//             // resultArr = resultArr[0].toUpperCase() + resultArr.slice(1);
-//             if(clearArr.indexOf(resultArr) == -1) {
-//                 clearArr.push(resultArr);
-//                 archive.insertAdjacentHTML("afterBegin", `<div>${resultArr}</div>`);
-//                 i++;
-//                 caunt++;
-//             } else {
-//                 f++;
-//                 if (f > 1000) break;
-//             }
-//         }
-//     }
-//     if (caunt) {
-//         setTimeout(getAllResult, 100);
-//     } else {
-//         for (let i = 0; i < clearArr.length; i++) {
-//             archive.insertAdjacentHTML("afterBegin", `<div>${clearArr[i]}</div>`);
-//         }
-//         console.log(clearArr.length)
-//     }
-// }
-
-// function getAllResult() {
-
-    // let worker = new Worker('worker.js');
-
-    // worker.addEventListener('message', function(e) {
-    //     resultArr = e.data.slice();
-    //     // console.log('Worker said: ', e.data);
-    //     console.log(resultArr);
-    //   }, false);
-
-    // worker.postMessage({
-    //     "gLetters": gLetters,
-    //     "sLetters": sLetters
-
-    // });
-
-    // resultArr = [];
-
-    // sLetters.forEach( a1 => sLetters.forEach( 
-    //     a2 => sLetters.forEach( 
-    //         a3 => sLetters.forEach( 
-    //             a4 => sLetters.forEach( 
-    //                 a5 => sLetters.forEach( 
-    //                     a6 => {
-    //                         if ( resultArr.length == 1000000) return;
-    //                         console.log(resultArr.length)
-    //                                 // if (resultArr.length == 1000) {
-    //                                 //     console.log(resultArr);
-    //                                 //     access = false;
-    //                                 //     clearArr.push(resultArr);
-    //                                 //     resultArr = [];
-    //                                 //     clear();
-    //                                 // };
-                                    
-    //                                 resultArr.push(a1 + a2 + a3 + a4 + a5 + a6) 
-  
-    //                     }))))));
-
-    // sLetters.forEach( a1 => sLetters.forEach( a2 => resultArr.push(a1 + a2)));
-    // sLetters.forEach( a1 => sLetters.forEach( 
-    //                     a2 => sLetters.forEach( 
-    //                         a3 => sLetters.forEach( 
-    //                             a4 => sLetters.forEach( 
-    //                                 a5 => sLetters.forEach( 
-    //                                     a6 => {
-
-    //                                         if (resultArr.length == 1000) {
-    //                                             console.log(resultArr)
-    //                                             clearArr.push(resultArr);
-    //                                             resultArr = [];
-    //                                             setTimeout(clear, 1);
-    //                                         };
-    //                                         resultArr.push(a1 + a2 + a3 + a4 + a5 + a6) 
-
-    //                                     }))))));
-
-// }
-
-// function generationArrS() {
-//     let arr = [];
-//     sLetters.forEach(x => arr.push(x));
-//     return arr;
-// }
-// function generationArrG(lang) {
-//     let arr = [];
-//     gLetters.forEach(x => arr.push(x));
-//     return arr;
-// }
-
-
-
