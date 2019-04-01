@@ -80,3 +80,26 @@ input[type="number"] {
     margin-left: 10px;
     padding-left: 10px;
 } 
+
+#showNext {
+    margin: 30px auto;
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.486);
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.preloader {
+    margin: auto;
+    width: 100px;
+}
+.preloader img {
+    width: 100%;
+}

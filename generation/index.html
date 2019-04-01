@@ -24,27 +24,31 @@
                 <label for="contactChoice2">En</label>
             </div>
             <div class="set_num">
-                <span>Выводить результаты по </span><input type="number" name="" id="setNumber" value="10" max="1000" min="1">
+                <span>Выводить результаты по </span><input type="number" name="" id="setNumber" value="10" max="20" min="1">
             </div>
             
             <div class="buttons">
                 <button id="show">Показать результат</button>
-                <button id="clear">Очистить архив</button>
+                <button id="showAll">Все результаты</button>
             </div>
             <div class="buttons">
-                <button id="showAll">Все результаты</button>
-                <a download="words.txt" id="save" href="#"><button>Скачать архив</button></a>
+                <button id="clear">Очистить архив</button>
+                <a download="words.doc" id="save" href="#"><button>Скачать архив</button></a>
             </div>
            
         </div>
         <div class="result_container">
             <h2>Результат поиска</h2>
             <div class="result"></div>
+            <button id="showNext">Показать еще</button>
         </div>
         <div class="archive_container">
             <h2>Архив рузультатов <span id="sortDown"> &darr; </span> <span id="sortUp"> &uarr; </span></h2>
             <div class="archive"></div>
         </div>
+    </div>
+    <div class="overlay">
+        <div class="preloader"><img src="preloader.gif" alt=""></div>
     </div>
     <script src="common.js"></script>
 </body>
