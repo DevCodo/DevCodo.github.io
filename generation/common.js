@@ -175,10 +175,6 @@ function generationWord() {
 }
 
 function checkWord() {
-    for (let i = 0; i < resultArr[0].length; i++) {
-        resultArr.push(resultArr[0][i])
-    }
-    resultArr = resultArr.slice(1);
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] != "+" && arr[i] != "*") resultArr.splice(i,0,arr[i]);
@@ -355,7 +351,7 @@ break20:    for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a20 = 0; a20 < b20.length; a20++) {
         if (clearArr.length > 10000000) break break20;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17],b18[a18],b19[a19],b20[a20]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17],b18[a18],b19[a19],b20[a20]);
         checkWord()
     }}}}}}}}}}}}}}}}}}}}}
     else if (cauntСycle == 19) {
@@ -380,7 +376,7 @@ break19:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a19 = 0; a19 < b19.length; a19++) {
         if (clearArr.length > 10000000) break break19;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17],b18[a18],b19[a19]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17],b18[a18],b19[a19]);
         checkWord()
     }}}}}}}}}}}}}}}}}}}}
     else if (cauntСycle == 18) {
@@ -404,7 +400,7 @@ break18:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a18 = 0; a18 < b18.length; a18++) {
         if (clearArr.length > 10000000) break break18;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17],b18[a18]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17],b18[a18]);
         checkWord()
     }}}}}}}}}}}}}}}}}}}
     else if (cauntСycle == 17) {
@@ -427,7 +423,7 @@ break17:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a17 = 0; a17 < b17.length; a17++) {
         if (clearArr.length > 10000000) break break17;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16],b17[a17]);
         checkWord()
     }}}}}}}}}}}}}}}}}}
     else if (cauntСycle == 16) {
@@ -449,7 +445,7 @@ break16:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a16 = 0; a16 < b16.length; a16++) {
         if (clearArr.length > 10000000) break break16;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15],b16[a16]);
         checkWord()
     }}}}}}}}}}}}}}}}}
     else if (cauntСycle == 15) {
@@ -470,7 +466,7 @@ break15:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a15 = 0; a15 < b15.length; a15++) {
         if (clearArr.length > 10000000) break break15;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14],b15[a15]);
         checkWord()
     }}}}}}}}}}}}}}}}
     else if (cauntСycle == 14) {
@@ -490,7 +486,7 @@ break14:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a14 = 0; a14 < b14.length; a14++) {
         if (clearArr.length > 10000000) break break14;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13],b14[a14]);
         checkWord()
     }}}}}}}}}}}}}}}
     else if (cauntСycle == 13) {
@@ -509,7 +505,7 @@ break13:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a13 = 0; a13 < b13.length; a13++) {
         if (clearArr.length > 10000000) break break13;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12],b13[a13]);
         checkWord()
     }}}}}}}}}}}}}}
     else if (cauntСycle == 12) {
@@ -527,7 +523,7 @@ break12:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a12 = 0; a12 < b12.length; a12++) {
         if (clearArr.length > 10000000) break break12;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11],b12[a12]);
         checkWord()
     }}}}}}}}}}}}}
     else if (cauntСycle == 11) {
@@ -544,7 +540,7 @@ break11:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a11 = 0; a11 < b11.length; a11++) {
         if (clearArr.length > 10000000) break break11;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10],b11[a11]);
         checkWord()
     }}}}}}}}}}}}
     else if (cauntСycle == 10) {
@@ -560,7 +556,7 @@ break10:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a10 = 0; a10 < b10.length; a10++) {
         if (clearArr.length > 10000000) break break10;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9],b10[a10]);
         checkWord()
     }}}}}}}}}}}
     else if (cauntСycle == 9) {
@@ -575,7 +571,7 @@ break9:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a9 = 0; a9 < b9.length; a9++) {
         if (clearArr.length > 10000000) break break9;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8],b9[a9]);
         checkWord()
     }}}}}}}}}}
     else if (cauntСycle == 8) {
@@ -589,7 +585,7 @@ break8:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a8 = 0; a8 < b8.length; a8++) {
         if (clearArr.length > 10000000) break break8;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7],b8[a8]);
         checkWord()
     }}}}}}}}}
     else if (cauntСycle == 7) {
@@ -602,7 +598,7 @@ break7:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a7 = 0; a7 < b7.length; a7++) {
         if (clearArr.length > 10000000) break break7;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6],b7[a7]);
         checkWord()
     }}}}}}}}
     else if (cauntСycle == 6) {
@@ -614,7 +610,7 @@ break6:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a6 = 0; a6 < b6.length; a6++) {
         if (clearArr.length > 10000000) break break6;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5],b6[a6]);
         checkWord()
     }}}}}}}
     else if (cauntСycle == 5) {
@@ -625,7 +621,7 @@ break5:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a5 = 0; a5 < b5.length; a5++) {
         if (clearArr.length > 10000000) break break5;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4],b5[a5]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4],b5[a5]);
         checkWord()
     }}}}}}
     else if (cauntСycle == 4) {
@@ -635,7 +631,7 @@ break4:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a4 = 0; a4 < b4.length; a4++) {
         if (clearArr.length > 10000000) break break4;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3],b4[a4]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3],b4[a4]);
         checkWord()
     }}}}}
     else if (cauntСycle == 3) {
@@ -644,7 +640,7 @@ break3:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a3 = 0; a3 < b3.length; a3++) {
         if (clearArr.length > 10000000) break break3;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2],b3[a3]]);
+        resultArr.push(b1[a1],b2[a2],b3[a3]);
         checkWord()
     }}}}
     else if (cauntСycle == 2) {
@@ -652,14 +648,14 @@ break2:     for (let a1 = 0; a1 < b1.length; a1++) {
     for (let a2 = 0; a2 < b2.length; a2++) {
         if (clearArr.length > 10000000) break break2;
         resultArr = [];
-        resultArr.push([b1[a1],b2[a2]]);
+        resultArr.push(b1[a1],b2[a2]);
         checkWord()
     }}}
     else if (cauntСycle == 1) {
 break1:     for (let a1 = 0; a1 < b1.length; a1++) {
     if (clearArr.length > 10000000) break break1;
         resultArr = [];
-        resultArr.push([b1[a1]]);
+        resultArr.push(b1[a1]);
         checkWord()
     }}
     
