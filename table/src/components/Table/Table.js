@@ -29,21 +29,3 @@ class Table extends React.Component {
 export default Table;
 
 
-
-
-
-
-str = '<div><span>dsfdsfds</span></div>'
-
-
-let str = '<table>';
-
-for (let x = 1; x <= 10; x++) {
-    str += '<tr>';
-    for (let y = 1; y <= 10; y++) {
-        str += `<td>${ x * y }</td>`
-    }
-    str += '</tr>'
-}
-
-str += '</table>'
