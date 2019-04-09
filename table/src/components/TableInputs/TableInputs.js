@@ -11,14 +11,12 @@ class TableInputs extends React.Component {
 
     ChangeNum1 = (e) => {
         let num1 = e.target.value;
-        if (num1 < 1) num1 = 1;
         this.setState({ num1 });
         this.props.onChangeNum1(num1)
-    }
+    } 
 
     ChangeNum2 = (e) => {
         let num2 = e.target.value;
-        if (num2 < 1 ) num2 = 1;
         this.setState({ num2 });
         this.props.onChangeNum2(num2)
     }
