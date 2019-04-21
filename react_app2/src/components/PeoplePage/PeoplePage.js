@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ItemList from '../ItemList';
-import PersonDetails from '../PersonDetails';
+import ItemDetails from '../ItemDetails';
 
 import './PeoplePage.scss';
 import ErrorIndicator from '../ErrorIndicator';
@@ -16,8 +16,7 @@ export default class PeoplePage extends React.Component {
 
 
   state = {
-    selectedPerson: 3,
-    hasError: false
+    selectedPerson: 3
   }
 
   onPersonSelected = (id) => {
@@ -45,14 +44,16 @@ export default class PeoplePage extends React.Component {
       </ItemList>
     )
 
-    const personDetails = (
+    const itemDetails = (
       <ErrorBoundry>
-        <PersonDetails personId={this.state.selectedPerson} />
+        <ItemDetails itemId={this.state.selectedPerson}
+         getData={this.swapiService.getPerson} 
+        getImageUrl={this.swapiService.getPersonImage}/>
       </ErrorBoundry>
     )
 
     return (
-        <Row left={itemList} right={personDetails} />
+        <Row left={itemList} right={itemDetails} />
     )
   }
 }
