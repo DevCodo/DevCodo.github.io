@@ -1,0 +1,343 @@
+#section1 {
+  background-image: url(/img/section1-main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.section1 {
+
+  &__bg2 {
+    background-image: url(/img/section1-main2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__header {
+    display: flex;
+    margin-top: rem(45);
+    margin-bottom: rem(134);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: inline-block;
+    z-index: 5;
+    img {
+        width: rem(155);
+    }
+  }
+
+  &__telefon {
+    font-size: rem(22);
+  }
+
+  &__telefon__icon {
+    width: rem(40);
+    display: none;
+    z-index: 5;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__menu_button {
+    height: rem(25);
+    width: rem(35);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    cursor: pointer;
+    &__item {
+      height: 2px;
+      width: 100%;
+      background: #fff;
+    }
+  }
+
+  &__close_menu {
+    height: rem(35);
+    width: rem(35);
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+    display: none;
+    &__item {
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      top: rem(20);
+      background: #fff;
+      &:nth-child(1) {
+        transform: rotate(45deg)
+      }
+      &:nth-child(2) {
+        transform: rotate(135deg)
+      }
+    }
+  }
+
+
+  &__menu {
+    flex-grow: 1;
+    padding: 0  rem(63);
+    z-index: 4;
+    &_wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__item{
+      font-size: rem(18);
+      text-transform: uppercase;
+      margin: 0 rem(12);
+      height: rem(25);
+      line-height: rem(25);
+      &:hover {
+        border-bottom: 2px solid #F75B04;
+      }
+      &:nth-child(1) {
+        animation-delay: .1s;
+      }
+      &:nth-child(2) {
+          animation-delay: .3s;
+      }
+      &:nth-child(3) {
+          animation-delay: .5s;
+      }
+      &:nth-child(4) {
+          animation-delay: .7s;
+      }
+      &:nth-child(5) {
+          animation-delay: .9s;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .section1 {
+      &__telefon {
+        display: none;
+      }
+      &__telefon__icon {
+        display: block;
+      }
+      &__menu_button {
+        display: flex;
+      }
+      &__menu {
+        flex-direction: column;
+        padding-top: rem(250);
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000000dc;
+        &_wrapper {
+          flex-direction: column;
+        }
+        &__item{
+          font-size: rem(26);
+          text-align: center;
+          padding: rem(30) 0;
+          font-weight: 600;
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: rem(1120);
+    &::after {
+        content: "";
+        height: rem(200);
+      }
+  }
+
+  &__hero__header {
+    font-size: rem(64);
+    font-weight: bold;
+    letter-spacing: rem(3);
+    line-height: 120%;
+  }
+
+  &__hero__description {
+    font-size: rem(18);
+    line-height: pes(29, 18);
+    font-weight: normal;
+    margin-top: rem(30);
+    margin-bottom: rem(70);
+    width: rem(525);
+  }
+
+  &__hero__button_quiz_link {
+    width: rem(300);
+    height: rem(50);
+  }
+
+  &__hero__button_quiz {
+    cursor: pointer;
+    width: rem(300);
+    height: rem(50);
+    line-height: rem(50);
+    color: #fff;
+    background: #F75B04;
+    font-size: rem(18);
+    letter-spacing: rem(2);
+    font-weight: bold;
+    font-family: $mainFont;
+
+    &:hover {
+      background: #f56f27;
+    }
+  }
+
+  &__cloud {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: run 100s infinite linear;
+    height: 40%;
+    z-index: 1;
+    img {
+      height: 100%;
+    }
+  }
+
+}
+
+@keyframes run {
+  0% {
+    transform: translate(0%)
+  }
+  100% {
+    transform: translate(-25%)
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto 30px;
+  align-items: center;
+  z-index: 2;
+
+  &__link {
+    text-decoration: underline;
+    text-align: center;
+    &:link {
+      color: #323232; 
+    }
+    &:visited {
+      color: #323232;
+    }
+    &:hover {
+      color: #323232; 
+    }
+    &:active {
+      color: #323232; 
+    }
+  }
+  &__OOO {
+      text-align: right;
+  }
+  &__copy,
+  &__OOO {
+    color: #323232;
+  }
+}
+
+
+
+
+@media screen and (max-width: $desktopWidth) {
+
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .section1 {
+    &__hero {
+        width: 100%;
+      }
+      &__hero__header {
+        font-size: rem(45);
+        width: 80%;
+    }
+    &__hero__description {
+        // width: 70%;
+    }
+
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .section1 {
+    &__header {
+      margin-bottom: rem(204);
+    }
+    &__hero__header {
+      // font-size: rem(50);
+      text-align: center;
+      width: 100%;
+    }
+    &__hero__description {
+      text-align: center;
+      width: 100%;
+      // padding: 0 rem(100);
+    }
+    &__hero a {
+      margin: 0 auto;
+    }
+
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+    .section1 {
+      &__header {
+        margin-bottom: 0;
+      }
+      &__hero {
+        flex-grow: 1;
+        justify-content: center;
+      }
+    }
+    .footer__OOO,
+    .footer__copy,
+    .footer__link {
+      // width: 33%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer__OOO,
+    .footer__link,
+    .footer__copy {
+        font-size: 10px;
+    }
+    .section1__header {
+        margin-bottom: rem(100);
+    }    
+}
