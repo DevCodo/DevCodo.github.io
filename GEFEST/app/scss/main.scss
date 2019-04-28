@@ -4,6 +4,7 @@
 @import "utils/_mixins";
 @import "utils/_fonts";
 @import "../libs/animate/animate.min.css";
+@import "../libs/swiper/swiper.min.css";
 
 * {
   -webkit-tap-highlight-color: transparent;
@@ -83,8 +84,6 @@ body {
 section {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .container {
@@ -106,6 +105,7 @@ section {
   font-weight: bold;
   letter-spacing: 0.08em;
   cursor: pointer;
+  border-radius: 4px;
   &:hover {
     background: #f56f27;
   }

@@ -5,6 +5,8 @@
   background-position: 100% 100%;
   min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  
 }
 
 .section1 {
@@ -57,6 +59,7 @@
     justify-content: space-between;
     display: none;
     cursor: pointer;
+    
     &__item {
       height: 2px;
       width: 100%;
@@ -149,10 +152,14 @@
         &__item{
           font-size: rem(26);
           text-align: center;
-          padding: rem(30) 0;
-          font-weight: 600;
+          padding: rem(40) 0;
+          font-weight: 400;
+          letter-spacing: 1px;
           &:hover {
             border-bottom: none;
+          }
+          a:hover {
+            color: #F75B04;
           }
         }
       }
@@ -205,6 +212,7 @@
     letter-spacing: rem(2);
     font-weight: bold;
     font-family: $mainFont;
+    border-radius: 4px;
 
     &:hover {
       background: #f56f27;
