@@ -34,12 +34,12 @@ img {
 
 @keyframes rotateWrapper {
   100% {
-    transform: rotate(126deg);
+    transform: rotate(132deg);
   }
 }
 @keyframes rotateLine {
   100% {
-    transform: rotate(-126deg);
+    transform: rotate(-132deg);
   }
 }
 
@@ -61,12 +61,12 @@ img {
     opacity: 1;
     
   }
-  87% {
+  81.5% {
     opacity: 0;
 
   }
   100% {
-    transform: rotate(-33deg) rotateX(110deg) skew(-50deg) scale(0.95);
+    transform: rotate(-33deg) rotateX(134deg) skew(-50deg) scale(0.95);
     opacity: 0;
   }
 }
