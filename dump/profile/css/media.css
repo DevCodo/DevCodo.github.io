@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /* line 16, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/media.scss */
+  .section_resume .left {
+    text-align: left;
+    border: none; }
+    /* line 19, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/media.scss */
+    .section_resume .left h3 {
+      text-align: left; } }
+
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+
+/*# sourceMappingURL=media.css.map */

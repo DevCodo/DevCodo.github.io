@@ -1,0 +1,111 @@
+/* line 13, ../../OpenServer/domains/original/css/skins/tomato.scss */
+body {
+  color: #222; }
+
+/* line 19, ../../OpenServer/domains/original/css/skins/tomato.scss */
+a {
+  color: #FF6347; }
+
+/* line 23, ../../OpenServer/domains/original/css/skins/tomato.scss */
+p,
+body .main_footer,
+.section_about li {
+  color: #888; }
+
+/* line 30, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.color_element {
+  color: #FF6347; }
+
+/* line 34, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.color_bg {
+  background-color: #FF6347; }
+
+/* line 38, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.color_border {
+  border-color: #FF6347; }
+
+/* line 42, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.bg_light {
+  background-color: #FAFAFA; }
+
+/* line 46, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.bg_dark {
+  background-color: #222;
+  color: #fff; }
+  /* line 50, ../../OpenServer/domains/original/css/skins/tomato.scss */
+  .bg_dark .section_description:after {
+    background-color: #fff; }
+  /* line 54, ../../OpenServer/domains/original/css/skins/tomato.scss */
+  .bg_dark a {
+    color: #fff; }
+
+/* line 60, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.top_menu a:hover {
+  color: #FF6347;
+  background-color: rgba(255, 255, 255, 0.1); }
+
+/* line 68, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.top_text p {
+  color: #FAFAFA; }
+
+/* line 73, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_description:after {
+  background-color: #222; }
+
+/* line 78, ../../OpenServer/domains/original/css/skins/tomato.scss */
+section h3 {
+  color: #888; }
+
+/* line 84, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_about p:nth-child(even) {
+  color: #FF6347; }
+
+/* line 90, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_resume h3 {
+  color: #222; }
+
+/* line 94, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_resume .left {
+  border-right: 1px solid #888; }
+
+/* line 97, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_resume .year {
+  background-color: #FF6347;
+  color: #fff; }
+
+/* line 104, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_portfolio li {
+  color: #888; }
+
+/* line 107, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_portfolio .active {
+  color: #fff;
+  border-bottom: 1px solid #FF6347; }
+
+/* line 112, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.section_portfolio .port_item_cont a {
+  border: 1px solid #FF6347;
+  color: #FF6347; }
+
+/* line 120, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.main_footer a {
+  color: #FF6347; }
+
+/* line 124, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.contacts_icon {
+  color: #FF6347; }
+
+/* line 130, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.main_form .form-group .text_danger {
+  color: #FF6347; }
+
+/* line 133, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.main_form .form-group input:focus,
+.main_form .form-group textarea:focus {
+  border: 1px solid #FF6347; }
+
+/* line 139, ../../OpenServer/domains/original/css/skins/tomato.scss */
+.main_form button {
+  background-color: #FF6347; }
+
+/*# sourceMappingURL=tomato.css.map */

@@ -1,0 +1,522 @@
+@charset "UTF-8";
+/* line 3, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -moz-pointer;
+  cursor: -webkit-pointer;
+  cursor: pointer; }
+
+/* line 8, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.42857;
+  border: 1px solid #000;
+  overflow-x: hidden; }
+
+/* line 20, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: red; }
+
+/* line 25, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+body input:required:valid,
+body textarea:required:valid {
+  color: green; }
+
+/* line 30, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.hidden {
+  display: none; }
+
+/* line 36, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+section,
+.main_head {
+  position: relative; }
+
+/* line 42, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+section {
+  padding: 70px 0 90px; }
+  /* line 45, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  section h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: 12px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 35px; }
+  /* line 56, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  section h2 {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 0 15px; }
+
+/* line 64, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.personal_header {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #555; }
+
+/* line 73, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_description_wrapper {
+  text-align: center; }
+  /* line 76, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_description_wrapper .section_description {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 140px; }
+    /* line 84, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .section_description_wrapper .section_description::after {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      left: 50%;
+      margin-left: -75px;
+      margin-top: 65px; }
+
+/* line 98, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_about p {
+  margin-bottom: 25px; }
+
+/* line 103, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_about ul,
+.section_about li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+/* line 109, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_about li {
+  margin-bottom: 10px; }
+
+/* line 113, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_about .social_wrapper {
+  margin-top: 25px; }
+
+/* line 117, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_about .col-md-4 {
+  padding-bottom: 30px; }
+
+/* line 122, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.person {
+  text-align: center; }
+  /* line 125, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .person img {
+    max-width: 220px;
+    display: inline-block;
+    border-radius: 50%; }
+
+/* line 134, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.social_wrapper li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 3px; }
+
+/* line 142, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume p {
+  margin-top: 10px; }
+
+/* line 145, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume .resume_item {
+  margin-bottom: 40px; }
+
+/* line 148, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume .left {
+  text-align: right; }
+  /* line 150, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_resume .left strong {
+    margin-left: 10px; }
+  /* line 153, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_resume .left h3 {
+    text-align: right; }
+
+/* line 158, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume .right {
+  text-align: left; }
+  /* line 160, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_resume .right strong {
+    margin-right: 10px; }
+  /* line 163, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_resume .right h3 {
+    text-align: left; }
+
+/* line 167, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume h3 {
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600; }
+
+/* line 172, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume .resume_icon {
+  font-size: 40px;
+  margin-bottom: 30px;
+  padding: 0 10px; }
+
+/* line 177, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume .year {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  font-weight: 600;
+  font-style: italic;
+  color: #fff; }
+
+/* line 185, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_resume .resume_description {
+  font-style: italic;
+  letter-spacing: 1px; }
+  /* line 188, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_resume .resume_description strong {
+    font-style: normal;
+    text-transform: uppercase; }
+
+/* line 199, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_portfolio ul,
+.section_portfolio li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+
+/* line 205, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_portfolio li {
+  display: inline-block;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  line-height: 2; }
+
+/* line 214, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_portfolio ul {
+  margin-bottom: 50px; }
+
+/* line 217, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_portfolio .portfolio_item {
+  display: none;
+  padding: 0; }
+  /* line 220, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_portfolio .portfolio_item img {
+    width: 100%; }
+  /* line 223, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_portfolio .portfolio_item .port_item_cont {
+    opacity: 0;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 15%; }
+    /* line 234, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .section_portfolio .portfolio_item .port_item_cont h3 {
+      color: #fff;
+      margin-bottom: 0; }
+    /* line 238, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .section_portfolio .portfolio_item .port_item_cont a {
+      background-color: transparent;
+      padding: 2px 10px; }
+    /* line 242, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .section_portfolio .portfolio_item .port_item_cont:hover {
+      opacity: 1;
+      padding-top: 20%; }
+
+/* line 250, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.port_description {
+  background-color: #fff;
+  max-width: 500px;
+  margin: auto;
+  position: relative; }
+  /* line 256, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .port_description p,
+  .port_description h3 {
+    padding: 20px;
+    margin: 0; }
+  /* line 260, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .port_description h3 {
+    padding-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400; }
+  /* line 266, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .port_description img {
+    width: 100%; }
+
+/* line 273, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_contacts .main_form .form-group {
+  margin-bottom: 20px;
+  display: block; }
+  /* line 277, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_contacts .main_form .form-group input,
+  .section_contacts .main_form .form-group textarea {
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    line-height: 40px;
+    text-indent: 12px;
+    font-size: 12px; }
+
+/* line 289, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_contacts .main_form button {
+  border: none;
+  color: #fff;
+  padding: 7px 13px 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  float: right; }
+
+/* line 300, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.section_contacts .contacts_box {
+  margin-bottom: 30px; }
+  /* line 302, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_contacts .contacts_box h3 {
+    text-align: left;
+    color: #000;
+    margin-bottom: 0px;
+    font-size: 14px; }
+  /* line 308, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_contacts .contacts_box .contacts_icon {
+    font-size: 30px; }
+  /* line 311, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .section_contacts .contacts_box p {
+    margin-top: 5px; }
+
+/* line 318, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.main_head {
+  min-height: 479px;
+  padding-top: 20px; }
+
+/* line 323, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+
+/* line 334, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.loader_inner {
+  background-image: url("../img/preloader.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  left: 50%;
+  top: 50%;
+  position: absolute; }
+
+/* line 349, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.logo_container {
+  float: left; }
+
+/* line 353, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+svg {
+  height: 60px;
+  width: 60px;
+  z-index: 100;
+  position: relative; }
+  /* line 358, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  svg path {
+    fill: #fff; }
+
+/* line 365, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.toggle_menu {
+  width: 60px;
+  height: 60px;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  position: fixed;
+  border: none;
+  background-color: #000; }
+  /* line 374, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .toggle_menu span {
+    display: block; }
+
+/* line 382, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.sandwich {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 200; }
+
+/* line 394, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.sw-topper {
+  position: relative;
+  top: 0;
+  width: 35px;
+  height: 3px;
+  background: #fff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: transform 0.5s, top 0.2s; }
+
+/* line 407, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.sw-bottom {
+  position: relative;
+  width: 35px;
+  height: 3px;
+  top: 7.5px;
+  background: #ffffff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: transform 0.5s, top 0.2s;
+  transition-delay: 0.2s, 0s; }
+
+/* line 419, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.sw-footer {
+  position: relative;
+  width: 35px;
+  height: 3px;
+  top: 15px;
+  background: #ffffff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: all 0.5s;
+  transition-delay: 0.1s; }
+
+/* line 432, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.active .sw-topper {
+  top: 10px;
+  transform: rotate(-45deg); }
+
+/* line 436, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.active .sw-bottom {
+  top: 7px;
+  transform: rotate(45deg); }
+
+/* line 440, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.active .sw-footer {
+  opacity: 0;
+  top: 0;
+  transform: rotate(180deg); }
+
+/* line 450, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.top_menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+  right: 0;
+  top: 0;
+  display: none; }
+  /* line 460, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .top_menu ul,
+  .top_menu li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  /* line 466, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .top_menu ul {
+    margin-top: 180px;
+    text-align: center; }
+    /* line 471, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .top_menu ul li:nth-child(1) a {
+      animation-delay: .1s; }
+    /* line 474, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .top_menu ul li:nth-child(2) a {
+      animation-delay: .3s; }
+    /* line 477, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .top_menu ul li:nth-child(3) a {
+      animation-delay: .5s; }
+    /* line 480, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .top_menu ul li:nth-child(4) a {
+      animation-delay: .7s; }
+    /* line 485, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .top_menu ul a {
+      color: #fff;
+      display: block;
+      padding: 20px 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      transition: color 0.5s; }
+
+/* line 499, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.top_wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  /* line 507, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .top_wrapper .top_descr {
+    display: table-row; }
+    /* line 509, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .top_wrapper .top_descr .top_centered {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle; }
+      /* line 513, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+      .top_wrapper .top_descr .top_centered .top_text {
+        display: inline-block;
+        margin: 0 20px;
+        transition: 1s; }
+        /* line 517, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+        .top_wrapper .top_descr .top_centered .top_text h1 {
+          display: inline-block;
+          padding: 10px 30px;
+          color: #fff;
+          border: 8px solid #fff;
+          text-transform: uppercase;
+          font-size: 3.2em;
+          font-weight: 800;
+          animation-delay: .5s; }
+        /* line 527, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+        .top_wrapper .top_descr .top_centered .top_text p {
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          animation-delay: 1s; }
+
+/* line 538, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.h_opacify {
+  opacity: .2; }
+
+/* line 544, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+.main_footer {
+  padding: 50px 0;
+  font-size: 13px; }
+  /* line 547, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+  .main_footer .social_wrapper {
+    float: right;
+    line-height: 0; }
+    /* line 550, C:/Users/iva_b/Desktop/WebDesign_Master/Создание Landing Page на WordPress/wordpress-landing-page-lesson-master/__clean_html_original/css/main.scss */
+    .main_footer .social_wrapper ul {
+      margin: 0; }
+section {
+  overflow: hidden
+}
+/*# sourceMappingURL=main.css.map */
