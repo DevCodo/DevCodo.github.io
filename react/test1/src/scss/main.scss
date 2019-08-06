@@ -1,0 +1,83 @@
+@import "utils/_reset";
+@import "utils/_libs";
+@import "utils/_vars";
+@import "utils/_mixins";
+@import "utils/_fonts";
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+}
+::placeholder {
+  color: #fff;
+  line-height:normal;
+}
+
+// ::selection {
+//   background-color: #666;
+//   color: #fff;
+// }
+
+// input, textarea {
+//   border: #666 1px solid;
+//   &:focus:required:invalid {
+//     border-color: red;
+//   }
+//   &:required:valid {
+//     border-color: green;
+//   }
+// }
+
+a:link {
+  color: $mainColor; 
+}
+a:visited {
+  color: $mainColor;
+}
+a:hover {
+  color: $mainColor; 
+}
+a:active {
+  color: $mainColor; 
+}
+
+html {
+	font-size: $mainFontSize;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  color: $mainColor;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  padding: 0 19px;
+}
+
+@media screen and (max-width: $desktopWidth) {
+  
+}
+@media screen and (max-width: $smDesktopWidth) {
+  
+}
+@media screen and (max-width: $tableWidth) {
+  
+}
+@media screen and (max-width: $phoneWidth) {
+  
+}
+
+@import "modules/_header";
+@import "modules/_footer";
+
