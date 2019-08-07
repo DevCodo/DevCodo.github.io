@@ -1,45 +1,26 @@
 import "@babel/polyfill";
+// import Parser from "./js/EmailParser";
 
-// function* gen(num) {
-//   yield 1;
-//   yield 2;
-//   yield 3;
+// let parser = new Parser("iva_black@mail.ru");
 
-// }
-
-// let same = gen();
-
-// let osnova = Math.floor(num / 10) ; // 133
-// let ostatok = num % 10;             // 4
-
+// console.log(parser.email);
+// console.log(parser.name);
+// console.log(parser.domain);
+// parser.email = "kirukaro.ru"
+// console.log(parser.email);
+// console.log(parser);
+// // console.log(parser);
 
 
-function num(number) {
-  let num = number;
 
-  while( num > 0 ) {
-    let osn = Math.floor(num / 10) ; // 133
-    let ost = num % 10;
-    console.log(ost);
-    num = osn;
-  }
-}
+let some = new Promise( function(resolve, reject) {
+ 
+  Math.random() > 0.5 ? resolve(3) : reject("Fatal")
+})
 
-function* gen(number) {
-  let num = number;
+some.then((x) => {
+  console.log(x)
+}).catch((error) => {
+  console.log(new Error(error))
+})
 
-  while( num > 0 ) {
-    let osn = Math.floor(num / 10) ; // 133
-    let ost = num % 10;
-    num = osn;
-    yield ost;
-  }
-}
-
-let num3 = gen(987484363);
-
-for (let some of num3 ) {
-  console.log(some);
-}
-
-// num(987654321);
