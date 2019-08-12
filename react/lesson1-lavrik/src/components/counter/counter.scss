@@ -1,0 +1,15 @@
+.counter button {
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+}
+.counter span {
+  display: inline-flex;
+  height: 40px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.counter p {
+  font-size: 24px;
+}

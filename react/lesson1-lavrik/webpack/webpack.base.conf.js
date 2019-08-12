@@ -28,7 +28,7 @@ module.exports = {
         rules: [{
             test: /\.js$/,
             loader: 'babel-loader',
-            exclude: '/node_modules'
+            exclude: '/node_modules/'
         },{
             test: /\.(png|jpg|gif|svg)$/,
             loader: 'file-loader',
@@ -38,11 +38,14 @@ module.exports = {
         },{
             test: /\.scss$/,
             use: [
-                'style-loader',
                 MiniCssExtractPlugin.loader,
                 {
                     loader: 'css-loader',
-                    options: { sourceMap: true }
+                    options: { 
+                        sourceMap: true,
+                        modules: true,
+                        localIdentName: "[name]__[hash:base64:5]"
+                    }
                 }, {
                     loader: 'postcss-loader',
                     options: {

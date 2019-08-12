@@ -1,41 +1,37 @@
-function EmailParser(mail) {
-  this.setting = {
-    email: mail,
-    name: 1,
-    domain: "yandex"
-  };
+import { async } from "q";
+
+// let promis1 = new Promise(function(resolve, reject) {
+//   setTimeout(() => {
+//     Math.random() > 0.5 ? resolve("good1") : reject("bad1");
+//   }, 300);
+// })
+
+// function promis2(res1) {
   
-  // Object.defineProperty(this, "email", {
-  //   get: () => {
-  //     return this.setting.email;
-  //   },
-  //   set: (value) => {
-  //     this.setting.email = value;
-  //   }
-  // })
-  // Object.defineProperty(this, "name", {
-  //   get: () => {
-  //     return this.setting.name;
-  //   }
-  // })
-  // Object.defineProperty(this, "domain", {
-  //   get: () => {
-  //     return this.setting.domain;
-  //   }
-  // })
-}
+//   return  new Promise(function(resolve, reject) {
+//       setTimeout(() => {
+//         Math.random() > 0.5 ? resolve(res1 + "good2") : reject("bad2");
+//       }, 300);
+//     })
+// }
 
-let date = {
-    a: 1,
-    b: 2
-}
 
-export default new Proxy(date, {
-  get(target, name) {
-    return target[name];
-  },
-  set(target, name, value) {
-    target[name] = value;
-    return true;
+// let promis3 = new Promise(function(resolve, reject) {
+//     resolve("good3")
+// })
+
+
+async function promis4() {
+  let num = Math.random();
+
+  if (num > 0.5) {
+    return "Bingo";
+
+  } else {
+    throw new Error("bewgfrgfsgfdgad");
   }
-})
+}
+
+
+
+export { promis4};
