@@ -1,0 +1,102 @@
+@import "utils/_reset";
+@import "utils/_libs";
+@import "utils/_vars";
+@import "utils/_mixins";
+@import "utils/_fonts";
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+// ::placeholder {
+//   color: #666;
+// }
+
+// ::selection {
+//   background-color: #666;
+//   color: #fff;
+// }
+
+// input, textarea {
+//   border: #666 1px solid;
+//   &:focus:required:invalid {
+//     border-color: red;
+//   }
+//   &:required:valid {
+//     border-color: green;
+//   }
+// }
+
+a:link {
+  color: $mainFontColor; 
+}
+a:visited {
+  color: $mainFontColor;
+}
+a:hover {
+  color: $mainFontColor; 
+}
+a:active {
+  color: $mainFontColor; 
+}
+
+html {
+	font-size: $mainFontSize;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+		font-size: 15px;
+  }
+  @media screen and (max-width: $tableWidth) {
+		font-size: 14px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		font-size: 13px;
+  }
+}
+
+body {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+section, .section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  padding: 0 rem(25);
+}
+
+@media screen and (max-width: $desktopWidth) {
+  
+}
+@media screen and (max-width: $smDesktopWidth) {
+  
+}
+@media screen and (max-width: $tableWidth) {
+  
+}
+@media screen and (max-width: $phoneWidth) {
+  
+}
+
+@import "modules/_header";
+@import "modules/_footer";
+

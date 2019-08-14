@@ -2,13 +2,19 @@
   height: 40px;
   width: 60px;
   cursor: pointer;
+  &:disabled {
+    background: rgb(68, 65, 65);
+  }
 }
-.counter span {
+.counter input {
   display: inline-flex;
   height: 40px;
   width: 60px;
   justify-content: center;
   align-items: center;
+  margin: 20px;
+  text-align: center;
+  background: rgb(163, 214, 183);
 }
 .counter p {
   font-size: 24px;

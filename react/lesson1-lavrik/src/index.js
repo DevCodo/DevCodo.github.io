@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Counter from './components/counter/counter';
 
-ReactDOM.render(<Counter  min={0} max={50} />, document.querySelector('#root'));
+// import Counter from './components/counter/counter';
+import PriceList from './components/prise-list';
+
+function App() {
+  return (
+    <PriceList />
+  )
+}
+
+ReactDOM.render(<App />, document.querySelector('#root'));
