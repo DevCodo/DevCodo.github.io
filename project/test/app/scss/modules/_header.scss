@@ -37,7 +37,7 @@
       height: 0;
       border: 30px solid transparent;
       border-left: 12px solid #fff;
-      left: 100%;
+      left: calc(100% - 1px);
       top: 0;
     }
   }
