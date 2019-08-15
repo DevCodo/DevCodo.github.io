@@ -56,6 +56,7 @@ body {
 .container {
   position: relative;
   width: 100%;
+  min-width: $desktopWidth;
   max-width: $desktopWidth;
   margin: 0 auto;
 }
