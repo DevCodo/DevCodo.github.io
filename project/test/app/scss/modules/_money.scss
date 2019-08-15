@@ -1,11 +1,16 @@
 .money {
   position: relative;
-
+  flex: 0 1 auto;
+  height: 100%;
+  height: calc(100% - 60px);
+  .container {
+    height: calc(100%);
+  }
   &__wrapper {
     width: 900px;
     margin-left: auto;
-    background: #fff;
     height: 100%;
+    background: #fff;
     box-shadow: -8px 9px 25px rgba(49, 68, 93, 0.23112);
   }
 
@@ -26,7 +31,8 @@
   }
 
   &__main {
-    max-height: 532px;
+    min-height: 402px;
+    height: calc(100% - 120px);
     overflow-y: auto;
   }
   &__main__wrapper {
