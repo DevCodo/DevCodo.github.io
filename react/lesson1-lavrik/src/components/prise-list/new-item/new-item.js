@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './new-item.scss';
+import style from './new-item.module.scss';
 
 export default class extends React.Component {
 

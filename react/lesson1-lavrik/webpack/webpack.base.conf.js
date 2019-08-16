@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 
 const PATHS = {
-    src: path.resolve(__dirname, '../src'),
+    src: path.resolve(__dirname, '../src2'),
     dist: path.resolve(__dirname, '../dist'),
     assets: ''    // 'assets/'
 }
@@ -20,7 +20,7 @@ module.exports = {
 
     output: {
         filename: `${PATHS.assets}js/[name].[chunkhash].js`,         //'[name].js',
-        path: PATHS.dist,                 //path.resolve(__dirname, './dist'),
+        // path: PATHS.dist,                 //path.resolve(__dirname, './dist'),
         publicPath: '/'
     },
 
@@ -36,16 +36,56 @@ module.exports = {
                 name: '[name].[ext]'
             }
         },{
-            test: /\.scss$/,
+            test: /\.module\.scss$/,
+            exclude: '/node_modules/',
             use: [
-                MiniCssExtractPlugin.loader,
                 {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      hmr: process.env.NODE_ENV === 'development',
+                    },
+                }, {
                     loader: 'css-loader',
                     options: { 
                         sourceMap: true,
                         modules: true,
-                        localIdentName: "[name]__[hash:base64:5]"
+                        // localIdentName: "[name]__[local]__[hash:base64:15]"
+                        localIdentName: "[local]__[sha1:hash:hex:7]"
                     }
+                }, {
+                    loader: 'postcss-loader',
+                    options: {
+                        sourceMap: true,
+                        ident: 'postcss',
+                        plugins: (loader) => [
+                            require('autoprefixer'),
+                            require('css-mqpacker'),
+                            require('cssnano')({
+                                preset: [
+                                    'default', {
+                                        discardComments: {
+                                        removeAll: true,
+                                        }
+                                    }
+                                ]
+                            })
+                        ]
+                    }
+                }, {
+                    loader: 'sass-loader',
+                    options: { sourceMap: true }
+                }
+            ]
+        },{
+            test: /^((?!\.module).)*(scss|css)$/,
+            use: [
+                {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      hmr: process.env.NODE_ENV === 'development',
+                    },
+                }, {
+                    loader: 'css-loader'
                 }, {
                     loader: 'postcss-loader',
                     options: {
@@ -86,5 +126,11 @@ module.exports = {
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
             { from: `${PATHS.src}/static`, to: '' }
         ])
-    ]
+    ],
+
+    resolve: {
+        alias: {
+            "~d": path.resolve(__dirname, '../src')
+        }
+    }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './itemCount.scss';
+
 export default function({ ind, count, curent, onChange }) {
 
   function inc () {
@@ -15,7 +17,7 @@ export default function({ ind, count, curent, onChange }) {
 
 
   return (
-    <div>
+    <div className="box">
       <button onClick={dec}> - </button>
       <span>{count}</span>
       <button onClick={inc}> + </button>

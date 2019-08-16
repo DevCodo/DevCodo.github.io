@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-// import Counter from './components/counter/counter';
-import PriceList from './components/prise-list';
+import PriceList from '@/components/prise-list';
 
 function App() {
   return (
