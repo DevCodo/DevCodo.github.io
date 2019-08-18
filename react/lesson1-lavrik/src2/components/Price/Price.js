@@ -1,12 +1,23 @@
 import React from 'react';
 import {observer} from 'mobx-react';
+import {Link} from 'react-router-dom';
 
+import {routesMap, urlBuild} from '../service/routes';
 import store from './../service/store';
 
 @observer class Price extends React.Component {
 
   render() {
-    
+    let posts = [1,2,3];
+
+    posts = posts.map(num => {
+      return (
+        <div key={num}>
+          <Link to={urlBuild('blogPost', num)}>Post #{num}</Link>
+        </div>
+      )
+    })
+
     let products = store.products.map((el, i) => {
       return (
         <tr key={el.id}>
@@ -27,22 +38,26 @@ import store from './../service/store';
 
 
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование</th>
-            <th>Цена</th>
-            <th>Количество</th>
-            <th>Сумма</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products}
-          <tr>
-            <td>Общая сумма: {store.total}</td>
-          </tr>
-        </tbody>
-      </table>
+      <>
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование</th>
+              <th>Цена</th>
+              <th>Количество</th>
+              <th>Сумма</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products}
+            <tr>
+              <td>Общая сумма: {store.total}</td>
+            </tr>
+          </tbody>
+        </table>
+        <Link to={routesMap.cart}>Перейти к оформлению</Link>
+        {posts}
+      </>
     )
   }
 

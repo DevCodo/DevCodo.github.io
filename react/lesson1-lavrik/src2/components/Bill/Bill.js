@@ -12,7 +12,7 @@ import style from './Bill.module.scss';
 
     for ( let name in store.persData ) {
       let item = (
-        <div>{ store.persData[name].value }</div>
+        <div key={store.persData[name].label}>{ store.persData[name].value }</div>
       )
       perData.push(item);
     }
@@ -23,7 +23,7 @@ import style from './Bill.module.scss';
         <div>На контактные данные</div>
         {perData}
         <div>На сумму: {store.total}</div>
-        <button className={style.button} onClick={ () => store.showBill(false) }>Подтвердить</button>
+        <button className={style.button} onClick={ () => this.props.history.push('/') }>Подтвердить</button>
       </div>
     )
   }

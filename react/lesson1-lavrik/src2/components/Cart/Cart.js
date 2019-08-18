@@ -1,14 +1,14 @@
 import React from 'react';
 import store from '../service/store';
 import {observer} from 'mobx-react';
+import {Link, Redirect} from 'react-router-dom';
 
+import {routesMap} from '../service/routes';
 import style from './Cart.module.scss';
 
  @observer class Cart extends React.Component {
  
-   
    render() {
-     
      let inputs = [];
    
      for ( let name in store.persData) {
@@ -32,7 +32,7 @@ import style from './Cart.module.scss';
         <form>
           {inputs}
         </form>
-        <button onClick={ () => store.showBill(true) } disabled={store.isDisabled}>Оформить заказ</button>
+        <button onClick={() => this.props.history.push(routesMap.bill)} disabled={store.isDisabled}>Оформить заказ</button>
       </React.Fragment>
     )
   }

@@ -12,7 +12,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         // open: true,
         // open: 'Google Chrome',
         // port: 8081,
-        overlay: true               //{warning: true, errors: true}
+        historyApiFallback: true,
+        overlay: true,               //{warning: true, errors: true}
     },
 
     plugins: [

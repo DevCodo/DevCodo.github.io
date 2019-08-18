@@ -52,12 +52,7 @@ class Store {
 
     label.valid = label.validator(value);
   }
-
-  @observable isShowBill = false;
-
-  @action showBill(boolean) {
-    this.isShowBill = boolean;
-  }  
+ 
 }
 
 export default new Store();

@@ -130,7 +130,7 @@ module.exports = {
 
     resolve: {
         alias: {
-            "~d": path.resolve(__dirname, '../src')
+            "~d": PATHS.src
         }
     }
 }
