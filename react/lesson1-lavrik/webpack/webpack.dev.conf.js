@@ -14,6 +14,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         // port: 8081,
         historyApiFallback: true,
         overlay: true,               //{warning: true, errors: true}
+        // proxy: {
+        //     '/reactcourseapi/**': {
+        //         terget: 'http://localhost',
+        //         secure: false,
+        //         changeOrigin: true
+        //     }
+        // }
     },
 
     plugins: [
