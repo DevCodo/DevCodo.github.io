@@ -86,6 +86,7 @@ export default class extends React.Component {
       <>
       <img src={'/img/portfolio1-2.jpg'} />
       <table>
+
         <thead>
           <tr>
             <th>Наименование</th>
