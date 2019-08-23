@@ -20,7 +20,8 @@
         {
           "loose": true
         }
-      ]
+      ],
+      "transform-react-jsx-img-import"
     ],
     "presets": [
       [
@@ -49,6 +50,7 @@
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.5.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-react-jsx-img-import": "^0.1.4",
     "copy-webpack-plugin": "^5.0.2",
     "css-loader": "^2.1.1",
     "css-mqpacker": "^7.0.0",

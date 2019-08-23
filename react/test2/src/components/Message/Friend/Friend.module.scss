@@ -1,0 +1,20 @@
+
+
+.item {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+  font-weight: normal;
+  &:visited {
+  }
+  &:hover {
+    font-weight: bold;
+  }
+  &:active {
+  }
+}
+.item_active {
+  font-weight: bold;
+}

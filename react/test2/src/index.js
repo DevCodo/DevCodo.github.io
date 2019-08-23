@@ -1,13 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-import PriceList from '~d/components/prise-list';
-
-function App() {
-  return (
-    <PriceList />
-  )
-}
+import App from './components/App';
 
 ReactDOM.render(<App />, document.querySelector('#root'));
