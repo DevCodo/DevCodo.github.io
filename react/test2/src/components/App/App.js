@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.scss';
+import store from '~d/redux/store';
 import Header from '../Header';
 import NavMenu from '../NavMenu';
 import Profile from '../Profile';
@@ -9,9 +10,9 @@ import Message from '../Message';
 import Footer from '../Footer';
 
 class App extends React.Component {
- 
-  render() {
 
+  render() {
+console.log(store)
     return (
       <BrowserRouter>
         <Header />
