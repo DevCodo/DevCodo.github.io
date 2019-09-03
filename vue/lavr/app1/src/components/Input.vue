@@ -1,7 +1,9 @@
 <template>
   <div >
     <p>{{name}}</p>
-    <input :value="value" :class="setClass" @input="onInput">
+    <input :value="value"
+          :class="setClass"
+          @input="onInput">
   </div>
 </template>
 
@@ -21,10 +23,7 @@ export default {
     setClass() {
       if (this.showClass) {
         let valid = this.pattern.test(this.value);
-         this.$emit("changevalue", {
-            value: this.value,
-            valid: valid
-          })
+        this.$emit("update:valid", valid)
         return valid ? "ok" : "off";
       }
     }
@@ -32,10 +31,8 @@ export default {
   methods: {
     onInput(e) {
       this.showClass = true;
-      this.$emit("changevalue", {
-        value: e.target.value,
-        valid: this.pattern.test(e.target.value)
-      })
+      this.$emit("update:value", e.target.value)
+      this.$emit("update:valid", this.pattern.test(e.target.value))
     }
   }
 }

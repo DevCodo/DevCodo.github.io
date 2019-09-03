@@ -6,13 +6,13 @@
 
     <Input v-for="(item, index) in info" 
             :name="item.name"
-            :value="item.value"
+            :value.sync="item.value"
             :pattern="item.pattern"
-            @changevalue="changeValue($event, index)"
+            :valid.sync="item.valid"
             :key="index" />
   </div>
 </template>
-
+// @changevalue="changeValue($event, index)"
 <script>
 import Input from './components/Input';
 
@@ -25,7 +25,7 @@ export default {
       info: [
         {
           name: "Name",
-          value: "dfdfd",
+          value: "dfdfdf",
           pattern: /^[a-zA-Z]{2,30}$/,
           valid: false
         },
@@ -43,7 +43,7 @@ export default {
         },
         {
           name: "Some Field",
-          value: "",
+          value: "fdfdf",
           pattern: /.+/,
           valid: false
         },
@@ -61,10 +61,6 @@ export default {
     }
   },
   methods: {
-    changeValue(e, index) {
-      this.info[index].value = e.value;
-      this.info[index].valid = e.valid;
-    }
   }
 }
 </script>
