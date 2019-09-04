@@ -5,6 +5,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
+  
   state: {
     cnt: 0,
     price: 500,
@@ -12,6 +13,7 @@ export const store = new Vuex.Store({
     name: "",
     phone: ""
   },
+
   getters: {
     price(state) {
       return state.price
@@ -32,6 +34,7 @@ export const store = new Vuex.Store({
       return state.orderState
     },
   },
+
   mutations: {
     send(state) {
       state.orderState = "loading";
@@ -48,6 +51,7 @@ export const store = new Vuex.Store({
       state.phone = payload.phone;
     },
   },
+
   actions: {
     sendOrder(store, payload) {
       store.commit('send');
