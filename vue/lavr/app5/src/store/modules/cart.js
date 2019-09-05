@@ -3,11 +3,16 @@ export default {
   state: {
     products: []
   },
+
   getters: {
     products(state){
       return state.products
     },
+    count(state) {
+      return state.products.length
+    }
   },
+
   mutations: {
     add(state, id) {
       if (state.products.indexOf(id) === -1) {
@@ -21,6 +26,7 @@ export default {
       }
     },
   },
+
   actions: {
     add(store, id) {
       store.commit('add', id)

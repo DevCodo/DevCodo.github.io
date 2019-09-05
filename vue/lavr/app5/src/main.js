@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
+// Vue.http.options.root = 'http://localhost/vuebackend/'
+
 Vue.config.productionTip = false
 
 new Vue({

@@ -2,7 +2,7 @@
   <div class="app">
     <header>
       <div class="logo">Site</div>
-      <div class="cart">In Cart:</div>
+      <div class="cart">In Cart: {{ ProductInCount }}</div>
     </header>
     <div class="wrapper">
       <nav>
@@ -20,7 +20,9 @@
       </ul>
       </nav>
       <main>
-        <router-view />
+        <transition name="slide" mode="out-in">
+           <router-view />
+        </transition>
       </main>
     </div>
   </div>
@@ -32,13 +34,17 @@
 import { mapGetters } from 'vuex' 
 
 export default {
+   created() {
+    this.$store.dispatch('products/loadItems');
+  },
+
   computed: {
-    ...mapGetters({
-      menuList: 'menu/items'
+    ...mapGetters('menu', {
+      menuList: 'items'
     }),
-    // ...mapGetters('menu', {
-    //   menuList: 'items'
-    // }),
+    ...mapGetters('cart', {
+      ProductInCount: 'count'
+    }),
     // menuList() {
     //   return this.$store.getters['menu/items']
     // }
@@ -105,7 +111,11 @@ a {
   align-items: center;
 }
 
-
-
+.slide-enter-active, .slide-leave-active {
+  transition: .2s;
+}
+.slide-enter, .slide-leave-to {
+  opacity: 0;
+}
 
 </style>

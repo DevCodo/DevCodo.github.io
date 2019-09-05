@@ -2,18 +2,23 @@
   <div class="Product_list">
     <h1>Products</h1>
     <div class="box">
-      <div class="product" v-for="(item) in products" :key="item.id_product">
-        <div class="name">{{item.title}}</div>
-        <div class="price">{{item.price}}</div>
+      <div class="product" v-for="(item) in products" :key="item.id">
+
+        <div class="name">
+          <router-link tag="h3" :to="{name: 'product', params: {id: item.id}}">
+            <a>{{item.title}}</a>
+          </router-link>
+        </div>
+        <img :src="item.thumbnailUrl" alt="">
 
         <div class="buttons">
           
-          <button v-if="inCart.indexOf(item.id_product) === -1"
+          <button v-if="inCart.indexOf(item.id) === -1"
                   class="add"
-                  @click="addToCart(item.id_product)">Add</button>
+                  @click="addToCart(item.id)">Add</button>
           <button v-else 
                   class="remove"
-                  @click="removeFromCart(item.id_product)">Remove</button>
+                  @click="removeFromCart(item.id)">Remove</button>
         
         </div>
       </div>
@@ -27,13 +32,8 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  components: {
     
-  },
-  data() {
-    return {
-    }
-  },
+
 
   computed: {
     ...mapGetters('products', {
@@ -59,16 +59,17 @@ export default {
 
 .box {
   display: flex;
-  justify-content: space-around
+  flex-wrap: wrap;
 } 
 
 .product {
   width: 30%;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  // height: 200px;
   border: 1px solid rgb(124, 124, 124);
   border-radius: 10px;
 }
@@ -78,7 +79,7 @@ export default {
 }
 
 .buttons {
-  margin-top: 50px;
+  margin: 20px;
 }
 
 .add {
