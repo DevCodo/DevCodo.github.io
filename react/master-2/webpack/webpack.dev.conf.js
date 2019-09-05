@@ -11,7 +11,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         contentBase: baseWebpackConfig.externals.paths.dist,
         // open: true,
         // open: 'Google Chrome',
-        // port: 8081,
+        port: 8081,
         historyApiFallback: true,
         overlay: true,               //{warning: true, errors: true}
         // proxy: {
