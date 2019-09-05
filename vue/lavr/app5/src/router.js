@@ -6,6 +6,8 @@ import Cart from './views/Cart.vue'
 import Checkout from './views/Checkout.vue'
 import E404 from './views/E404.vue'
 
+import store from './store';
+
 Vue.use(Router)
 
 export default new Router({
@@ -19,13 +21,20 @@ export default new Router({
     {
       path: '/products',
       name: 'products',
-      component: ProductList
+      component: ProductList,
+      beforeEnter: (to, from, next) => {
+        store.dispatch('products/loadItems');
+        next()
+      }
     },
     {
       path: '/products/:id',
       name: 'product',
-      component: Product,
-      // props: true
+      // component: Product,
+      components: {
+        default: Product,
+        second: ProductList
+      }
     },
     {
       path: '/checkout',

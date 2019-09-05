@@ -1,6 +1,7 @@
 <template>
   <div class="product">
-    <h2 v-if="!getProduct">Loading...</h2>
+    <!-- <div>{{getProduct}}</div> -->
+    <h2 v-if="loading">Loading...</h2>
     <template v-else>
       <div>{{getProduct.title}}</div>
       <img :src="getProduct.thumbnailUrl" alt="">
@@ -22,8 +23,24 @@
 <script>
 
 import { mapGetters, mapActions } from 'vuex';
+import store from '../store';
 
 export default {
+
+  created() {
+    this.$store.dispatch('products/loadItem', this.getId);
+    
+  },
+   beforeRouteUpdate(to,from,next) {
+     this.$store.dispatch('products/loadItem', to.params.id);
+     this.getProduct
+     next();
+  },
+  //  beforeRouteEnter(to,from,next) {
+  //    console.log("Enter")
+  //  store.dispatch('products/loadItem', to.params.id);
+  // next();
+  // },
 
   computed: {
        ...mapGetters('cart', {
@@ -33,8 +50,12 @@ export default {
       return +this.$route.params.id
     },
     getProduct() {
-      return this.$store.getters['products/item'](this.getId)
-    }
+      return this.$store.getters['products/item'];
+    },
+    loading() {
+      return this.$store.getters['products/loadingItem'];
+    },
+
   },
 
   methods: {
@@ -42,7 +63,6 @@ export default {
       addToCart: 'add',
       removeFromCart: 'remove'
     }),
-   
   },
 }
 </script>

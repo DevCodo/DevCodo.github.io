@@ -20,9 +20,10 @@
       </ul>
       </nav>
       <main>
-        <transition name="slide" mode="out-in">
+        <!-- <transition name="slide" mode="out-in"> -->
            <router-view />
-        </transition>
+           <router-view name="second" />
+        <!-- </transition> -->
       </main>
     </div>
   </div>
@@ -34,9 +35,6 @@
 import { mapGetters } from 'vuex' 
 
 export default {
-   created() {
-    this.$store.dispatch('products/loadItems');
-  },
 
   computed: {
     ...mapGetters('menu', {

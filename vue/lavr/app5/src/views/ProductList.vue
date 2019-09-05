@@ -30,10 +30,14 @@
 <script>
 
 import { mapGetters, mapActions } from 'vuex';
+// import store from '../store';
 
 export default {
     
-
+  // beforeRouteEnter(to,from,next) {
+  //  store.dispatch('products/loadItems');
+  //   next();
+  // },
 
   computed: {
     ...mapGetters('products', {

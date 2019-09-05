@@ -10,7 +10,10 @@
         </tr>
 
         <tr v-for="(item, index) in productInCar" :key="index">
-          <td>{{item.title}}</td>
+          <td>
+            {{item.title}}
+            <img :src="item.thumbnailUrl" alt="">
+            </td>
           <td>{{item.price}}</td>
         </tr>
 
@@ -40,7 +43,7 @@ export default {
 
     productInCar() {
       return this.products.filter(item => {
-        return this.inCart.indexOf(item.id_product) !== -1
+        return this.inCart.indexOf(item.id) !== -1
       })
     }
   },
