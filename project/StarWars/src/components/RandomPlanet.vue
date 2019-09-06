@@ -1,29 +1,102 @@
 <template>
-  <div class="wrapper" :style="{background: `url(https://avatars.mds.yandex.net/get-pdb/231404/93746b8d-16e2-4b3e-9b10-beb12b783788/s1200)`}">
-    <div class="img" style="background: url('../img/card-back.jpg')"></div>
+  <div class="wrapper" >
+
+    <Spinner v-if="data === null" />
+
+    <ErrorIndicator v-else-if="data === false" />
+
+    <template v-else>
+      <img :src="imgUrl" class="img" alt="">
+
+      <div class="info">
+          <div class="name">{{data.name}}</div> 
+
+          <div class="item">Population {{data.population}}</div>
+          <div class="item">Rotation Perios {{data.rotationPeriod}}</div>
+          <div class="item">Diameter {{data.diameter}}</div>
+        </div> 
+    </template>
+
   </div>
 </template>
 
 <script>
+import Spinner from './Spinner';
+import ErrorIndicator from './ErrorIndicator';
+
 export default {
-  props: {
-  }
+  components: {
+    Spinner,
+    ErrorIndicator
+  },
+  
+  data() {
+    return {
+      interval: null
+    }
+  },
+
+  created() {
+    this.$store.dispatch('planets/getRandomPlanet', this.getId());
+    this.interval = setInterval(() => {
+      this.$store.dispatch('planets/getRandomPlanet', this.getId());
+    }, 10000);
+  },
+
+  destroyed() {
+    clearInterval(this.interval);
+  },
+
+  computed: {
+    data() {
+      return this.$store.getters['planets/randomPlanet'];
+    },
+    imgUrl() {
+      return this.$store.getters['planets/randomPlanetImage'];
+    }
+  },
+
+  methods: {
+    getId() {
+      return Math.ceil(Math.random() * 18 + 1);
+    },
+  },
+
+
+
+
 }
 </script>
 
 <style scoped lang="scss">
 
 .wrapper {
+  position: relative;
   height: 180px;
   width: 100%;
   background: #303030;
   border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  color: #fff;
 }
-
 .img {
   width: 150px;
   height: 150px;
-  // background-image: url('../img/card-back.jpg');
+  border-radius: 5px;
+}
+.info {
+  margin-left: 20px;
+}
+.name {
+  font-size: 22px;
+}
+.item {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 6px;
+  border-top: 1px solid #505050;
+  padding-top: 6px;
 }
 
 </style>

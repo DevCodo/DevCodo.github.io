@@ -52,7 +52,10 @@ export default {
 }
 
 .lds-css {
-  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
 
 .lds-double-ring {

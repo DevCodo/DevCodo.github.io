@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <Header />
-    <RandomPlanet />
     
+    <transition name="show" mode="out-in" appear>
+      <router-view />
+           <!-- <router-view name="second" /> -->
+    </transition>
+
   </div>
 </template>
 
@@ -26,17 +30,27 @@ export default {
   margin: 0;
   box-sizing: border-box;
 }
-
 html, body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   background: #222222;
+  color: #fff;
+  overflow-x: hidden;
 }
-
 #app {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 25px;
 }
+
+.show-enter,
+.show-leave-to {
+  transform: scale(0);
+}
+.show-enter-active,
+.show-leave-active {
+  transition: 0.4s;
+}
+
 
 </style>

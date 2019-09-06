@@ -1,15 +1,12 @@
 <template>
   <header>
     <div class="logo">
-      <router-link to='/'>
-      <!-- Star Wars -->
-        <img src="../img/logo.png" alt="logo">
-      </router-link>
+      <router-link to='/' >Star Wars</router-link>
     </div>
     <nav>
-      <router-link to="/people" active-class="link_active" class="link">People</router-link>
-      <router-link to="/planets" active-class="link_active" class="link">Planets</router-link>
-      <router-link to="/starships" active-class="link_active" class="link">Starships</router-link>
+      <router-link :to="{name: 'people'}" active-class="link_active" class="link">People</router-link>
+      <router-link :to="{name: 'planets'}" active-class="link_active" class="link">Planets</router-link>
+      <router-link :to="{name: 'starships'}" active-class="link_active" class="link">Starships</router-link>
     </nav>
   </header>
 </template>
@@ -32,19 +29,23 @@ header {
   align-items: center;
 }
 .logo {
-  height: 40px;
-  cursor: pointer;
-  img {
-    height: 100%;
+  flex-shrink: 0;
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    &:hover {
+      color: #39a070;
+    }
   }
 }
 nav {
-  margin-left: 100px;
+  margin-left: 70px;
 }
 .link {
-  color: #348b62;
+  color: #39a070;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   height: 50px;
   display: inline-flex;
   justify-content: center;

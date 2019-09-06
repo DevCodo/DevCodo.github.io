@@ -22,6 +22,7 @@ export default {
 <style lang="scss" scoped>
 
 .error-indicator {
+  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
