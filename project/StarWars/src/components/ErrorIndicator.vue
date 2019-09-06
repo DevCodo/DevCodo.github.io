@@ -22,12 +22,13 @@ export default {
 <style lang="scss" scoped>
 
 .error-indicator {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #c78f22;
+  position: absolute;
 }
 
 .error-indicator img {
