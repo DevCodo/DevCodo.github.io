@@ -1,23 +1,19 @@
 <template>
   <div class="game">
 
-    <!-- <div v-if="!cards" class="overlay">
-      <Spinner />
-    </div> -->
-    
-    <transition-group name="shuffle" tag="div" class="box">
-      <Card v-for="(item, index) in cards"
-      @clickFlip="clickFlip()"
-  
-      :name="item.name"
-      :url="item.url"
-      :key="index" />
-      <!-- <div v-for="(item, index) in cards" :key="index" @click="shuffle()" class="it">
-        <span>{{item.name}}</span>
-        <img :src="item.url" alt="">
-      </div> -->
-    </transition-group>
+    <div class="overlay" v-show="overlay" >
+      <Spinner v-if="!cards" />
+      <img v-else src="../img/play.png" @click="play()">
+    </div>
 
+    <transition-group name="shuffle" tag="div" class="box" >
+        <Card v-for="(item, index) in cards" :key="item.uniqueId" 
+        @clickFlip="clickFlip(index)" 
+        :flip='item.flip'
+        :wait="wait"
+        :url="item.url" />
+    </transition-group>
+    
   </div>
 </template>
 
@@ -27,21 +23,27 @@ import Card from './Card';
 import Spinner from './Spinner';
 
 export default {
-
-  components: {
+    components: {
     Card,
     Spinner,
   },
- 
   data() {
     return {
       cards: this.getCards,
-      arr: [1,2,3,4,5,6,7,8,9,10,11,12]
+      wait: false,
+      first: null,
+      second: null,
+      overlay: true
     }
   },
-
-  created() {
+  
+ created() {
     this.cards = this.$store.getters['game/cards'];
+    if (this.cards) {
+      this.cards.forEach((card) => {
+        card.flip = false;
+      }); 
+    }
   },
 
   computed: {
@@ -51,18 +53,72 @@ export default {
   },
 
   methods: {
+    play() {
+      this.overlay = false;
+      this.cards.forEach((card) => {
+        card.flip = true;
+      }); 
+      setTimeout(() => {
+        this.start();
+      }, 600);
+    },
     clickFlip(index) {
-      console.log(13)
-      this.shuffle()
+      
+      this.cards[index].flip = true;
+
+      if (this.first === null) {
+        this.first = index;
+      } else {
+        this.second = index;
+
+        if (this.cards[this.first].id != this.cards[this.second].id) {
+          this.no();
+        } else {
+          this.yes();
+        }
+      }
+    },
+    no() {
+      this.wait = true;
+      setTimeout(() => {
+        this.cards[this.first].flip = false;
+        this.cards[this.second].flip = false;
+        this.first = null;
+        this.second = null;
+        this.wait = false;
+      }, 500);
+    },
+    yes() {
+      this.wait = true;
+      this.first = null;
+      this.second = null;
+      setTimeout(() => {
+        this.wait = false;
+        this.checkEveryFlip();
+      }, 300);
+    },
+    checkEveryFlip() {
+      if (this.cards.every(card => card.flip)) {
+        this.start()
+      }
+    },
+    start() {
+      this.shuffle();
+      this.cards.forEach((card, i) => {
+        setTimeout(() => {
+          card.flip = false;
+        },i * 100 + 1000);
+      }); 
     },
     shuffle() {
-      let array = [...this.cards]
+      let array = [...this.cards];
        for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
-      this.cards = array
+      this.cards = array;
     },
+    
   },
 
   watch: {
@@ -70,44 +126,52 @@ export default {
       this.cards = this.getCards
     }
   }
+
+
 }
 </script>
 
+<style lang="scss" scoped>
 
-<style scoped lang="scss">
+  .game {
+    position: relative;
+    width: 100%;
+    min-height: 642px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 70px;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    img {
+      width: 100px;
+      cursor: pointer;
+    }
+  }
 
-.game {
-  position: relative;
-  // width: 100%;
-  // height: 100%;
-}
-.overlay {
-  // position: absolute;
-  // height: 100%;
-  // width: 100%;
-  background: #000;
-}
-.box {
-  margin: 50px auto;
-  max-width: 700px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around
-}
-.shuffle-move {
-  // opacity: 0.7!important;
-  transition: 1s;
-  
-}
-// .item {
-//   width: 100px;
-//   height: 100px;
-//   background: rgb(97, 182, 197);
-//   margin: 5px;
-//   width: 25%;
-//   display: inline-block;
-//   transition: 1s;
-// }
+  .shuffle-move {
+    opacity: 0.7!important;
+  }
+  .box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-
+  @media screen and (max-width: 700px) {
+    .game {
+      margin-top: 100px;
+      min-height: 350px;
+    }
+  }
 </style>

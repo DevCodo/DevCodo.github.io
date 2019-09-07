@@ -13,6 +13,7 @@
       </div>
     </template>
     
+    <slot></slot>
   </div>
 </template>
 
@@ -26,10 +27,7 @@ export default {
     Spinner,
     ErrorIndicator
   },
-  props: {
-    dataAll: null,
-    pickItem: Function
-  },
+  props: ['dataAll' ,'pickItem', 'page', 'maxPage'],
 
   computed: {
     data() {
@@ -45,10 +43,11 @@ export default {
 .item_list {
   position: relative;
   width: 100%;
-  min-height: 450px;
+  min-height: 482px;
   background: #303030;
   border-radius: 5px;
   border: 1px solid #505050;
+  margin-bottom: 50px;
 }
 
 .item {
@@ -64,6 +63,29 @@ export default {
   &:hover {
     background: #464646;
   }
+}
+
+.link {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  height: 34px;
+  padding: 0 10px;
+  background: #39a070;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  bottom: -50px;
+  &:hover {
+    background: #666;
+  }
+}  
+.prev {
+
+}
+.next {
+  right: 0px;
 }
 
 </style>

@@ -1,0 +1,88 @@
+<template>
+  <div class="lds-css">
+    <div class="lds-double-ring">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</template>
+
+<script>
+
+export default {
+  
+}
+</script>
+
+
+<style lang="scss" scoped>
+
+@keyframes lds-double-ring {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes lds-double-ring {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-double-ring_reverse {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes lds-double-ring_reverse {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.lds-css {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.lds-double-ring {
+  position: relative;
+}
+.lds-double-ring div {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  border: 8px solid #000;
+  border-color: #3d7ec0 transparent #3d7ec0 transparent;
+  animation: lds-double-ring 1.5s linear infinite;
+}
+.lds-double-ring div:nth-child(2) {
+  width: 140px;
+  height: 140px;
+  top: 30px;
+  left: 30px;
+  border-color: transparent #cc4545 transparent #cc4545;
+  animation: lds-double-ring_reverse 1.5s linear infinite;
+}
+.lds-double-ring {
+  width: 77px !important;
+  height: 77px !important;
+  transform: translate(-38.5px, -38.5px) scale(0.385) translate(38.5px, 38.5px);
+}
+</style>

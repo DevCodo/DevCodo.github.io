@@ -24,9 +24,10 @@ export default {
 header {
   height: 60px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .logo {
   flex-shrink: 0;
@@ -58,6 +59,28 @@ nav {
 }
 .link_active {
   color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    margin-bottom: 60px;
+  }
+  .logo {
+    a {
+      font-size: 28px;
+    }
+  }
+  nav {
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .link {
+    font-size: 16px;
+    height: 40px;
+  }
 }
 
 </style>

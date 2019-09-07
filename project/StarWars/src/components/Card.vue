@@ -1,8 +1,14 @@
 <template>
-  <div class="card" @click="clickFlip">
-    <div class="box">
-    <img :src="url" alt="">
-    <span>{{name}}</span>
+  <div class="container" @click="fliping()" >
+    <div class="flipper" :style="flipStyle">
+
+      <div class="front" >
+      </div>
+
+      <div class="back" :style="{backgroundImage: `url(${url})`}">
+        <!-- <img :src="url" alt=""> -->
+      </div>
+      
     </div>
   </div>
 </template>
@@ -10,22 +16,20 @@
 
 <script>
 export default {
-  props: ['url', 'name'],
- 
-  data() {
-    return {
-     
-    }
-  },
+  props: ['url', 'wait', 'flip'],
 
   computed: {
-    
+    flipStyle() {
+      return this.flip ? "transform: rotateY(180deg)" : "";
+    },
   },
 
   methods: {
-    clickFlip() {
-      this.$emit('clickFlip')
-    }
+    fliping() {
+      if (this.wait || this.flip) return;
+      this.$emit('clickFlip', {
+      })
+    },
   },
 
 
@@ -35,21 +39,44 @@ export default {
 
 <style scoped lang="scss">
 
-.card {
-  // width: 100px;
-  // padding-bottom: 30%;
-  background: #303030;
-  border-radius: 5px;
-  margin-bottom: 20px;
+.container {
+  width: calc(18%);
+  padding-bottom: 24.75%;
+  margin: 1%;
+  perspective: 1200;
+  transform-style: preserve-3d;
+  transition: 1s;
+  cursor: pointer;
 }
-.box {
-  position: relative;
-}
-img {
-  width: 150px;
-}
-span {
+.flipper {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: .5s linear;  
 }
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 2px solid #a8a8a8;
+}
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-image: url('../img/card-back.png');
+}
+.back {
+  transform: rotateY(-180deg);
+}
+
 
 </style>

@@ -29,6 +29,7 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 html, body {
   width: 100%;

@@ -7,10 +7,11 @@ export default {
 
   state: {
     allPlanets: null,
-    planet: undefined,
+    planet: null,
     randomPlanet: null,
     planetImage: null,
     randomPlanetImage: null,
+    planetDetails: null
   },
 
   getters: {
@@ -20,6 +21,9 @@ export default {
     planet(state) {
       return state.planet;
     },
+    planetDetails(state) {
+      return state.planetDetails
+    },  
     randomPlanet(state) {
       return state.randomPlanet;
     },
@@ -38,6 +42,12 @@ export default {
     getPlanet(state, data) {
       state.planet = data;
     },
+    reomveAllPlanets(state) {
+      state.allPlanets = null;
+    },
+    reomvePlanet(state) {
+      state.planet = null;
+    },
     getRandomPlanet(state, data) {
       state.randomPlanet = data;
     },
@@ -47,35 +57,57 @@ export default {
     getRandomPlanetImage(state, id) {
       state.randomPlanetImage = getPlanetImage(id);
     },
-    removePlanet(state) {
-      state.planet = null;
+    removePlanetImage(state) {
+      state.planetImage = null;
+    },
+    getPlanetDetails(state, data) {
+      state.planetDetails = data;
+    },
+    removePlanetDetails(state) {
+      state.planetDetails = null;
     },
   },
 
   actions: {
-    getAllPlanets(store) {
-      getAllPlanets()
+    getAllPlanets({commit}, page) {
+      commit('reomveAllPlanets');
+      commit('reomvePlanet');
+      commit('removePlanetImage');
+      getAllPlanets(page)
       .then(data => {
-        store.commit('getAllPlanets', data);
+        commit('getAllPlanets', data);
+        commit('getPlanet', data[0]);
+        commit('getPlanetImage', data[0].id);
       })
-      .catch(err => store.commit('getAllPlanets', false))
+      .catch(err => {
+        commit('getAllPlanets', false)
+        commit('getPlanet', false)
+      })
     },
-    getPlanet(store, id) {
-      store.commit('removePlanet');
+    getPlanet({commit, state}, id) {
+      let data = state.allPlanets.filter(item => item.id == id);
+      commit('getPlanet', data[0]);
+      commit('removePlanetImage');
+      setTimeout(() => {
+        commit('getPlanetImage', id);
+      }, 0);
+    },
+    getRandomPlanet({commit, state}, id) {
       getPlanet(id)
         .then(data => {
-          store.commit('getPlanet', data);
-          store.commit('getPlanetImage', id);
+          commit('getRandomPlanet', data);
+          commit('getRandomPlanetImage', id);
         })
-        .catch(err => store.commit('getPlanet', false))
+        .catch(err => commit('getRandomPlanet', false))
     },
-    getRandomPlanet(store, id) {
+    getPlanetDetails({commit}, id) {
+      commit('removePlanetDetails');
       getPlanet(id)
         .then(data => {
-          store.commit('getRandomPlanet', data);
-          store.commit('getRandomPlanetImage', id);
+          data.url = getPlanetImage(id);
+          commit('getPlanetDetails', data);
         })
-        .catch(err => store.commit('getRandomPlanet', false))
+        .catch(err => commit('getPlanetDetails', false))
     },
   }
 }

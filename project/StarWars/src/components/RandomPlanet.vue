@@ -40,7 +40,7 @@ export default {
     this.$store.dispatch('planets/getRandomPlanet', this.getId());
     this.interval = setInterval(() => {
       this.$store.dispatch('planets/getRandomPlanet', this.getId());
-    }, 10000);
+    }, 2000);
   },
 
   destroyed() {
@@ -79,6 +79,7 @@ export default {
   padding: 15px;
   display: flex;
   color: #fff;
+  margin: 20px 0;
 }
 .img {
   width: 150px;

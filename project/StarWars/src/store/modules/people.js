@@ -7,8 +7,10 @@ export default {
 
   state: {
     allPeople: null,
-    person: undefined,
+    person: null,
     personImage: null,
+    personDetails: null,
+    fullPath: null
   },
 
   getters: {
@@ -18,8 +20,14 @@ export default {
     person(state) {
       return state.person;
     },
+    personDetails(state) {
+      return state.personDetails;
+    },
     personImage(state) {
       return state.personImage;
+    },
+    fullPath(state) {
+      return state.fullPath;
     },
   },
 
@@ -30,30 +38,61 @@ export default {
     getPerson(state, data) {
       state.person = data;
     },
+    removeAllPeople(state) {
+      state.allPeople = null;
+    },
+    removePerson(state) {
+      state.person = null;
+    },
     getPersonImage(state, id) {
       state.personImage = getPersonImage(id);
     },
-    removePesone(state) {
-      state.person = null;
+    removePersonImage(state) {
+      state.personImage = null;
+    },
+    getPersonDetails(state, data) {
+      state.personDetails = data;
+    },
+    removePersonDetails(state) {
+      state.personDetails = null;
+    },
+    setFullPath(state, path) {
+      state.fullPath = path;
     },
   },
 
   actions: {
-    getAllPeople(store) {
-      getAllPeople()
+    getAllPeople({commit}, page) {
+      commit('removeAllPeople');
+      commit('removePerson');
+      commit('removePersonImage');
+      getAllPeople(page)
       .then(data => {
-        store.commit('getAllPeople', data);
+        commit('getAllPeople', data);
+        commit('getPerson', data[0]);
+        commit('getPersonImage', data[0].id);
       })
-      .catch(err => store.commit('getAllPeople', false))
+      .catch(err => {
+        commit('getAllPeople', false)
+        commit('getPerson', false)
+      })
     },
-    getPerson(store, id) {
-      store.commit('removePesone');
+    getPerson({commit, state}, id) {
+      let data = state.allPeople.filter(item => item.id == id);
+      commit('getPerson', data[0]);
+      commit('removePersonImage');
+      setTimeout(() => {
+        commit('getPersonImage', id);
+      }, 0);
+    },
+    getPersonDetails({commit}, id) {
+      commit('removePersonDetails');
       getPerson(id)
         .then(data => {
-          store.commit('getPerson', data);
-          store.commit('getPersonImage', id);
+          data.url = getPersonImage(id);
+          commit('getPersonDetails', data);
         })
-        .catch(err => store.commit('getPerson', false))
+        .catch(err => commit('getPersonDetails', false))
     },
   }
 }

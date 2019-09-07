@@ -22,21 +22,20 @@ export default {
   },
 
   actions: {
-    getCards({commit, state}) {
+    getCards({commit, state}, page) {
 
       if (state.cards) return;
-
-      getAllPeople()
+      getAllPeople(page)
       .then(data => {
-        let arr = data.splice(0,6);
-        arr = arr.map(item => {
+        let arr = [...data, ...data];
+        arr = arr.map((item, i) => {
           return {
             ...item,
             url: getPersonImage(item.id),
             flip: false,
+            uniqueId: i
           }
         })
-        arr = [...arr, ...arr];
         commit('getCards', arr);
       })
       .catch(err => commit('getCards', false))

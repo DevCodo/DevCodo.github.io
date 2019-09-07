@@ -2,20 +2,21 @@
   <div>
     <Row>
       <div slot="left">
-        <ItemList :dataAll="allStarships" :pickItem="getStarship" />
+        <ItemList :dataAll="allStarships" :pickItem="getStarship" >
+          <router-link v-show="page > 1" :to="{name: 'starships', query: {page: page - 1}}" class="link prev">prev page</router-link>
+          <router-link v-show="page < 4" :to="{name: 'starships', query: {page: page + 1}}" class="link next">next page</router-link>
+        </ItemList> 
       </div>
 
       <div slot="right">
-        <Details :imgUrl="starshipImage" :data="starship" >
-
-          <span slot="choose">Choose a Starship</span>
-
+        <ItemDetails :imgUrl="starshipImage" :data="starship" >
           <template v-slot="{ data }">
-            <div class="item">Gender {{data.gender}}</div>
-            <div class="item">Birth Year {{data.birthYear}}</div>
-            <div class="item">Eye Color {{data.eyeColor}}</div>
+            <div class="item">Model {{data.model}}</div>
+            <div class="item">Length {{data.length}}</div>
+            <div class="item">Cost in credits {{data.costInCredits}}</div>
+            <router-link :to="{name: 'starship', params: { id: data.id }}" class="link">more detailed</router-link>
           </template>
-        </Details>   
+        </ItemDetails>   
       </div>
     </Row> 
   </div>
@@ -25,7 +26,7 @@
 
 import ItemList from '../components/ItemList';
 import Row from '../components/Row';
-import Details from '../components/Details';
+import ItemDetails from '../components/ItemDetails';
 
 import { mapGetters, mapActions } from 'vuex';
 
@@ -33,8 +34,19 @@ export default {
   components: {
     ItemList,
     Row,
-    Details,
+    ItemDetails,
   },
+
+  created() {
+    this.$store.commit('people/setFullPath', null)
+    this.page ? this.getAllStarships(this.page) : this.getAllStarships(1);
+  },
+
+  beforeRouteUpdate(to, from, next) {
+    this.$store.commit('people/setFullPath', to.fullPath)
+    to.query.page ? this.getAllStarships(to.query.page) : this.getAllStarships(1);
+    next();
+  }, 
 
   computed: {
     ...mapGetters('starships', {
@@ -42,10 +54,15 @@ export default {
       starship: 'starship',
       starshipImage: 'starshipImage',
     }),
+    page() {
+      let page = +this.$route.query.page;
+      return page ? page : 1
+    }
   },
 
   methods: {
     ...mapActions('starships', {
+      getAllStarships: 'getAllStarships',
       getStarship: 'getStarship',
     })
   },

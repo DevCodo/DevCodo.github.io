@@ -1,0 +1,69 @@
+<template>
+  <div class="item_list">
+
+    <Spinner v-if="data === null" />
+
+    <ErrorIndicator v-else-if="data === false" />
+
+    <template v-else>
+      <div class="item" v-for="item in data"
+          @click="pickItem(item.id)"
+          :key="item.id">
+        <span>{{ item.name }}</span> 
+      </div>
+    </template>
+    
+  </div>
+</template>
+
+
+<script>
+import Spinner from './Spinner';
+import ErrorIndicator from './ErrorIndicator';
+
+export default {
+  components: {
+    Spinner,
+    ErrorIndicator
+  },
+  props: {
+    dataAll: null,
+    pickItem: Function
+  },
+
+  computed: {
+    data() {
+      return this.dataAll;
+    }
+  },
+}
+</script>
+
+
+<style scoped lang="scss">
+
+.item_list {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  background: #303030;
+  border-radius: 5px;
+  border: 1px solid #505050;
+}
+
+.item {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-bottom: 1px solid #505050;
+  cursor: pointer;
+  &:last-child {
+    border: none;
+  }
+  &:hover {
+    background: #464646;
+  }
+}
+
+</style>

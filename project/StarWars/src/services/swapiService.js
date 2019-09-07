@@ -12,8 +12,8 @@ class SwapiService {
     return await res.json();
   }
 
-   getAllPeople = async () => {
-    const res = await this.getResource(`/people/`);
+   getAllPeople = async (page) => {
+    const res = await this.getResource(`/people/?page=${page}`);
     return res.results.map(this._transformPerson);
   }
 
@@ -22,8 +22,8 @@ class SwapiService {
     return this._transformPerson(person);
   }
 
-   getAllPlanets = async () => {
-    const res = await this.getResource(`/planets/`);
+   getAllPlanets = async (page) => {
+    const res = await this.getResource(`/planets/?page=${page}`);
     return res.results.map(this._transformPlanet);
   }
   
@@ -32,8 +32,8 @@ class SwapiService {
     return this._transformPlanet(planet);
   }
   
-  getAllStarships = async () => {
-    const res = await this.getResource(`/starships/`);
+  getAllStarships = async (page) => {
+    const res = await this.getResource(`/starships/?page=${page}`);
     return res.results.map(this._transformStarship);
   }
   
@@ -66,7 +66,12 @@ class SwapiService {
       name: planet.name,
       population: planet.population,
       rotationPeriod: planet.rotation_period,
-      diameter: planet.diameter
+      diameter: planet.diameter,
+      climate: planet.climate,
+      gravity: planet.gravity,
+      orbitalPeriod: planet.orbital_period,
+      terrain: planet.terrain,
+      surfaceWater: planet.surface_water,
     }
   }
 
@@ -76,7 +81,7 @@ class SwapiService {
       name: starship.name,
       model: starship.model,
       manufacturer: starship.manufacturer,
-      costInCredits: starship.costIn_credits,
+      costInCredits: starship.cost_in_credits,
       length: starship.length,
       crew: starship.crew,
       passengers: starship.passengers,
@@ -90,7 +95,11 @@ class SwapiService {
       name: person.name,
       gender: person.gender,
       birthYear: person.birth_year,
-      eyeColor: person.eye_color
+      eyeColor: person.eye_color,
+      hairColor: person.hair_color,
+      height: person.height,
+      mass: person.mass,
+      skinColor: person.skin_color,
     }
   }
 
