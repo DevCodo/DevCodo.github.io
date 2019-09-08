@@ -5,8 +5,6 @@
 
     <ErrorIndicator v-else-if="data === false" />
 
-    
-
     <template v-if="data && this.page === 'people'">
       <img :src="data.url" class="img" alt="">
       <div class="info">

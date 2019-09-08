@@ -71,14 +71,14 @@ export default {
   text-decoration: none;
   height: 34px;
   padding: 0 10px;
-  background: #39a070;
+  background: #666;
   border-radius: 5px;
   display: inline-flex;
   align-items: center;
   font-size: 16px;
   bottom: -50px;
   &:hover {
-    background: #666;
+    background: #39a070;
   }
 }  
 .prev {

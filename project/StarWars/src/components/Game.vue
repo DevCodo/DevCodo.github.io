@@ -2,9 +2,12 @@
   <div class="game">
 
     <div class="overlay" v-show="overlay" >
-      <Spinner v-if="!cards" />
+      <Spinner v-if="cards === null" />
+      <ErrorIndicator v-else-if="cards === false" />
       <img v-else src="../img/play.png" @click="play()">
     </div>
+
+    
 
     <transition-group name="shuffle" tag="div" class="box" >
         <Card v-for="(item, index) in cards" :key="item.uniqueId" 
@@ -21,11 +24,13 @@
 <script>
 import Card from './Card';
 import Spinner from './Spinner';
+import ErrorIndicator from './ErrorIndicator';
 
 export default {
     components: {
     Card,
     Spinner,
+    ErrorIndicator,
   },
   data() {
     return {
