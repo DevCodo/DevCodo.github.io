@@ -92,7 +92,7 @@ export default new Vuex.Store({
       })
     },
 
-    login({commit,state}, data) {
+    login({commit}, data) {
       commit('setProcessing', true)
       fetch(`${_baseUrl}/login/`, {
         method: 'post',

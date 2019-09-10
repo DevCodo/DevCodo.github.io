@@ -16,6 +16,7 @@
           :rules="nameRules"
           required
           label="Имя"
+          @keyup.enter="onSubmit"
           prepend-icon="mdi-account-circle"
         />
         <v-text-field 
@@ -23,6 +24,7 @@
           :rules="passwordRules"
           required
           label="Пароль" 
+          @keyup.enter="onSubmit"
           :type="showPassword ? 'text' : 'password'" 
           prepend-icon="mdi-lock"
           :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
