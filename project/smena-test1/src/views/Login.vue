@@ -32,10 +32,6 @@
 
 <script>
 
-let getPerson = async () => {
-  let res = await fetch('http://localhost:8081');
-  console.log(res)
-}
 
 
 export default {
@@ -48,9 +44,7 @@ export default {
     message: ""
   }),
   methods: {
-    login() {
-      this.$store.dispatch('login')
-    }
+   
   },
 };
 </script>
