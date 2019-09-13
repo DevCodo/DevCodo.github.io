@@ -6,7 +6,7 @@ const sum = (a, b) => {
 
 describe('тесты', () => {
   it('первый тест', () => {
-    expect(1 + 2).toEqual(4)
+    expect(1 + 2).toEqual(3)
   })
 })
  

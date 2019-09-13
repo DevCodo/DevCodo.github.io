@@ -1,0 +1,66 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "cars": [
+    {
+      "name": "Mazda",
+      "year": "2014",
+      "id": 1
+    },
+    {
+      "name": "54545",
+      "year": 2018,
+      "id": 2
+    },
+    {
+      "name": "54545",
+      "year": 2018,
+      "id": 3
+    },
+    {
+      "name": "Volga",
+      "year": "2900",
+      "id": 4
+    },
+    {
+      "name": "",
+      "year": 2018,
+      "id": 5
+    },
+    {
+      "name": "",
+      "year": 2018,
+      "id": 6
+    },
+    {
+      "name": "fgfgfg",
+      "year": 2018,
+      "id": 7
+    },
+    {
+      "name": "",
+      "year": 2018,
+      "id": 8
+    },
+    {
+      "name": "",
+      "year": 2018,
+      "id": 9
+    }
+  ]
+}
