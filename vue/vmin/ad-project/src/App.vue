@@ -16,7 +16,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app dark color="indigo">
+    <v-app-bar app dark color="primary">
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" />
       <v-toolbar-title>Title</v-toolbar-title>
 
