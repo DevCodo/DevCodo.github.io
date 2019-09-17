@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './components/Home.vue'
-import Login from './components/Auth/Login'
-import Registration from './components/Auth/Registration'
-import Orders from "./components/User/Orders"
-import Ad from "./components/Ads/Ad"
-import AdList from "./components/Ads/AdList"
-import NewAd from "./components/Ads/NewAd"
+import AutGuard from './auth-guard'
+import Home from '@/components/Home.vue'
+import Login from '@/components/Auth/Login'
+import Registration from '@/components/Auth/Registration'
+import Orders from "@/components/User/Orders"
+import Ad from "@/components/Ads/Ad"
+import AdList from "@/components/Ads/AdList"
+import NewAd from "@/components/Ads/NewAd"
 
 
 
@@ -22,21 +23,24 @@ export default new Router({
       component: Home
     },
     {
-      path: '/ad/:ad',
+      path: '/ad/:id',
+      props: true,
       name: 'ad',
       component: Ad
     },
     {
       path: '/list',
       name: 'list',
-      component: AdList
+      component: AdList,
+      beforeEnter: AutGuard
     },
     {
       path: '/new',
       name: 'newAd',
-      component: NewAd
+      component: NewAd,
+      beforeEnter: AutGuard
     },
-    {
+    {``
       path: '/login',
       name: 'login',
       component: Login
@@ -49,7 +53,8 @@ export default new Router({
     {
       path: '/orders',
       name: 'orders',
-      component: Orders
+      component: Orders,
+      beforeEnter: AutGuard
     },
     
   ]

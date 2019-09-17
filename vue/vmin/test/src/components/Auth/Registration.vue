@@ -29,7 +29,6 @@
               ></v-text-field>
 
               <v-text-field
-                id="password"
                 label="Password"
                 name="password"
                 prepend-icon="mdi-lock"
@@ -39,7 +38,6 @@
                 v-model="password"
               ></v-text-field>
               <v-text-field
-                id="password"
                 label="Confirm Password"
                 name="confirm-password"
                 prepend-icon="mdi-lock"
@@ -54,7 +52,8 @@
             <v-spacer></v-spacer>
             <v-btn color="primary"
               @click="onSubmit"
-              :disabled="!valid"
+              :loading="loading"
+              :disabled="!valid || loading"
             >Create accaunt</v-btn>
           </v-card-actions>
         </v-card>
@@ -88,6 +87,11 @@ export default {
       ],
     }
   },
+  computed: {
+    loading() {
+      return this.$store.getters.loading
+    }
+  },
   methods: {
     onSubmit() {
       if (this.$refs.form.validate()) {
@@ -95,7 +99,11 @@ export default {
           email: this.email,
           password: this.password
         }
-        console.log(user)
+        this.$store.dispatch('registerUser', user)
+          .then(() => {
+            this.$router.push('/')
+          })
+          .catch()
       }
     }
   },
