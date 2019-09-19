@@ -1,0 +1,74 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "editor.renderWhitespace": "none",
+    "editor.minimap.enabled": true,
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": false,
+    "editor.tokenColorCustomizations": {
+        "[Gruvbox Dark (Medium)]": {
+            "strings": "#9d8a6d",
+            "numbers": "#c4bcb5",
+            "comments": "#6d7a86",
+            "functions": "#e9b035"
+        }
+    },
+    "workbench.colorCustomizations": {
+        "editorBracketMatch.background": "#1e98bd8e",
+        "editorBracketMatch.border": "#1e98bd00",
+        "statusBar.background": "#202020",
+        "statusBar.foreground": "#bbb8b8",
+        "editor.selectionBackground": "#135564",
+        "editor.selectionHighlightBackground": "#135564"
+    },
+    "editor.hover.enabled": false, // убирает всплывающие подсказки
+    "[css]": {
+        "editor.hover.enabled": true
+    },
+    "[scss]": {
+        "editor.hover.enabled": true
+    },
+    "[sass]": {
+        "editor.hover.enabled": true
+    },
+    "[vue]": {
+        "editor.hover.enabled": true
+    },
+    "[jsonc]": {
+        "editor.hover.enabled": true
+    },
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": -1,
+    "files.autoSaveDelay": 400,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.occurrencesHighlight": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDelete": false,
+    "editor.selectionHighlight": false,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveSassCompile.settings.generateMap": false,
+    "colorize.ignore_search_variables_info": true,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDragAndDrop": false,
+    "editor.tabSize": 2,
+    "files.associations": {
+        "*.tpl": "html"
+    },
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "workbench.iconTheme": "material-icon-theme",
+    // "liveServer.settings.host": "127.0.0.3" //смена домена
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "workbench.tree.indent": 20
+}
