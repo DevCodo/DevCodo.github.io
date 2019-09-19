@@ -40,7 +40,7 @@ export default new Router({
       component: NewAd,
       beforeEnter: AutGuard
     },
-    {``
+    {
       path: '/login',
       name: 'login',
       component: Login
