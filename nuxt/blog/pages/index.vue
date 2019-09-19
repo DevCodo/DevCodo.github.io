@@ -12,7 +12,10 @@ import Post from '@/components/main/Post';
 
 export default {
   head: {
-    title: 'Главная'
+    title: 'Главнаяс',
+    meta: [
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
   },
   components: {
     Post,

@@ -29,7 +29,7 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, ab est sit neque cum, fugiat corporis fugit, nihil quaerat perspiciatis excepturi placeat error quasi reiciendis vel? Ex architecto possimus facilis?</p>
     </main>
     <footer>
-      <CommentForm />
+      <CommentForm @created="createCommentHaddler" v-if="canAddComment"/>
       <div class="comments" v-if="false">
         <Comment 
           v-for="comment in 4"
@@ -52,7 +52,17 @@ import CommentForm from '@/components/main/CommentForm';
     components: {
       Comment,
       CommentForm,
-    }
+    },
+    data() {
+      return {
+        canAddComment: true
+      }
+    },
+    methods: {
+      createCommentHaddler() {
+        this.canAddComment = false
+      }
+    },
   }
 </script>
 
