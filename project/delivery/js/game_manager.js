@@ -13,7 +13,7 @@ GameManager.prototype.init = function () {
 
   this.count = 4;
   this.level = 1;
-  this.speed = 500;
+  this.speed = 600;
   // this.maxSpeed = 200;
   this.interval = this.speed * 2.5;
   this.point = 2;
@@ -114,14 +114,14 @@ GameManager.prototype.upLevel = function () {
   this.level++;
 
   switch (true) {
-    case (this.level < 8):
-      this.speed += -50;
-      break;
+    // case (this.level < 4):
+    //   this.speed += -50;
+    //   break;
     case (this.level > 19):
       this.speed += 0;
       break;
     default:
-      this.speed += -25;
+      this.speed += -60;
       break;
   }
   this.interval = this.speed * 2.5;
@@ -134,12 +134,12 @@ GameManager.prototype.updateScore = function (data) {
     this.score += this.point;
     this.HTMLredraw.updateScore({ value: this.score });
 
-    if (this.score >= 1000) {
+    if (this.score >= 50) {
       this.gameWin();
       return false;
     }
 
-    if (!(this.score % 50)) {
+    if (!(this.score % 8)) {
       this.upLevel();
     }
   } else {

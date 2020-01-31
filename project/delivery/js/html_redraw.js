@@ -59,7 +59,7 @@ HTMLredraw.prototype.gameOver = function () {
 };
 
 HTMLredraw.prototype.gameWin = function () {
-  var msg = this.getMessage('You\'ve Won!');
+  var msg = this.getMessage('Красава! Держи промокод <span style="color: red">E34H7</span>');
 
   this.messageWrap.show();
   this.messageWrap.appendChild(msg);
