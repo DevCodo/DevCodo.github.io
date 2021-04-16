@@ -9,11 +9,15 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "drei": "^2.2.21",
+    "nice-color-palettes": "^3.0.0",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-three-fiber": "^6.0.13",
     "three": "^0.127.0",
+    "use-cannon": "^0.5.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
